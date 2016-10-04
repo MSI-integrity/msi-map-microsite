@@ -80,29 +80,29 @@ var Report = React.createClass({
       return (
         <div>
           <div className="row">
-            <div className="small-5 small-offset-1 columns">
+            <div className="small-6 columns">
               <h1>Text Text Text</h1>
               <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
             </div>
-            <div className="small-5 columns end">
+            <div className="small-6 columns">
               <div className="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
                 <ul className="orbit-container">
                   <button className="orbit-previous"><span className="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
                   <button className="orbit-next"><span className="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
                   <li className="is-active orbit-slide">
-                    <img className="orbit-image" src="http://placehold.it/400x370&text=Pegasi B" alt="Space" />
+                    <img className="orbit-image" src="https://s-media-cache-ak0.pinimg.com/originals/02/65/fe/0265fe0b04f990cb07f1d11c0b15ad4e.jpg" alt="Space" />
                     <figcaption className="orbit-caption">Space, the final frontier.</figcaption>
                   </li>
                   <li className="orbit-slide">
-                    <img className="orbit-image" src="http://placehold.it/400x370&text=Pegasi B" alt="Space" />
+                    <img className="orbit-image" src="http://3.bp.blogspot.com/-kTB6PIKLFI8/VXxTiGbf88I/AAAAAAAAc48/mRJmPWszVm0/s400/Adventure%2BTime%2BAppisodev.webp" alt="Space" />
                     <figcaption className="orbit-caption">Lets Rocket!</figcaption>
                   </li>
                   <li className="orbit-slide">
-                    <img className="orbit-image" src="http://placehold.it/400x370&text=Pegasi B" alt="Space" />
+                    <img className="orbit-image" src="http://images6.fanpop.com/image/photos/33400000/Adventure-Time-BroFist-ask-the-adventure-time-ocs-33458232-400-250.jpg" alt="Space" />
                     <figcaption className="orbit-caption">Encapsulating</figcaption>
                   </li>
                   <li className="orbit-slide">
-                    <img className="orbit-image" src="http://placehold.it/400x370&text=Pegasi B" alt="Space" />
+                    <img className="orbit-image" src="http://vignette3.wikia.nocookie.net/adventuretimebdm/images/6/6a/Atwallwidescreen.jpg/revision/latest?cb=20110516210801" alt="Space" />
                     <figcaption className="orbit-caption">Outta This World</figcaption>
                   </li>
                 </ul>
@@ -116,7 +116,7 @@ var Report = React.createClass({
             </div>
           </div>
           <div className="row">
-            <div className="small-10 large-centered columns">
+            <div className="small-12 large-centered columns">
               <h1>Project Description</h1>
               <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
             </div>
@@ -131,18 +131,22 @@ var Data = React.createClass({
       return (
         <div>
           <div className="row">
-            <h1>The Data</h1>
+            <div className="small-12 columns">
+              <h1>The Data</h1>
+            </div>
           </div>
           <div className="row">
             <div className="small-6 columns">
               <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
             </div>
-            <div className="small-6 columns">
-              <a href="#" className="button large">Download Data</a>
+            <div className="small-6 columns text-center">
+              <a href="data.json" className="button large" download>Download Data (JSON)</a>
             </div>
           </div>
           <div className="row">
-            <h1>About The Researchers</h1>
+            <div className="small-12 columns">
+              <h1>About The Researchers</h1>
+            </div>
             <div className="small-6 columns">
               <img src="image/org_icons/msi-integrity.png" />
               <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
@@ -171,48 +175,181 @@ var Explore = React.createClass({
         }.bind(this)
       });
     },
+
     getInitialState: function () {
       return {
-        data: []
+        data: [],
+        selectedFeatures: [],
+        searchTerm: ""
       };
     },
+
     componentDidMount: function() {
       this.loadDataFromServer();
     },
+
+    filteredData: function (searchTerm, selectedFeatures) {
+      var filteredData;
+      if (searchTerm === '') {
+        filteredData = this.state.data;
+      } else {
+        filteredData = this.state.data.filter(function (datum) {
+          return datum.name.indexOf(searchTerm) !== -1 || datum.mission.indexOf(searchTerm) !== -1
+        });
+      }
+      // If any features are selected
+      if (selectedFeatures.length > 0) {
+        filteredData = filteredData.filter(function (datum) {
+          // Must contain all selected features
+          for (var i = 0; i < selectedFeatures.length; i++) {
+            if (datum.features.indexOf(selectedFeatures[i]) === -1) {
+              return false;
+            }
+          }
+          return true;
+        });
+      }
+      return filteredData;
+    },
+
+    allFeatures: {
+      evaluations: {
+        description: "Evaluations",
+        icon_url: "image/feature_icons/evaluations.png"
+      },
+      grievance_mechanism: {
+        description: "Grievance Mechanism",
+        icon_url: "image/feature_icons/grievance_mechanism.png"
+      },
+      human_rights_law_reference: {
+        description: "Human Rights Law Reference",
+        icon_url: "image/feature_icons/human_rights_law_reference.png"
+      },
+      human_rights_reference: {
+        description: "Human Rights Reference",
+        icon_url: "image/feature_icons/human_rights_reference.png"
+      },
+      involvement_of_affected_communities: {
+        description: "Involvement of Affected Communities",
+        icon_url: "image/feature_icons/involvement_of_affected_communities.png"
+      },
+      reports: {
+        description: "Reports",
+        icon_url: "image/feature_icons/reports.png"
+      },
+      sanctions: {
+        description: "Sanctions",
+        icon_url: "image/feature_icons/sanctions.png"
+      },
+      standards: {
+        description: "Standards",
+        icon_url: "image/feature_icons/standards.png"
+      }
+    },
+
     generateFeatureBadges: function(features) {
-      var size = 25;
+      var size = 40,
+          allFeatures = this.allFeatures;
       return features.map(function (feature, i) {
-        var src = "image/feature_icons/" + feature + ".png";
+        var icon_url = allFeatures[feature]['icon_url'],
+            description = allFeatures[feature]['description'];
         return (
-          <img src={src} height={size} width={size} key={i} />
+          <img src={icon_url} alt={description} title={description} height={size} width={size} key={i} />
         );
       });
     },
-    render: function () {
-      var generateFeatureBadges = this.generateFeatureBadges;
-      var dataNodes = this.state.data.map(function (datum, i) {
-        return (
-          <div className="row" key={i}>
-            <div className="small-3 columns">
-              {datum.name}
+
+    renderTableRow: function (datum, i) {
+      return (
+        <div className="row msi-info" key={i}>
+          <div className="large-8 columns">
+            <div>
+              <h3>{datum.name}</h3>
             </div>
-            <div className="small-5 columns">
+            <div>
+              <h5>Launched {datum.launched}</h5>
+            </div>
+            <div>
               {datum.mission}
             </div>
-            <div className="small-2 columns">
+            <div>
+              <h4>Stakeholders</h4>
               {datum.stakeholders}
             </div>
-            <div className="small-1 columns">
-              {datum.launched}
-            </div>
-            <div className="small-1 columns">
-              {generateFeatureBadges(datum.features)}
+          </div>
+          <div className="large-4 columns">
+            <h4>Features</h4>
+            {this.generateFeatureBadges(datum.features)}
+          </div>
+        </div>
+      );
+    },
+
+    handleToggleFeature: function (featureName) {
+      var selectedFeatures = this.state.selectedFeatures;
+      var index = selectedFeatures.indexOf(featureName)
+      if (index === -1) {
+        selectedFeatures = selectedFeatures.concat(featureName);
+      } else {
+        selectedFeatures.splice(index, 1);
+      }
+      console.log(selectedFeatures);
+      this.setState({selectedFeatures: selectedFeatures});
+    },
+
+    renderSearchBar: function () {
+      var allFeatures = this.allFeatures;
+      var handleToggleFeature = this.handleToggleFeature;
+      var selectedFeatures = this.state.selectedFeatures;
+      var featureNodes = Object.keys(allFeatures).map(function (featureName, index) {
+        var description = allFeatures[featureName]['description'],
+            icon_url = allFeatures[featureName]['icon_url'],
+            classes = "small-3 columns feature-selector-feature";
+        if (selectedFeatures.indexOf(featureName) !== -1) {
+          classes += " active";
+        }
+        return (
+          <div className={classes} key={index} onClick={() => {handleToggleFeature(featureName)}}>
+            <img src={icon_url} alt={description} title={description} />
+            <div>
+              {description}
             </div>
           </div>
         );
       });
       return (
-        <div>
+        <div key={-1}>
+          <div className="row">
+            <div className="large-6 large-centered columns">
+              <input type="text" placeholder="Name of MSI and mission" onChange={(event) => {this.setState({searchTerm: event.target.value})}}/>
+            </div>
+          </div>
+          <div className="row collapse feature-selector">
+            <div className="small-6 columns">
+              {featureNodes.slice(0, 4)}
+            </div>
+            <div className="small-6 columns">
+              {featureNodes.slice(4, 8)}
+            </div>
+          </div>
+          <div className="row">
+            <div className="large-4 large-centered columns text-center">
+              <h3>{this.filteredData(this.state.searchTerm, this.state.selectedFeatures).length} Results</h3>
+            </div>
+          </div>
+        </div>
+      );
+    },
+
+    render: function () {
+      var generateFeatureBadges = this.generateFeatureBadges;
+      var renderTableRow = this.renderTableRow;
+      var dataNodes = this.filteredData(this.state.searchTerm, this.state.selectedFeatures).map(function (datum, i) {
+        return renderTableRow(datum, i);
+      });
+      dataNodes.unshift(this.renderSearchBar());
+      return (
+        <div className="msi-info-container">
           {dataNodes}
         </div>
       );

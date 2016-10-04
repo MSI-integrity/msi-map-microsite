@@ -1,3 +1,31 @@
 .active {
   background-color: silver;
 }
+
+.feature-selector {
+  background-color: white;
+}
+
+.feature-selector-feature {
+  float: left;
+  text-align: center;
+}
+
+.msi-info {
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.msi-info:first-child {
+  margin-top: 0;
+}
+
+.msi-info:last-child {
+  margin-bottom: 0;
+}
+
+.msi-info-container {
+  background-color: silver;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
