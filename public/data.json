@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "name": "Extractives Industry Transparency Initiative (EITI)",
+      "mission": "The Extractive Industries Transparency Initiative (EITI) is a global Standard to promote open and accountable management of natural resources. It seeks to strengthen government and company systems, inform public debate, and enhance trust. In each implementing country it is supported by a coalition of governments, companies and civil society working together.",
+      "stakeholders": "Government (9), Industry (6), Civil Society (5)",
+      "launched": "2002",
+      "features": [
+        "involvement_of_affected_communities",
+        "standards",
+        "evaluations",
+        "reports",
+        "sanctions"
+      ]
+    },
+    {
+      "name": "Voluntary Principles on Security and Human Rights",
+      "mission": "Established in 2000, the Voluntary Principles on Security and Human Rights are a set of principles designed to guide companies in maintaining the safety and security of their operations within an operating framework that encourages respect for human rights.",
+      "stakeholders": "Not publicly available",
+      "launched": "2000",
+      "features": [
+        "human_rights_reference",
+        "standards",
+        "human_rights_law_reference",
+        "sanctions"
+      ]
+    },
+    {
+      "name": "Alliance for Responsible Mining (ARM)",
+      "mission": "ARM's mission is to set standards for responsible ASM and to support and enable producers to deliver Fairmined certified metals and minerals through economically just supply chains to the markets, in order to contribute towards the transformation of ASM into a socially and environmentally responsible activity, and to the improvement of• the quality of life of marginalized artisanal miners, their families and communities.",
+      "stakeholders": "Industry (2), Civil Society (5)",
+      "launched": "2004",
+      "features": [
+        "involvement_of_affected_communities",
+        "human_rights_reference",
+        "standards",
+        "human_rights_law_reference",
+        "evaluations"
+      ]
+    }
+  ]
+}
