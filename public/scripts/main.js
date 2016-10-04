@@ -160,7 +160,7 @@ var Data = React.createClass({
 var Explore = React.createClass({
     loadDataFromServer: function() {
       $.ajax({
-        url: '/data.json',
+        url: 'data.json',
         dataType: 'json',
         cache: false,
         success: function(data) {
