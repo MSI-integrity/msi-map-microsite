@@ -2,6 +2,10 @@
   background-color: silver;
 }
 
+.download-data {
+  margin-top: 40px;
+}
+
 .feature-selector {
   background-color: white;
 }
@@ -28,4 +32,8 @@
   background-color: silver;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.nav {
+  margin-bottom: 15px;
 }
