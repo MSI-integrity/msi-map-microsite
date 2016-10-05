@@ -1,0 +1,67 @@
+@import 'foundation';
+
+@include foundation-everything;
+
+$primary-color: blue;
+$secondary-color: lightblue;
+
+body {
+  background-color: $primary-color;
+}
+
+.active {
+  background-color: $primary-color;
+}
+
+.feature-selector {
+  background-color: $secondary-color;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.feature-selector-feature {
+  float: left;
+  text-align: center;
+}
+
+.msi-info {
+  background-color: $secondary-color;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav {
+  .top-bar, .menu {
+    background-color: $secondary-color;
+  }
+}
+
+.tab {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &.active-tab {
+    display: block;
+  }
+}
+
+.qa-row {
+  margin-top: 20px;
+  background-color: $secondary-color;
+}
+
+.results-summary {
+  background-color: $secondary-color;
+  margin-top: 30px;
+}
+
+// .orbit-container {
+//   height: 250px;
+// }
+//
+// .orbit-container .orbit-slides-container > * {
+//   position: relative;
+//   margin-left: 0;
+//   float: left;
+//   height: 100%;
+// }
