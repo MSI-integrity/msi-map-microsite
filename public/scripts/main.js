@@ -168,7 +168,9 @@ var Explore = React.createClass({
         dataType: 'json',
         cache: false,
         success: function(data) {
-          this.setState({data: data.data});
+          data = this.addIds(data.data);
+          var index = this.createSearchIndex(data);
+          this.setState({data: data, searchIndex: index});
         }.bind(this),
         error: function(xhr, status, err) {
           console.error(status, err.toString());
@@ -184,18 +186,40 @@ var Explore = React.createClass({
       };
     },
 
+    addIds: function (data) {
+      for (var i = 0; i < data.length; i++) {
+        data[i].id = i;
+      }
+      return data;
+    },
+
+    createSearchIndex: function (data) {
+      var index = lunr(function() {
+        this.field('name');
+        this.field('mission');
+      });
+      for (var i = 0; i < data.length; i++) {
+        index.add(data[i]);
+      }
+      return index;
+    },
+
     componentDidMount: function() {
       this.loadDataFromServer();
     },
 
     filteredData: function (searchTerm, selectedFeatures) {
-      var filteredData;
+      var filteredData, searchResults, ids;
       if (searchTerm === '') {
         filteredData = this.state.data;
       } else {
-        filteredData = this.state.data.filter(function (datum) {
-          return datum.name.indexOf(searchTerm) !== -1 || datum.mission.indexOf(searchTerm) !== -1
-        });
+        // debugger;
+        searchResults = this.state.searchIndex.search(searchTerm);
+        filteredData = searchResults.map((result) => {
+          var datum = this.state.data[result.ref];
+          datum.score = result.score;
+          return datum;
+        }).sort((a, b) => {a.score - b.score});;
       }
       // If any features are selected
       if (selectedFeatures.length > 0) {
