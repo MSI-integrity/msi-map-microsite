@@ -12,7 +12,7 @@ var Explore = React.createClass({
         success: function(data) {
           data = this.addIds(data.data);
           var index = this.createSearchIndex(data);
-          this.setState({data: data, searchIndex: index});
+          this.setState({data: data, filteredData: data, searchIndex: index});
         }.bind(this),
         error: function(xhr, status, err) {
           console.error(status, err.toString());
@@ -23,6 +23,7 @@ var Explore = React.createClass({
     getInitialState: function () {
       return {
         data: [],
+        filteredData: [],
         selectedFeatures: [],
         searchTerm: ""
       };
@@ -50,8 +51,10 @@ var Explore = React.createClass({
       this.loadDataFromServer();
     },
 
-    filteredData: function (searchTerm, selectedFeatures) {
-      var filteredData, searchResults, ids;
+    filterData: function () {
+      var searchTerm = this.state.searchTerm,
+          selectedFeatures = this.state.selectedFeatures,
+          filteredData, searchResults, ids;
       if (searchTerm === '') {
         filteredData = this.state.data;
       } else {
@@ -75,7 +78,7 @@ var Explore = React.createClass({
           return true;
         });
       }
-      return filteredData;
+      this.setState({filteredData: filteredData});
     },
 
     allFeatures: {
@@ -128,7 +131,7 @@ var Explore = React.createClass({
     renderTableRow: function (datum, i) {
       return (
         <div className="row msi-info" key={i}>
-          <div className="large-8 columns">
+          <div className="large-9 columns">
             <div>
               <h3>{datum.name}</h3>
             </div>
@@ -143,12 +146,18 @@ var Explore = React.createClass({
               {datum.stakeholders}
             </div>
           </div>
-          <div className="large-4 columns">
+          <div className="large-2 columns end features-list">
             <h4>Features</h4>
             {this.generateFeatureBadges(datum.features)}
           </div>
         </div>
       );
+    },
+
+    handleSearchTermChange: function (event) {
+      this.setState({
+        searchTerm: event.target.value
+      }, this.filterData);
     },
 
     handleToggleFeature: function (featureName) {
@@ -160,7 +169,39 @@ var Explore = React.createClass({
         selectedFeatures.splice(index, 1);
       }
       console.log(selectedFeatures);
-      this.setState({selectedFeatures: selectedFeatures});
+      this.setState({selectedFeatures: selectedFeatures}, this.filterData);
+    },
+
+    renderSearchResultsSummary: function () {
+      var filteredByElement, featuresText, selectedFeatures = this.state.selectedFeatures;
+      if (this.state.searchTerm){
+        filteredByElement = (
+          <div>
+            Filtered by seach term <span className="search-term">{this.state.searchTerm}</span>
+          </div>
+        );
+      }
+      if (selectedFeatures.length) {
+        featuresText = 'With the feature' + (selectedFeatures.length === 1 ? ' ' : 's ');
+        for (var i = 0; i < selectedFeatures.length; i++) {
+            featuresText += '<span class="search-term">' + this.allFeatures[selectedFeatures[i]].description + '</span>';
+            if (i < selectedFeatures.length - 2) {
+              featuresText += ', ';
+            } else if (i === selectedFeatures.length - 2) {
+              featuresText += ' and ';
+            }
+        }
+      } else {
+        featuresText = 'Matching any features'
+      }
+      return (
+        <div className="large-4 large-centered columns text-center results-summary">
+          <h2>{this.state.filteredData.length} Results</h2>
+          {filteredByElement}
+          <div dangerouslySetInnerHTML={{__html: featuresText}}>
+          </div>
+        </div>
+      );
     },
 
     renderSearchBar: function () {
@@ -187,7 +228,7 @@ var Explore = React.createClass({
         <div key={-1} className="search-container row">
           <div className="row">
             <div className="large-6 large-centered columns">
-              <input type="text" placeholder="Name of MSI and mission" onChange={(event) => {this.setState({searchTerm: event.target.value})}}/>
+              <input type="text" placeholder="Name of MSI and mission" onChange={this.handleSearchTermChange}/>
             </div>
           </div>
           <div className="row">
@@ -203,9 +244,7 @@ var Explore = React.createClass({
             </div>
           </div>
           <div className="row">
-            <div className="large-4 large-centered columns text-center results-summary">
-              <h2>{this.filteredData(this.state.searchTerm, this.state.selectedFeatures).length} Results</h2>
-            </div>
+            {this.renderSearchResultsSummary()}
           </div>
         </div>
       );
@@ -214,7 +253,7 @@ var Explore = React.createClass({
     render: function () {
       var generateFeatureBadges = this.generateFeatureBadges;
       var renderTableRow = this.renderTableRow;
-      var dataNodes = this.filteredData(this.state.searchTerm, this.state.selectedFeatures).map(function (datum, i) {
+      var dataNodes = this.state.filteredData.map(function (datum, i) {
         return renderTableRow(datum, i);
       });
       dataNodes.unshift(this.renderSearchBar());

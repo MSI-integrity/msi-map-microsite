@@ -21763,7 +21763,7 @@
 	      success: (function (data) {
 	        data = this.addIds(data.data);
 	        var index = this.createSearchIndex(data);
-	        this.setState({ data: data, searchIndex: index });
+	        this.setState({ data: data, filteredData: data, searchIndex: index });
 	      }).bind(this),
 	      error: (function (xhr, status, err) {
 	        console.error(status, err.toString());
@@ -21774,6 +21774,7 @@
 	  getInitialState: function getInitialState() {
 	    return {
 	      data: [],
+	      filteredData: [],
 	      selectedFeatures: [],
 	      searchTerm: ""
 	    };
@@ -21801,10 +21802,14 @@
 	    this.loadDataFromServer();
 	  },
 
-	  filteredData: function filteredData(searchTerm, selectedFeatures) {
+	  filterData: function filterData() {
 	    var _this = this;
 
-	    var filteredData, searchResults, ids;
+	    var searchTerm = this.state.searchTerm,
+	        selectedFeatures = this.state.selectedFeatures,
+	        filteredData,
+	        searchResults,
+	        ids;
 	    if (searchTerm === '') {
 	      filteredData = this.state.data;
 	    } else {
@@ -21830,7 +21835,7 @@
 	        return true;
 	      });
 	    }
-	    return filteredData;
+	    this.setState({ filteredData: filteredData });
 	  },
 
 	  allFeatures: {
@@ -21884,7 +21889,7 @@
 	      { className: 'row msi-info', key: i },
 	      React.createElement(
 	        'div',
-	        { className: 'large-8 columns' },
+	        { className: 'large-9 columns' },
 	        React.createElement(
 	          'div',
 	          null,
@@ -21922,7 +21927,7 @@
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: 'large-4 columns' },
+	        { className: 'large-2 columns end features-list' },
 	        React.createElement(
 	          'h4',
 	          null,
@@ -21931,6 +21936,12 @@
 	        this.generateFeatureBadges(datum.features)
 	      )
 	    );
+	  },
+
+	  handleSearchTermChange: function handleSearchTermChange(event) {
+	    this.setState({
+	      searchTerm: event.target.value
+	    }, this.filterData);
 	  },
 
 	  handleToggleFeature: function handleToggleFeature(featureName) {
@@ -21942,12 +21953,53 @@
 	      selectedFeatures.splice(index, 1);
 	    }
 	    console.log(selectedFeatures);
-	    this.setState({ selectedFeatures: selectedFeatures });
+	    this.setState({ selectedFeatures: selectedFeatures }, this.filterData);
+	  },
+
+	  renderSearchResultsSummary: function renderSearchResultsSummary() {
+	    var filteredByElement,
+	        featuresText,
+	        selectedFeatures = this.state.selectedFeatures;
+	    if (this.state.searchTerm) {
+	      filteredByElement = React.createElement(
+	        'div',
+	        null,
+	        'Filtered by seach term ',
+	        React.createElement(
+	          'span',
+	          { className: 'search-term' },
+	          this.state.searchTerm
+	        )
+	      );
+	    }
+	    if (selectedFeatures.length) {
+	      featuresText = 'With the feature' + (selectedFeatures.length === 1 ? ' ' : 's ');
+	      for (var i = 0; i < selectedFeatures.length; i++) {
+	        featuresText += '<span class="search-term">' + this.allFeatures[selectedFeatures[i]].description + '</span>';
+	        if (i < selectedFeatures.length - 2) {
+	          featuresText += ', ';
+	        } else if (i === selectedFeatures.length - 2) {
+	          featuresText += ' and ';
+	        }
+	      }
+	    } else {
+	      featuresText = 'Matching any features';
+	    }
+	    return React.createElement(
+	      'div',
+	      { className: 'large-4 large-centered columns text-center results-summary' },
+	      React.createElement(
+	        'h2',
+	        null,
+	        this.state.filteredData.length,
+	        ' Results'
+	      ),
+	      filteredByElement,
+	      React.createElement('div', { dangerouslySetInnerHTML: { __html: featuresText } })
+	    );
 	  },
 
 	  renderSearchBar: function renderSearchBar() {
-	    var _this2 = this;
-
 	    var allFeatures = this.allFeatures;
 	    var handleToggleFeature = this.handleToggleFeature;
 	    var selectedFeatures = this.state.selectedFeatures;
@@ -21980,9 +22032,7 @@
 	        React.createElement(
 	          'div',
 	          { className: 'large-6 large-centered columns' },
-	          React.createElement('input', { type: 'text', placeholder: 'Name of MSI and mission', onChange: function (event) {
-	              _this2.setState({ searchTerm: event.target.value });
-	            } })
+	          React.createElement('input', { type: 'text', placeholder: 'Name of MSI and mission', onChange: this.handleSearchTermChange })
 	        )
 	      ),
 	      React.createElement(
@@ -22010,16 +22060,7 @@
 	      React.createElement(
 	        'div',
 	        { className: 'row' },
-	        React.createElement(
-	          'div',
-	          { className: 'large-4 large-centered columns text-center results-summary' },
-	          React.createElement(
-	            'h2',
-	            null,
-	            this.filteredData(this.state.searchTerm, this.state.selectedFeatures).length,
-	            ' Results'
-	          )
-	        )
+	        this.renderSearchResultsSummary()
 	      )
 	    );
 	  },
@@ -22027,7 +22068,7 @@
 	  render: function render() {
 	    var generateFeatureBadges = this.generateFeatureBadges;
 	    var renderTableRow = this.renderTableRow;
-	    var dataNodes = this.filteredData(this.state.searchTerm, this.state.selectedFeatures).map(function (datum, i) {
+	    var dataNodes = this.state.filteredData.map(function (datum, i) {
 	      return renderTableRow(datum, i);
 	    });
 	    dataNodes.unshift(this.renderSearchBar());
