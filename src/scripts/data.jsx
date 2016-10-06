@@ -1,6 +1,12 @@
 var React = require('react');
 
 var Data = React.createClass({
+    formatsToFileName: {
+      'JSON': 'data.json',
+      'Excel': 'data.xlsx',
+      'Some other format?': 'data.txt'
+    },
+
     getInitialState: function () {
       return {
         format: 'JSON'
@@ -8,33 +14,30 @@ var Data = React.createClass({
     },
 
     setFormat: function (format) {
-      if (format !== 'JSON' && format !== 'Excel') {
+      if (Object.keys(this.formatsToFileName).indexOf(format) === -1) {
         console.error('format' + format + 'is bad');
       }
       this.setState({format: format});
     },
 
     fileUri: function () {
-      if (this.state.format === 'JSON') {
-        return 'data.json';
-      } else if (this.state.format === 'Excel') {
-        return 'data.xlsx';
-      }
+      return this.formatsToFileName[this.state.format];
+    },
+
+    renderFormatButtons: function () {
+      var setFormat = this.setFormat,
+          currentFormat = this.state.format;
+
+      return Object.keys(this.formatsToFileName).map(function (formatName, index) {
+        var buttonClasses = "button small" + (currentFormat === formatName ? ' alert' : '');
+        var cb = () => {setFormat(formatName)};
+        return (
+          <a className={buttonClasses} onClick={cb} key={index}>{formatName}</a>
+        );
+      });
     },
 
     render: function () {
-      var formatButtonClasses = "button small",
-          jsonButtonClasses = formatButtonClasses,
-          excelButtonClasses = formatButtonClasses;
-
-      if (this.state.format === 'JSON') {
-        jsonButtonClasses += ' alert';
-      }
-
-      if (this.state.format === 'Excel') {
-        excelButtonClasses += ' alert';
-      }
-
       return (
         <div className={"tab" + (this.props.activeTab ? ' active-tab' : '')}>
           <div className="row data-content">
@@ -48,8 +51,8 @@ var Data = React.createClass({
               <div>
                 <a href={this.fileUri()} className="button large download-data" download>Download Data</a>
               </div>
-              <div>
-                <a className={jsonButtonClasses} onClick={() => {this.setFormat('JSON')}}>JSON</a> <a className={excelButtonClasses} onClick={() => {this.setFormat('Excel')}}>Excel</a>
+              <div className="download-format-chooser">
+                {this.renderFormatButtons()}
               </div>
             </div>
           </div>

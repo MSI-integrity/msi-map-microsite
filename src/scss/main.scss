@@ -126,6 +126,15 @@ h1, h2, h3, h4, h5 {
   padding-top: 20px;
 }
 
+.download-format-chooser {
+  a {
+    margin-right: 5px;
+  }
+  a:last-child {
+    margin-right: 0;
+  }
+}
+
 .features-list {
   h4 {
     margin-bottom: 5px;
