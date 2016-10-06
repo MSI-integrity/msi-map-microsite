@@ -21,7 +21,6 @@ var COMMENTS_FILE = path.join(__dirname, 'comments.json');
 app.set('port', (process.env.PORT || 3000));
 
 app.use('/', express.static(path.join(__dirname, 'build')));
-app.use('/static', express.static(path.join(__dirname, 'static')));
 
 app.listen(app.get('port'), function() {
   console.log('Server started: http://localhost:' + app.get('port') + '/');

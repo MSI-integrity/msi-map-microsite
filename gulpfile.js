@@ -43,10 +43,17 @@ gulp.task('html', function () {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('build', ['sass', 'js', 'html']);
+gulp.task('static', function () {
+  gulp.src('./static/**/*')
+    .pipe(gulp.dest('./build/static'));
+});
+
+gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'static']);
 
 gulp.task('default', ['build'], function () {
     gulp.watch('./scss/*.scss', ['sass']);
     gulp.watch('./src/scripts/*.jsx', ['js']);
     gulp.watch('./src/html/index.html', ['html']);
+    gulp.watch('./static/**/*', ['static']);
+
 });
