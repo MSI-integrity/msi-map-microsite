@@ -51,7 +51,7 @@ gulp.task('static', function () {
 gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'static']);
 
 gulp.task('default', ['build'], function () {
-    gulp.watch('./scss/*.scss', ['sass']);
+    gulp.watch('./src/scss/*.scss', ['sass']);
     gulp.watch('./src/scripts/*.jsx', ['js']);
     gulp.watch('./src/html/index.html', ['html']);
     gulp.watch('./static/**/*', ['static']);
