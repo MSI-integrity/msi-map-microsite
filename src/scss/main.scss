@@ -1,0 +1,96 @@
+@import 'foundation';
+@import 'slick.scss';
+
+// Custom dot size for slick-theme
+$slick-dot-size: 50px;
+@import 'slick-theme.scss';
+
+@include foundation-everything;
+
+$primary-color: #C35A2D;
+$secondary-color: #FFA179;
+$tertiary-color: #3B46CC;
+
+// Padding for all the box-looking elements
+$box-padding: 20px;
+
+body {
+  background-color: $primary-color;
+}
+
+.active {
+  background-color: $primary-color;
+}
+
+.feature-selector {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.feature-selector-feature {
+  float: left;
+  text-align: center;
+  font-size: 14px;
+}
+
+.msi-info {
+  background-color: $secondary-color;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: $box-padding;
+}
+
+.nav {
+  .top-bar, .menu {
+    background-color: $secondary-color;
+  }
+}
+
+.tab {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &.active-tab {
+    display: block;
+  }
+}
+
+.qa-title {
+  background-color: $tertiary-color;
+  padding-left: 10px;
+}
+
+.qa-row {
+  margin-top: 20px;
+  padding: $box-padding;
+  background-color: $secondary-color;
+}
+
+.report-content, .data-content, .researchers-content {
+  background-color: $secondary-color;
+  padding: $box-padding;
+  margin-top: 20px;
+}
+
+.researchers-content {
+  img {
+    margin-bottom: 10px;
+    height: 75px;
+  }
+}
+
+.search-container {
+  background-color: $tertiary-color;
+  padding-top: 20px;
+}
+
+.top-nav-logo {
+  height: 40px;
+}
+
+.download-data-container {
+  margin-top: 30px;
+  border: 5px solid $primary-color;
+  background-color: $tertiary-color;
+  padding-top: 20px;
+}

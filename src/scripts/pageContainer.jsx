@@ -2,6 +2,7 @@ var React = require('react'),
     Nav = require('./nav'),
     Data = require('./data'),
     Explore = require('./explore'),
+    Footer = require('./footer'),
     QuestionAndAnswer = require('./QuestionAndAnswer'),
     Report = require('./report');
 
@@ -41,6 +42,7 @@ var PageContainer = React.createClass({
       <div>
         {React.createElement(Nav, {hashValue: this.props.hashValue})}
         {this.renderTabs()}
+        {React.createElement(Footer)}
       </div>
     );
   }

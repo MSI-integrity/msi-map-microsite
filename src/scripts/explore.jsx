@@ -37,7 +37,7 @@ var Explore = React.createClass({
 
     createSearchIndex: function (data) {
       var index = lunr(function() {
-        this.field('name');
+        this.field('name', {boost: 10});
         this.field('mission');
       });
       for (var i = 0; i < data.length; i++) {
@@ -184,18 +184,22 @@ var Explore = React.createClass({
         );
       });
       return (
-        <div key={-1}>
+        <div key={-1} className="search-container row">
           <div className="row">
             <div className="large-6 large-centered columns">
               <input type="text" placeholder="Name of MSI and mission" onChange={(event) => {this.setState({searchTerm: event.target.value})}}/>
             </div>
           </div>
-          <div className="row collapse feature-selector">
-            <div className="small-6 columns">
-              {featureNodes.slice(0, 4)}
-            </div>
-            <div className="small-6 columns">
-              {featureNodes.slice(4, 8)}
+          <div className="row">
+            <div className="large-8 large-centered columns">
+              <div className="row collapse feature-selector">
+                <div className="small-6 columns">
+                  {featureNodes.slice(0, 4)}
+                </div>
+                <div className="small-6 columns">
+                  {featureNodes.slice(4, 8)}
+                </div>
+              </div>
             </div>
           </div>
           <div className="row">

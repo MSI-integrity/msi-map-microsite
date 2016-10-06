@@ -55,6 +55,9 @@ var Nav = React.createClass({
         <div className="top-bar" id="realEstateMenu">
           <div className="top-bar-left">
             <ul className="menu" data-responsive-menu="accordion">
+              <li>
+                <img className="top-nav-logo" src="http://wiseowlwebdesigns.com/core/img/logoPage/target.png" />
+              </li>
               <li className="menu-text">Mapping Multi-Stakeholder Initiatives</li>
             </ul>
           </div>
