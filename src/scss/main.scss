@@ -63,10 +63,15 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-.qa-row {
+.qa-row, .qa-row-summary {
   margin-top: 20px;
   padding: $box-padding;
   background-color: $secondary-color;
+
+  h2 {
+    display: inline-block;
+    margin-right: 10px;
+  }
 }
 
 .report-content-top, .report-content-bottom, .data-content, .researchers-content {
