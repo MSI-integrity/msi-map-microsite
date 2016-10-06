@@ -16,7 +16,7 @@ gulp.task('js', function () {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('default', function () {
+gulp.task('default', ['sass', 'js'], function () {
     gulp.watch('./scss/*.scss', ['sass']);
     gulp.watch('./src/scripts/*.jsx', ['js']);
 });
