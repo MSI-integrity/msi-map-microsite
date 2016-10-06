@@ -18,32 +18,33 @@ var Nav = React.createClass({
   },
 
   renderMenuItems: function () {
+    var activeClass = 'active-link';
     var itemData = [
       {
         onClick: this.goToReportTab,
-        className: this.props.hashValue == '' && 'active',
+        className: this.props.hashValue == '' && activeClass,
         text: 'The Report'
       },
       {
         onClick: this.goToDataTab,
-        className: this.props.hashValue ==  'data' && 'active',
+        className: this.props.hashValue ==  'data' && activeClass,
         text: 'The Data'
       },
       {
         onClick: this.goToExploreTab,
-        className: this.props.hashValue == 'explore' && 'active',
+        className: this.props.hashValue == 'explore' && activeClass,
         text: 'Explore'
       },
       {
         onClick: this.goToQuestionAndAnswerTab,
-        className: this.props.hashValue == 'questions' && 'active',
+        className: this.props.hashValue == 'questions' && activeClass,
         text: 'Q&A'
       }
     ];
     return itemData.map(function (datum, i) {
       return (
-        <li key={i}>
-          <a className={'menu-link ' + datum.className} onClick={datum.onClick}>{datum.text}</a>
+        <li className={"menu-link " + datum.className} key={i}>
+          <a onClick={datum.onClick}>{datum.text}</a>
         </li>
       )
     });

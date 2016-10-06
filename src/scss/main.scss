@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .active {
-  background-color: $primary-color;
+  background-color: $secondary-color;
 }
 
 .msi-info {
@@ -138,11 +138,23 @@ h1, h2, h3, h4, h5 {
 
 .menu-link {
     font-weight: bold;
-    &.active {
-    color: $secondary-color;
+    margin-right: 10px;
     &:hover {
-      color: $secondary-color;
-      cursor: default;
+      background-color: $primary-color;
     }
+    a {
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    &.active-link {
+      background-color: $tertiary-color;
+      a {
+        color: $secondary-color;
+        &:hover {
+          color: $secondary-color;
+          cursor: default;
+        }
+      }
   }
 }

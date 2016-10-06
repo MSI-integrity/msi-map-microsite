@@ -13,7 +13,7 @@ gulp.task('sass', function () {
         'bower_components/slick-carousel/slick'
       ]
     }))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    // .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('build/'));
 });
 
@@ -50,10 +50,12 @@ gulp.task('static', function () {
 
 gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'static']);
 
-gulp.task('default', ['build'], function () {
+gulp.task('watch', ['build'], function () {
     gulp.watch('./src/scss/*.scss', ['sass']);
     gulp.watch('./src/scripts/*.jsx', ['js']);
     gulp.watch('./src/html/index.html', ['html']);
     gulp.watch('./static/**/*.{png,json,xlsx}', ['static']);
 
 });
+
+gulp.task('default', ['build']);
