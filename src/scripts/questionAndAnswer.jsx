@@ -4,8 +4,8 @@ var QuestionAndAnswer = React.createClass({
     render: function () {
       return (
         <div className={"tab" + (this.props.activeTab ? ' active-tab' : '')}>
-          <div className="qa-title">
-            <div className="row">
+          <div className="row qa-title">
+            <div className="small-12 columns">
               <h1>Q&A</h1>
             </div>
           </div>

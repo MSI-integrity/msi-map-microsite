@@ -24148,10 +24148,10 @@
 	      { className: "tab" + (this.props.activeTab ? ' active-tab' : '') },
 	      React.createElement(
 	        'div',
-	        { className: 'qa-title' },
+	        { className: 'row qa-title' },
 	        React.createElement(
 	          'div',
-	          { className: 'row' },
+	          { className: 'small-12 columns' },
 	          React.createElement(
 	            'h1',
 	            null,
