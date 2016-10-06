@@ -30,6 +30,7 @@ var Report = React.createClass({
     },
 
     render: function () {
+      var photoRoot = 'static/images/photos/';
       return (
         <div className={"tab" + (this.props.activeTab ? ' active-tab' : '')}>
           <div className="row report-content-top">
@@ -40,16 +41,19 @@ var Report = React.createClass({
             <div className="small-6 columns">
               <div className="single-item">
                 <div>
-                  <img className="orbit-image" src="https://s-media-cache-ak0.pinimg.com/originals/02/65/fe/0265fe0b04f990cb07f1d11c0b15ad4e.jpg" alt="Space" />
+                  <img className="orbit-image" src={photoRoot + 'slider1.jpg'} alt="Space" />
                 </div>
                 <div>
-                  <img className="orbit-image" src="http://3.bp.blogspot.com/-kTB6PIKLFI8/VXxTiGbf88I/AAAAAAAAc48/mRJmPWszVm0/s400/Adventure%2BTime%2BAppisodev.webp" alt="Space" />
+                  <img className="orbit-image" src={photoRoot + 'slider2.jpg'} alt="Space" />
                 </div>
                 <div>
-                  <img className="orbit-image" src="http://images6.fanpop.com/image/photos/33400000/Adventure-Time-BroFist-ask-the-adventure-time-ocs-33458232-400-250.jpg" alt="Space" />
+                  <img className="orbit-image" src={photoRoot + 'slider3.jpg'} alt="Space" />
                 </div>
                 <div>
-                  <img className="orbit-image" src="http://vignette3.wikia.nocookie.net/adventuretimebdm/images/6/6a/Atwallwidescreen.jpg/revision/latest?cb=20110516210801" alt="Space" />
+                  <img className="orbit-image" src={photoRoot + 'slider4.jpg'} alt="Space" />
+                </div>
+                <div>
+                  <img className="orbit-image" src={photoRoot + 'slider5.jpg'} alt="Space" />
                 </div>
               </div>
             </div>
