@@ -24227,7 +24227,7 @@
 	          React.createElement(
 	            'h2',
 	            null,
-	            'Some Question'
+	            'Some Other Question'
 	          ),
 	          React.createElement(
 	            'p',
