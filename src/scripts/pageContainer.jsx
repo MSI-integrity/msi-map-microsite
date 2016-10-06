@@ -3,7 +3,7 @@ var React = require('react'),
     Data = require('./data'),
     Explore = require('./explore'),
     Footer = require('./footer'),
-    QuestionAndAnswer = require('./QuestionAndAnswer'),
+    QuestionAndAnswer = require('./questionAndAnswer'),
     Report = require('./report');
 
 var PageContainer = React.createClass({
