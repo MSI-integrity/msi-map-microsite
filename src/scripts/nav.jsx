@@ -43,7 +43,7 @@ var Nav = React.createClass({
     return itemData.map(function (datum, i) {
       return (
         <li key={i}>
-          <a className={datum.className} onClick={datum.onClick}>{datum.text}</a>
+          <a className={'menu-link ' + datum.className} onClick={datum.onClick}>{datum.text}</a>
         </li>
       )
     });
