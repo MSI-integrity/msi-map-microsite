@@ -44,7 +44,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('static', function () {
-  gulp.src('./static/**/*')
+  gulp.src('./static/**/*.{png,json,xlsx}')
     .pipe(gulp.dest('./build/static'));
 });
 
@@ -54,6 +54,6 @@ gulp.task('default', ['build'], function () {
     gulp.watch('./src/scss/*.scss', ['sass']);
     gulp.watch('./src/scripts/*.jsx', ['js']);
     gulp.watch('./src/html/index.html', ['html']);
-    gulp.watch('./static/**/*', ['static']);
+    gulp.watch('./static/**/*.{png,json,xlsx}', ['static']);
 
 });

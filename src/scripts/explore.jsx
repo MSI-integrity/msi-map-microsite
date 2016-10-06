@@ -204,7 +204,7 @@ var Explore = React.createClass({
           </div>
           <div className="row">
             <div className="large-4 large-centered columns text-center results-summary">
-              <h3>{this.filteredData(this.state.searchTerm, this.state.selectedFeatures).length} Results</h3>
+              <h2>{this.filteredData(this.state.searchTerm, this.state.selectedFeatures).length} Results</h2>
             </div>
           </div>
         </div>

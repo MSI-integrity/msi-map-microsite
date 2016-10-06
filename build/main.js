@@ -22014,7 +22014,7 @@
 	          'div',
 	          { className: 'large-4 large-centered columns text-center results-summary' },
 	          React.createElement(
-	            'h3',
+	            'h2',
 	            null,
 	            this.filteredData(this.state.searchTerm, this.state.selectedFeatures).length,
 	            ' Results'
@@ -24246,7 +24246,7 @@
 	      { className: "tab" + (this.props.activeTab ? ' active-tab' : '') },
 	      React.createElement(
 	        'div',
-	        { className: 'row report-content' },
+	        { className: 'row report-content-top' },
 	        React.createElement(
 	          'div',
 	          { className: 'small-6 columns' },
@@ -24292,7 +24292,7 @@
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: 'row report-content' },
+	        { className: 'row report-content-bottom' },
 	        React.createElement(
 	          'div',
 	          { className: 'small-12 large-centered columns' },

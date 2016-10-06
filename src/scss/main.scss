@@ -7,9 +7,9 @@ $slick-dot-size: 50px;
 
 @include foundation-everything;
 
-$primary-color: #C35A2D;
-$secondary-color: #FFA179;
-$tertiary-color: #3B46CC;
+$primary-color: #C0C0C0;
+$secondary-color: #FFFFFF;
+$tertiary-color: #336699;
 
 // Padding for all the box-looking elements
 $box-padding: 20px;
@@ -18,19 +18,12 @@ body {
   background-color: $primary-color;
 }
 
+h1, h2, h3, h4, h5 {
+  color: $tertiary-color;
+}
+
 .active {
   background-color: $primary-color;
-}
-
-.feature-selector {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.feature-selector-feature {
-  float: left;
-  text-align: center;
-  font-size: 14px;
 }
 
 .msi-info {
@@ -38,10 +31,16 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: $box-padding;
+
+  h4 {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
 }
 
 .nav {
   .top-bar, .menu {
+    color: $tertiary-color;
     background-color: $secondary-color;
   }
 }
@@ -57,7 +56,10 @@ body {
 
 .qa-title {
   background-color: $tertiary-color;
-  padding-left: 10px;
+  padding-left: $box-padding;
+  h1 {
+    color: $secondary-color;
+  }
 }
 
 .qa-row {
@@ -66,10 +68,14 @@ body {
   background-color: $secondary-color;
 }
 
-.report-content, .data-content, .researchers-content {
+.report-content-top, .report-content-bottom, .data-content, .researchers-content {
   background-color: $secondary-color;
   padding: $box-padding;
   margin-top: 20px;
+}
+
+.report-content-top {
+  padding-top: 30px;
 }
 
 .researchers-content {
@@ -80,9 +86,30 @@ body {
 }
 
 .search-container {
-  background-color: $tertiary-color;
-  padding-top: 20px;
-  padding-bottom: 5px;
+  background-color: $secondary-color;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  .feature-selector {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .feature-selector-feature {
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    div {
+      // Hacky way to get text to center even if it's bigger than the div
+      margin-left: -10%;
+      margin-right: -10%
+    }
+    &.active {
+      background-color: $tertiary-color;
+      color: $secondary-color;
+    }
+  }
 }
 
 .top-nav-logo {
