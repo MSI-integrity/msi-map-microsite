@@ -43,13 +43,16 @@ var QuestionAndAnswer = React.createClass({
     var summaryNodes = this.questionsAndAnswers.map(function (info, index) {
       var scrollToThisQuestion = () => {scrollToQuestion(index);};
       return (
-        <div key={index}>
+        <div className="question-toc-item" key={index}>
           <a onClick={scrollToThisQuestion}>{info.question}</a>
         </div>
       );
     });
     return (
       <div className="row qa-row-summary">
+        <div className="small-12 columns">
+          <h1>Q&A</h1>
+        </div>
         <div className="small-12 columns">
           {summaryNodes}
         </div>
@@ -73,11 +76,6 @@ var QuestionAndAnswer = React.createClass({
   render: function () {
     return (
       <div className={"tab" + (this.props.activeTab ? ' active-tab' : '')}>
-        <div className="row qa-title">
-          <div className="small-12 columns">
-            <h1>Q&A</h1>
-          </div>
-        </div>
         {this.renderQASummary()}
         {this.renderQARows()}
       </div>

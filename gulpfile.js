@@ -10,7 +10,7 @@ gulp.task('sass', function () {
     .pipe(sass({
       includePaths: [
         'bower_components/foundation-sites/scss',
-        'bower_components/slick-carousel/slick'
+        'node_modules/slick-carousel/slick'
       ]
     }))
     // .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -32,7 +32,6 @@ gulp.task('js', function () {
 gulp.task('bower-components', function () {
   gulp.src([
     'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/slick-carousel/slick/slick.min.js'
   ], {base: 'bower_components/'})
     .pipe(rename({dirname: ''}))
     .pipe(gulp.dest('./build/vendor'));

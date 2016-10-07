@@ -168,7 +168,6 @@ var Explore = React.createClass({
       } else {
         selectedFeatures.splice(index, 1);
       }
-      console.log(selectedFeatures);
       this.setState({selectedFeatures: selectedFeatures}, this.filterData);
     },
 
@@ -227,8 +226,8 @@ var Explore = React.createClass({
       return (
         <div key={-1} className="search-container row">
           <div className="row">
-            <div className="large-6 large-centered columns">
-              <input type="text" placeholder="Name of MSI and mission" onChange={this.handleSearchTermChange}/>
+            <div className="large-7 large-centered columns">
+              <input className="search-box" type="search" placeholder="Name of MSI and mission" onChange={this.handleSearchTermChange}/>
             </div>
           </div>
           <div className="row">

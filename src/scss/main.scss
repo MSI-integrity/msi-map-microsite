@@ -2,7 +2,7 @@
 @import 'slick.scss';
 
 // Custom dot size for slick-theme
-$slick-dot-size: 50px;
+// $slick-dot-size: 50px;
 @import 'slick-theme.scss';
 
 @include foundation-everything;
@@ -13,6 +13,8 @@ $tertiary-color: #336699;
 
 // Padding for all the box-looking elements
 $box-padding: 20px;
+
+$shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 body {
   background-color: $primary-color;
@@ -31,6 +33,7 @@ h1, h2, h3, h4, h5 {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: $box-padding;
+  box-shadow: $shadow;
 
   h4 {
     margin-bottom: 0;
@@ -39,6 +42,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav {
+  box-shadow: $shadow;
+
   .top-bar, .menu {
     color: $tertiary-color;
     background-color: $secondary-color;
@@ -54,23 +59,19 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-.qa-title {
-  background-color: $tertiary-color;
-  padding: $box-padding;
-  padding-bottom: 15px;
-  h1 {
-    color: $secondary-color;
-  }
-}
-
 .qa-row, .qa-row-summary {
   margin-top: 20px;
   padding: $box-padding;
   background-color: $secondary-color;
+  box-shadow: $shadow;
 
   h2 {
     display: inline-block;
     margin-right: 10px;
+  }
+
+  .question-toc-item {
+    padding-left: 10px;
   }
 }
 
@@ -78,6 +79,7 @@ h1, h2, h3, h4, h5 {
   background-color: $secondary-color;
   padding: $box-padding;
   margin-top: 20px;
+  box-shadow: $shadow;
 }
 
 .report-content-top {
@@ -95,6 +97,7 @@ h1, h2, h3, h4, h5 {
   background-color: $secondary-color;
   padding-top: 30px;
   padding-bottom: $box-padding;
+  box-shadow: $shadow;
 
   .feature-selector {
     padding-top: 10px;
@@ -107,6 +110,8 @@ h1, h2, h3, h4, h5 {
     font-size: 14px;
     padding-top: 10px;
     padding-bottom: 10px;
+    cursor: pointer;
+
     div {
       // Hacky way to get text to center even if it's bigger than the div
       margin-left: -10%;
@@ -126,9 +131,9 @@ h1, h2, h3, h4, h5 {
 
 .download-data-container {
   margin-top: 30px;
-  border: 5px solid $primary-color;
   background-color: $tertiary-color;
   padding-top: 20px;
+  box-shadow: $shadow;
 }
 
 .download-format-chooser {

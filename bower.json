@@ -2,12 +2,9 @@
   "name": "PROJECT_NAME",
   "dependencies": {
     "jquery": "^3.1.1",
-    "foundation-sites": "^6.2.3",
-    "lunr.js": "lunr#^0.7.1",
-    "slick-carousel": "^1.6.0"
+    "foundation-sites": "^6.2.3"
   },
   "resolutions": {
-    "jquery": "~2.2.0",
-    "lunr.js": "^0.7.1"
+    "jquery": "~2.2.0"
   }
 }
