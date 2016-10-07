@@ -47,7 +47,12 @@ gulp.task('static', function () {
     .pipe(gulp.dest('./build/static'));
 });
 
-gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'static']);
+gulp.task('fonts', function () {
+  gulp.src('./node_modules/slick-carousel/slick/fonts/*')
+    .pipe(gulp.dest('./build/fonts'));
+});
+
+gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'static', 'fonts']);
 
 gulp.task('watch', ['build'], function () {
     gulp.watch('./src/scss/*.scss', ['sass']);
