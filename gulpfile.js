@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-    jeditor = require("gulp-json-editor");
+    jeditor = require("gulp-json-editor"),
+    jsonminify = require('gulp-jsonminify'),
     sass = require('gulp-sass'),
     webpack = require('gulp-webpack'),
     cleanCSS = require('gulp-clean-css'),
@@ -47,14 +48,14 @@ gulp.task('html', function () {
 gulp.task('index', function () {
   gulp.src('./data/data.json')
     .pipe(jeditor(buildIndex))
+    .pipe(jsonminify())
     .pipe(rename('indexed_data.json'))
     .pipe(gulp.dest('./build/data'));
 });
 
-gulp.task('data', ['index'], function () {
+gulp.task('data', function () {
   gulp.src('./data/*.{json,xslx}')
     .pipe(gulp.dest('./build/data'));
-    // TODO also build index?
 });
 
 gulp.task('images', function () {
@@ -73,7 +74,6 @@ gulp.task('watch', ['build'], function () {
     gulp.watch('./src/scss/*.scss', ['sass']);
     gulp.watch('./src/scripts/*.jsx', ['js']);
     gulp.watch('./src/html/index.html', ['html']);
-    gulp.watch('./static/**/*.{png,jpg,json,xlsx}', ['static']);
 });
 
 gulp.task('default', ['build']);

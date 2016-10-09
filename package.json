@@ -20,6 +20,7 @@
     "gulp-concat": "latest",
     "gulp-connect": "latest",
     "gulp-json-editor": "^2.2.1",
+    "gulp-jsonminify": "^1.0.0",
     "gulp-minify": "0.0.14",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "latest",
