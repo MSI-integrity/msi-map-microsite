@@ -1,12 +1,12 @@
 var lunr = require('lunr'),
     React = require('react');
 
-var featureIconPrefix = 'static/images/feature_icons/';
+var featureIconPrefix = 'images/feature_icons/';
 
 var Explore = React.createClass({
     loadDataFromServer: function() {
       $.ajax({
-        url: 'static/data.json',
+        url: 'data/data.json',
         dataType: 'json',
         cache: false,
         success: function(data) {

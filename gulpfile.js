@@ -42,9 +42,15 @@ gulp.task('html', function () {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('static', function () {
-  gulp.src('./static/**/*.{png,jpg,json,xlsx}')
-    .pipe(gulp.dest('./build/static'));
+gulp.task('data', function () {
+  gulp.src('./data/**/*.{json,xslx}')
+    .pipe(gulp.dest('./build/data'));
+    // TODO also build index?
+});
+
+gulp.task('images', function () {
+  gulp.src('./images/**/*.{png,jpg}')
+    .pipe(gulp.dest('./build/images'));
 });
 
 gulp.task('fonts', function () {
@@ -52,7 +58,7 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./build/fonts'));
 });
 
-gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'static', 'fonts']);
+gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'data', 'images', 'fonts']);
 
 gulp.task('watch', ['build'], function () {
     gulp.watch('./src/scss/*.scss', ['sass']);

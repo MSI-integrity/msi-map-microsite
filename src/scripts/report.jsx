@@ -10,7 +10,7 @@ var Report = React.createClass({
   },
 
   renderImageSlider: function () {
-    var photoRoot = 'static/images/photos/',
+    var photoRoot = 'images/photos/',
         settings = {
           arrows: false,
           autoplay: true,
