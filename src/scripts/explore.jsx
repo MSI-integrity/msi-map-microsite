@@ -6,12 +6,12 @@ var featureIconPrefix = 'images/feature_icons/';
 var Explore = React.createClass({
     loadDataFromServer: function() {
       $.ajax({
-        url: 'data/data.json',
+        url: 'data/indexed_data.json',
         dataType: 'json',
         cache: false,
-        success: function(data) {
-          data = this.addIds(data.data);
-          var index = this.createSearchIndex(data);
+        success: function(indexed_data) {
+          var data = indexed_data.data,
+              index = lunr.Index.load(indexed_data.index);
           this.setState({data: data, filteredData: data, searchIndex: index});
         }.bind(this),
         error: function(xhr, status, err) {
@@ -27,24 +27,6 @@ var Explore = React.createClass({
         selectedFeatures: [],
         searchTerm: ""
       };
-    },
-
-    addIds: function (data) {
-      for (var i = 0; i < data.length; i++) {
-        data[i].id = i;
-      }
-      return data;
-    },
-
-    createSearchIndex: function (data) {
-      var index = lunr(function() {
-        this.field('name', {boost: 10});
-        this.field('mission');
-      });
-      for (var i = 0; i < data.length; i++) {
-        index.add(data[i]);
-      }
-      return index;
     },
 
     componentDidMount: function() {

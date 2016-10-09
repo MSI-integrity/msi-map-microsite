@@ -19,6 +19,7 @@
     "gulp-clean-css": "^2.0.13",
     "gulp-concat": "latest",
     "gulp-connect": "latest",
+    "gulp-json-editor": "^2.2.1",
     "gulp-minify": "0.0.14",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "latest",
@@ -26,6 +27,7 @@
     "gulp-util": "latest",
     "gulp-watch": "^4.3.10",
     "gulp-webpack": "latest",
+    "through2": "^2.0.1",
     "webpack": "^1.12.0"
   },
   "scripts": {

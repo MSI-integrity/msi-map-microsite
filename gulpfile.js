@@ -1,9 +1,11 @@
 var gulp = require('gulp'),
+    jeditor = require("gulp-json-editor");
     sass = require('gulp-sass'),
     webpack = require('gulp-webpack'),
     cleanCSS = require('gulp-clean-css'),
     minify = require('gulp-minify'),
-    rename = require("gulp-rename");
+    rename = require("gulp-rename"),
+    buildIndex = require('./build_index.js');
 
 gulp.task('sass', function () {
   gulp.src('./src/scss/*.scss')
@@ -42,8 +44,15 @@ gulp.task('html', function () {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('data', function () {
-  gulp.src('./data/**/*.{json,xslx}')
+gulp.task('index', function () {
+  gulp.src('./data/data.json')
+    .pipe(jeditor(buildIndex))
+    .pipe(rename('indexed_data.json'))
+    .pipe(gulp.dest('./build/data'));
+});
+
+gulp.task('data', ['index'], function () {
+  gulp.src('./data/*.{json,xslx}')
     .pipe(gulp.dest('./build/data'));
     // TODO also build index?
 });
@@ -58,7 +67,7 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./build/fonts'));
 });
 
-gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'data', 'images', 'fonts']);
+gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'index', 'data', 'images', 'fonts']);
 
 gulp.task('watch', ['build'], function () {
     gulp.watch('./src/scss/*.scss', ['sass']);
