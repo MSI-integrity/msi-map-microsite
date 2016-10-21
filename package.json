@@ -10,6 +10,7 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-slick": "^0.14.5",
+    "react-tooltip": "^3.2.1",
     "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
