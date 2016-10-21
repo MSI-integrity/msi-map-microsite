@@ -9,7 +9,7 @@ var Footer = React.createClass({
       );
     }
     return (
-      <div className="row text-center">
+      <div className="row text-center footer">
         <p>© 2016 <a href="http://www.msi-integrity.org">MSI Integrity</a></p>
         {photoCopyright}
       </div>
