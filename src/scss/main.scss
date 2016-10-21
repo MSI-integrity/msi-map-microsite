@@ -207,26 +207,28 @@ h1, h2, h3, h4, h5 {
 }
 
 .search-term {
-  color: $tertiary-color;
+  color: $primary-color;
 }
 
 .menu-link {
     font-weight: bold;
     margin-right: 10px;
+
     &:hover {
-      background-color: $primary-color;
+      background-color: white;
     }
     a {
+      color: $tertiary-color;
       &:hover {
-        color: $secondary-color;
+        color: $primary-color;
       }
     }
     &.active-link {
-      background-color: $tertiary-color;
+      background-color: $primary-color;
       a {
-        color: $secondary-color;
+        color: $tertiary-color;
         &:hover {
-          color: $secondary-color;
+          color: $tertiary-color;
           cursor: default;
         }
       }
