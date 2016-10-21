@@ -129,7 +129,7 @@ var Explore = React.createClass({
             </div>
           </div>
           <div className="large-2 columns end features-list">
-            <h4>Features</h4>
+            <h4>Elements</h4>
             {this.generateFeatureBadges(datum.features)}
           </div>
         </div>
@@ -163,7 +163,7 @@ var Explore = React.createClass({
         );
       }
       if (selectedFeatures.length) {
-        featuresText = 'With the feature' + (selectedFeatures.length === 1 ? ' ' : 's ');
+        featuresText = 'With the element' + (selectedFeatures.length === 1 ? ' ' : 's ');
         for (var i = 0; i < selectedFeatures.length; i++) {
             featuresText += '<span class="search-term">' + this.allFeatures[selectedFeatures[i]].description + '</span>';
             if (i < selectedFeatures.length - 2) {
@@ -173,7 +173,7 @@ var Explore = React.createClass({
             }
         }
       } else {
-        featuresText = 'Matching any features'
+        featuresText = 'Matching any elements'
       }
       return (
         <div className="large-4 large-centered columns text-center results-summary">

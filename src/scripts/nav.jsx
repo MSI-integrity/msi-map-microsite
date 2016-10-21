@@ -27,7 +27,7 @@ var Nav = React.createClass({
       {
         onClick: this.goToHomeTab,
         className: this.props.hashValue == '' && activeClass,
-        text: 'Home'
+        text: 'Overview'
       },
       {
         onClick: this.goToReportTab,
