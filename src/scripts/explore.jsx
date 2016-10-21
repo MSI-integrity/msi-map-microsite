@@ -231,6 +231,15 @@ var Explore = React.createClass({
       );
     },
 
+    renderInfoBox: function () {
+      return (
+        <div className="row explore-info">
+          <p>In addition to collecting basic data about the identity of each MSI, we have collected and coded data on initiatives based on their scope and mandate, internal decision-making and governance processes, and operations. Use the search bar below to find specific initiatives, or select MSI element icons to filter the search results.</p>
+          <p>For more information about the threshold criteria used for each MSI feature see our Project Methodology.</p>
+        </div>
+      );
+    },
+
     render: function () {
       var generateFeatureBadges = this.generateFeatureBadges;
       var renderTableRow = this.renderTableRow;
@@ -240,6 +249,7 @@ var Explore = React.createClass({
       dataNodes.unshift(this.renderSearchBar());
       return (
         <div className={"msi-info-container tab" + (this.props.activeTab ? ' active-tab' : '')}>
+          {this.renderInfoBox()}
           {dataNodes}
         </div>
       );

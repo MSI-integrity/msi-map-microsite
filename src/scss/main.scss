@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-.report-content-top, .report-content-bottom, .data-content, .researchers-content {
+.report-content-top, .report-content-bottom, .data-content, .researchers-content, .project-methodology {
   background-color: $box-background-color;
   padding: $box-padding;
   margin-top: 20px;
@@ -271,4 +271,10 @@ h1, h2, h3, h4, h5 {
     @extend .body-font;
     margin: 0;
   }
+}
+
+.explore-info {
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
 }

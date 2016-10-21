@@ -56,6 +56,7 @@ var Report = React.createClass({
         <div className="row report-content-bottom">
           <div className="row collapse">
             <h1>What's Inside</h1>
+            <p>“Mapping Multi-Stakeholder Initiatives: Proliferation and Practice” uses data from this mapping project to illuminate trends in the functions and operations of MSIs as part of a larger global governance landscape. Summary data points and graphics may be found below.</p>
           </div>
           <div className="row collapse">
             <div className="large-6 columns">
