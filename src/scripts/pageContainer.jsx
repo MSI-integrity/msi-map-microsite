@@ -45,7 +45,7 @@ var PageContainer = React.createClass({
       <div>
         {React.createElement(Nav, {hashValue: this.props.hashValue})}
         {this.renderTabs()}
-        {React.createElement(Footer)}
+        {React.createElement(Footer, {homepage: this.tabElementFromHashValue() == Home})}
       </div>
     );
   }

@@ -35,14 +35,14 @@ var Nav = React.createClass({
         text: 'The Report'
       },
       {
-        onClick: this.goToDataTab,
-        className: this.props.hashValue ==  'data' && activeClass,
-        text: 'The Data'
-      },
-      {
         onClick: this.goToExploreTab,
         className: this.props.hashValue == 'explore' && activeClass,
         text: 'Explore'
+      },
+      {
+        onClick: this.goToDataTab,
+        className: this.props.hashValue ==  'data' && activeClass,
+        text: 'The Data'
       },
       {
         onClick: this.goToQuestionAndAnswerTab,
