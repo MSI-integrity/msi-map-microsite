@@ -7,9 +7,20 @@
 
 @include foundation-everything;
 
-$primary-color: #C0C0C0;
-$secondary-color: #FFFFFF;
-$tertiary-color: #336699;
+$primary-color: #966b54;
+$secondary-color: #38180b;
+$box-background-color: #ebebeb;
+$tertiary-color: #FFFFFF;
+
+.header-font {
+  font-weight: bold;
+  font: Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.body-font {
+  font-family: garamond;
+}
 
 // Padding for all the box-looking elements
 $box-padding: 20px;
@@ -21,7 +32,8 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  color: $tertiary-color;
+  @extend .header-font;
+  color: $secondary-color;
 }
 
 .active {
@@ -29,7 +41,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .msi-info {
-  background-color: $secondary-color;
+  background-color: $box-background-color;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: $box-padding;
@@ -42,32 +54,70 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav {
+  @extend .header-font;
   box-shadow: $shadow;
 
   .top-bar, .menu {
     color: $tertiary-color;
     background-color: $secondary-color;
+
+    .menu-text {
+      font-size: 20px;
+    }
   }
 }
 
 .tab {
+  @extend .body-font;
   display: none;
-  margin-top: 20px;
+  // margin-top: 20px;
   margin-bottom: 20px;
   &.active-tab {
     display: block;
   }
 }
 
+.homepage-top {
+  background-image: url('images/photos/homepage.jpg');
+  background-size: cover;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .homepage-box {
+    @extend .body-font;
+    background-color: $primary-color;
+    padding: $box-padding;
+    box-shadow: $shadow;
+    color: white;
+    h4 {
+      color: white;
+    }
+  }
+}
+
+.homepage-bottom {
+  @extend .body-font;
+  background-color: $secondary-color;
+  color: white;
+  padding-top: $box-padding;
+  padding-bottom:$box-padding;
+  margin-bottom: 20px;
+}
+
 .qa-row, .qa-row-summary {
   margin-top: 20px;
   padding: $box-padding;
-  background-color: $secondary-color;
+  background-color: $box-background-color;
   box-shadow: $shadow;
 
-  h2 {
-    display: inline-block;
+  h3 {
+    display: inline;
     margin-right: 10px;
+  }
+
+  .question-title {
+    margin-bottom: 10px;
   }
 
   .question-toc-item {
@@ -76,10 +126,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .report-content-top, .report-content-bottom, .data-content, .researchers-content {
-  background-color: $secondary-color;
+  background-color: $box-background-color;
   padding: $box-padding;
   margin-top: 20px;
   box-shadow: $shadow;
+}
+
+.report-content-top {
+  padding-bottom: 30px;
 }
 
 .report-content-top {
@@ -94,10 +148,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .search-container {
-  background-color: $secondary-color;
+  background-color: $box-background-color;
   padding-top: 30px;
   padding-bottom: $box-padding;
   box-shadow: $shadow;
+  margin-top: $box-padding;
 
   .feature-selector {
     padding-top: 10px;

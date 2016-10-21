@@ -1,8 +1,12 @@
 var React = require('react');
 
 var Nav = React.createClass({
-  goToReportTab: function () {
+  goToHomeTab: function () {
     window.location.hash = "";
+  },
+
+  goToReportTab: function () {
+    window.location.hash = "report";
   },
 
   goToDataTab: function() {
@@ -21,8 +25,13 @@ var Nav = React.createClass({
     var activeClass = 'active-link';
     var itemData = [
       {
-        onClick: this.goToReportTab,
+        onClick: this.goToHomeTab,
         className: this.props.hashValue == '' && activeClass,
+        text: 'Home'
+      },
+      {
+        onClick: this.goToReportTab,
+        className: this.props.hashValue == 'report' && activeClass,
         text: 'The Report'
       },
       {
@@ -56,9 +65,6 @@ var Nav = React.createClass({
         <div className="top-bar">
           <div className="top-bar-left">
             <ul className="menu" data-responsive-menu="accordion">
-              <li>
-                <img className="top-nav-logo" src="http://wiseowlwebdesigns.com/core/img/logoPage/target.png" />
-              </li>
               <li className="menu-text">Mapping Multi-Stakeholder Initiatives</li>
             </ul>
           </div>

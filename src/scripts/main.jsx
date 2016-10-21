@@ -7,6 +7,7 @@ var handleHashChange = function () {
   var hashValue = window.location.hash.replace(/^#/, "");
   switch(hashValue) {
     case "":
+    case "report":
     case "data":
     case "explore":
     case "questions":

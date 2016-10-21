@@ -1,5 +1,6 @@
 var React = require('react'),
     Nav = require('./nav'),
+    Home = require('./home'),
     Data = require('./data'),
     Explore = require('./explore'),
     Footer = require('./footer'),
@@ -10,6 +11,8 @@ var PageContainer = React.createClass({
   tabElementFromHashValue: function () {
     switch (this.props.hashValue) {
       case "":
+        return Home;
+      case "report":
         return Report;
       case "data":
         return Data;
@@ -24,7 +27,7 @@ var PageContainer = React.createClass({
 
   renderTabs: function () {
     var tabElementToShow = this.tabElementFromHashValue();
-    return [Report, Data, Explore, QuestionAndAnswer].map((tabElement, index) => {
+    return [Home, Report, Data, Explore, QuestionAndAnswer].map((tabElement, index) => {
       var isActiveTab = false;
       if (tabElement === tabElementToShow) {
         isActiveTab = true;
