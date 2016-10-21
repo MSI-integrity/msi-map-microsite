@@ -59,7 +59,7 @@ gulp.task('data', function () {
 });
 
 gulp.task('images', function () {
-  gulp.src('./images/**/*.{png,jpg}')
+  gulp.src('./images/**/*.{png,jpg,ico}')
     .pipe(gulp.dest('./build/images'));
 });
 
