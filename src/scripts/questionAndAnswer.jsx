@@ -56,7 +56,7 @@ var QuestionAndAnswer = React.createClass({
       var scrollToThisQuestion = () => {scrollToQuestion(index);};
       return (
         <div className="question-toc-item" key={index}>
-          <a onClick={scrollToThisQuestion}>{info.question}</a>
+          <strong><a onClick={scrollToThisQuestion}>{info.question}</a></strong>
         </div>
       );
     });

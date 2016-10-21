@@ -61,6 +61,10 @@ h1, h2, h3, h4, h5 {
     color: $tertiary-color;
     background-color: $secondary-color;
 
+    a {
+      color: $tertiary-color;
+    }
+
     .menu-text {
       font-size: 20px;
     }
@@ -116,6 +120,13 @@ h1, h2, h3, h4, h5 {
     margin-right: 10px;
   }
 
+  a {
+    color: $secondary-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
   .question-title {
     margin-bottom: 10px;
   }
@@ -133,11 +144,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .report-content-top {
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.report-content-top {
-  padding-top: 30px;
+.report-content-bottom {
+  padding: 30px;
 }
 
 .researchers-content {
@@ -186,7 +198,7 @@ h1, h2, h3, h4, h5 {
 
 .download-data-container {
   margin-top: 30px;
-  background-color: $tertiary-color;
+  background-color: $primary-color;
   padding-top: 20px;
   box-shadow: $shadow;
 }

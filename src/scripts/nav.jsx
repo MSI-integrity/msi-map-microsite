@@ -65,7 +65,7 @@ var Nav = React.createClass({
         <div className="top-bar">
           <div className="top-bar-left">
             <ul className="menu" data-responsive-menu="accordion">
-              <li className="menu-text">Mapping Multi-Stakeholder Initiatives</li>
+              <a href="#"><li className="menu-text">Mapping Multi-Stakeholder Initiatives</li></a>
             </ul>
           </div>
           <div className="top-bar-right">
