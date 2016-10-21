@@ -31,6 +31,23 @@ body {
   background-color: $primary-color;
 }
 
+$logo-banner-height: 60px;
+$logo-banner-padding: 5px;
+
+.logo-banner {
+  background-color: $tertiary-color;
+  padding: 5px;
+  height: $logo-banner-height;
+  h5 {
+    color: $primary-color;
+    display: inline-block;
+  }
+  img {
+    height: $logo-banner-height - $logo-banner-padding * 2;
+    margin-left: 10px;
+  }
+}
+
 h1, h2, h3, h4, h5 {
   @extend .header-font;
   color: $secondary-color;

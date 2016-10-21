@@ -62,6 +62,12 @@ var Nav = React.createClass({
   render: function () {
     return (
       <div className="nav">
+        <div className="logo-banner">
+          <h5>A joint initiative of</h5>
+          <img src="images/org_icons/dhrc-logo.png" />
+          <img src="images/org_icons/msi-integrity.png" />
+          <img src="images/org_icons/miller-chevalier-logo.png" />
+        </div>
         <div className="top-bar">
           <div className="top-bar-left">
             <ul className="menu" data-responsive-menu="accordion">
