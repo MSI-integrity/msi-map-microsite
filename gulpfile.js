@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     minify = require('gulp-minify'),
     rename = require("gulp-rename"),
-    buildIndex = require('./build_index.js');
+    s2j = require('gulp-sheets2json'),
+    buildIndex = require('./build_index.js'),
+    convertFromXlsx = require('./convert_data.js');
 
 gulp.task('sass', function () {
   gulp.src('./src/scss/*.scss')
@@ -43,6 +45,12 @@ gulp.task('bower-components', function () {
 gulp.task('html', function () {
   gulp.src('./src/html/index.html')
     .pipe(gulp.dest('./build'));
+});
+
+gulp.task('convert', function() {
+  gulp.src('data/data.xlsx')
+    .pipe(s2j())
+    .pipe(gulp.dest('data.json'));
 });
 
 gulp.task('index', function () {

@@ -71,7 +71,7 @@ var Explore = React.createClass({
         icon_url: featureIconPrefix + "evaluations.png",
         explanation: "Evaluations: This icon indicates whether the MSI requires that third party evaluations be used to monitor individual<br />member/company compliance with initiative standards. “Assessments”, “audits,” and “verification processes” were all considered<br>as evaluation processes for the purposes of this data point. For more information on this data point, please see our Project Methodology."
       },
-      grievance_mechanism: {
+      grievance_mechanisms: {
         description: "Grievance Mechanism",
         icon_url: featureIconPrefix + "grievance_mechanism.png",
         explanation: "Grievance Mechanism: This icon indicates whether the MSI provides a grievance mechanism for individuals to file complaints<br />regarding member compliance with legal or initiative standards, resolve allegations of wrongdoing and/or seek remedy for<br />human rights abuses. To satisfy this criterion, MSI grievance mechanisms must evidence a designated process and/or review<br />body (as opposed to a “general feedback” form), and be open to all stakeholders including affected community members. For<br />more information on this data point, please see our Project Methodology."
@@ -112,10 +112,11 @@ var Explore = React.createClass({
       var size = 40,
           allFeatures = this.allFeatures;
       return features.map(function (feature, i) {
+        console.log(feature);
         var icon_url = allFeatures[feature]['icon_url'],
             description = allFeatures[feature]['description'];
         return (
-          <img src={icon_url} alt={description} title={description} height={size} width={size} key={i} />
+          <img className="row-feature" src={icon_url} alt={description} title={description} height={size} width={size} key={i} />
         );
       });
     },
@@ -126,6 +127,9 @@ var Explore = React.createClass({
           <div className="large-9 columns">
             <div>
               <h3>{datum.name}</h3>
+            </div>
+            <div>
+              <h4>{datum.industry}</h4>
             </div>
             <div>
               <h5>Launched {datum.launched}</h5>
