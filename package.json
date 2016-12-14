@@ -31,7 +31,8 @@
     "gulp-watch": "^4.3.10",
     "gulp-webpack": "latest",
     "through2": "^2.0.1",
-    "webpack": "^1.12.0"
+    "webpack": "^1.12.0",
+    "xlsx2json": "^1.0.0"
   },
   "scripts": {
     "start": "node server.js",
