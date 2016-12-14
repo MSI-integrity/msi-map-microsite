@@ -12,8 +12,7 @@
     "react-dom": "^15.3.2",
     "react-slick": "^0.14.5",
     "react-tooltip": "^3.2.1",
-    "slick-carousel": "^1.6.0",
-    "xlsx2json": "^1.0.0"
+    "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.23",
@@ -32,7 +31,8 @@
     "gulp-watch": "^4.3.10",
     "gulp-webpack": "latest",
     "through2": "^2.0.1",
-    "webpack": "^1.12.0"
+    "webpack": "^1.12.0",
+    "xlsx2json": "^1.0.0"
   },
   "scripts": {
     "start": "node server.js",
