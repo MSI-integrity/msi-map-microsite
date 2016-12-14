@@ -44,5 +44,5 @@ xlsx2json('data/data.xlsx', {
     m.features = features;
     return m;
   }); 
-  console.log({data: msis}); 
+  console.log(JSON.stringify({data: msis})); 
 });
