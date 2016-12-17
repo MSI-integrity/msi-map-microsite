@@ -8,8 +8,8 @@
     "express": "^4.4.5",
     "gulp-sheets2json": "^1.0.1",
     "lunr": "^0.7.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "preact": "^7.1.0",
+    "preact-compat": "^3.9.4",
     "react-slick": "^0.14.5",
     "react-tooltip": "^3.2.1",
     "slick-carousel": "^1.6.0"

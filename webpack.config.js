@@ -28,7 +28,11 @@ module.exports = {
     // Include '.js', '.jsx' to resolve files by these implicit extensions
     // (e.g. require('underscore')).
     extensions: ['', '.js', '.jsx'],
-    modulesDirectories: ["node_modules", "bower_components"]
+    modulesDirectories: ["node_modules", "bower_components"],
+    alias: {
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat'
+    }
   },
   plugins: [
       new webpack.ResolverPlugin(
