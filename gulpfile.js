@@ -24,12 +24,12 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
   gulp.src('./src/scripts/*.jsx')
     .pipe(webpack(require('./webpack.config.js')))
-    // .pipe(minify({
-    //   ext: {
-    //       src:'-debug.js',
-    //       min:'.js'
-    //   }
-    // }))
+    .pipe(minify({
+      ext: {
+        src:'-debug.js',
+        min:'.js'
+      }
+    }))
     .pipe(gulp.dest('./build'));
 });
 
