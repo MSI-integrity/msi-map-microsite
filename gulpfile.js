@@ -17,7 +17,7 @@ gulp.task('sass', function () {
         'node_modules/slick-carousel/slick'
       ]
     }))
-    // .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('build/'));
 });
 
