@@ -1,7 +1,6 @@
 var lunr = require('lunr'),
     React = require('react'),
-    ReactDOM = require('react-dom'),
-    ReactTooltip = require('react-tooltip');
+    ReactDOM = require('react-dom');
 
 var featureIconPrefix = 'images/feature_icons/';
 
@@ -220,7 +219,6 @@ var Explore = React.createClass({
       });
       return (
         <div key={-1} className="search-container row">
-          <ReactTooltip multiline={true} />
           <div className="row">
             <div className="large-7 large-centered columns">
               <input className="search-box" type="search" placeholder="Name of MSI and mission" onChange={this.handleSearchTermChange}/>
@@ -237,6 +235,9 @@ var Explore = React.createClass({
                 </div>
               </div>
             </div>
+          </div>
+          <div className="row">
+            // TODO put hovered element here
           </div>
           <div className="row">
             {this.renderSearchResultsSummary()}
