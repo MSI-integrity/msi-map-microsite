@@ -47,7 +47,7 @@ var Nav = React.createClass({
       {
         onClick: this.goToQuestionAndAnswerTab,
         className: this.props.hashValue == 'questions' && activeClass,
-        text: 'Q&A'
+        text: 'FAQ'
       }
     ];
     return itemData.map(function (datum, i) {
