@@ -66,9 +66,16 @@ h1, h2, h3, h4, h5 {
   box-shadow: $shadow;
 
   h4 {
+    color: black;
     margin-bottom: 0;
-    margin-top: 5px;
   }
+}
+
+.launched-text {
+  h5 {
+    margin-bottom: 0;
+  }
+  margin-bottom: .5rem;
 }
 
 .nav {
@@ -232,6 +239,7 @@ h1, h2, h3, h4, h5 {
 
 .features-list {
   h4 {
+    padding-top: 20px;
     margin-bottom: 5px;
   }
 }

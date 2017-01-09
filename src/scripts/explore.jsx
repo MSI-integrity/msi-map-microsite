@@ -126,24 +126,25 @@ var Explore = React.createClass({
         <div className="row msi-info" key={i}>
           <div className="large-9 columns">
             <div>
-              <h3>{datum.name}</h3>
+              <h4>{datum.name}</h4>
             </div>
             <div>
-              <h4>{datum.industry}</h4>
-            </div>
-            <div>
-              <h5>Launched {datum.launched}</h5>
+              <h5>{datum.industry}</h5>
             </div>
             <div>
               {datum.mission}
             </div>
             <div>
-              <h4>Stakeholders</h4>
+              <h5>Stakeholders</h5>
               {datum.stakeholders}
             </div>
           </div>
           <div className="large-2 columns end features-list">
-            <h4>Elements</h4>
+            <div className="launched-text">
+              <h5>Launched</h5>
+              {datum.launched}
+            </div>
+            <h5>Elements</h5>
             {this.generateFeatureBadges(datum.features)}
           </div>
         </div>
@@ -212,11 +213,8 @@ var Explore = React.createClass({
           classes += " active";
         }
         return (
-          <div data-tip={explanation} className={classes} key={index} onClick={() => {handleToggleFeature(featureName)}}>
+          <div className={classes} key={index} onClick={() => {handleToggleFeature(featureName)}}>
             <img src={icon_url} alt={description} title={description} />
-            <div>
-              {description}
-            </div>
           </div>
         );
       });
