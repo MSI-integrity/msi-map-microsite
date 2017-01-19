@@ -38,6 +38,9 @@ $logo-banner-padding: 5px;
   background-color: $tertiary-color;
   padding: 5px;
   height: $logo-banner-height;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
   h5 {
     color: $primary-color;
     display: inline-block;
@@ -82,9 +85,12 @@ h1, h2, h3, h4, h5 {
   @extend .header-font;
   box-shadow: $shadow;
 
-  .top-bar, .menu {
+    .top-bar, .menu {
     color: $tertiary-color;
     background-color: $secondary-color;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75rem;
 
     a {
       color: $tertiary-color;
