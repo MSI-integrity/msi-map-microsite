@@ -28,10 +28,10 @@ $box-padding: 20px;
 $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 body {
-  background-color: $primary-color;
+  background-color: $secondary-color;
 }
 
-$logo-banner-height: 60px;
+$logo-banner-height: 40px;
 $logo-banner-padding: 5px;
 
 .logo-banner {
@@ -45,6 +45,7 @@ $logo-banner-padding: 5px;
     color: $primary-color;
     display: inline-block;
     margin-left: 10px;
+    font-size: 10px;
   }
   img {
     height: $logo-banner-height - $logo-banner-padding * 2;
@@ -120,12 +121,13 @@ h1, h2, h3, h4, h5 {
 
   .homepage-box {
     @extend .body-font;
-    background-color: $primary-color;
+    background-color: rgba(255, 255, 255, 0.6);
+
     padding: $box-padding;
     box-shadow: $shadow;
-    color: white;
+    color: black;
     h4 {
-      color: white;
+      color: black;
     }
   }
 }
