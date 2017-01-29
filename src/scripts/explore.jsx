@@ -26,7 +26,8 @@ var Explore = React.createClass({
         data: [],
         filteredData: [],
         selectedFeatures: [],
-        searchTerm: ""
+        searchTerm: "",
+        hoveredFeature: ""
       };
     },
 
@@ -68,42 +69,42 @@ var Explore = React.createClass({
       evaluations: {
         description: "Evaluations",
         icon_url: featureIconPrefix + "evaluations.png",
-        explanation: "Evaluations: This icon indicates whether the MSI requires that third party evaluations be used to monitor individual<br />member/company compliance with initiative standards. “Assessments”, “audits,” and “verification processes” were all considered<br>as evaluation processes for the purposes of this data point. For more information on this data point, please see our Project Methodology."
+        explanation: "Evaluations: This icon indicates whether the MSI requires that third party evaluations be used to monitor individual member/company compliance with initiative standards. “Assessments”, “audits,” and “verification processes” were all considered as evaluation processes for the purposes of this data point. For more information on this data point, please see our Project Methodology."
       },
       grievance_mechanisms: {
         description: "Grievance Mechanism",
         icon_url: featureIconPrefix + "grievance_mechanism.png",
-        explanation: "This icon indicates whether the MSI provides a grievance mechanism for individuals to file complaints<br />regarding member compliance with legal or initiative standards, resolve allegations of wrongdoing and/or seek remedy for<br />human rights abuses. To satisfy this criterion, MSI grievance mechanisms must evidence a designated process and/or review<br />body (as opposed to a “general feedback” form), and be open to all stakeholders including affected community members. For<br />more information on this data point, please see our Project Methodology."
+        explanation: "This icon indicates whether the MSI provides a grievance mechanism for individuals to file complaints regarding member compliance with legal or initiative standards, resolve allegations of wrongdoing and/or seek remedy for human rights abuses. To satisfy this criterion, MSI grievance mechanisms must evidence a designated process and/or review body (as opposed to a “general feedback” form), and be open to all stakeholders including affected community members. For more information on this data point, please see our Project Methodology."
       },
       human_rights_law_reference: {
         description: "Human Rights Law Reference",
         icon_url: featureIconPrefix + "human_rights_law_reference.png",
-        explanation: "This icon indicates whether the MSI explicitly references human rights laws or principles<br>(e.g., the UN Declaration on Human Rights, the ILO Core Conventions or the UN Guiding Principles on Business and Human Rights)<br>in its standards. For more information on this data point, please see our Project Methodology."
+        explanation: "This icon indicates whether the MSI explicitly references human rights laws or principles (e.g., the UN Declaration on Human Rights, the ILO Core Conventions or the UN Guiding Principles on Business and Human Rights) in its standards. For more information on this data point, please see our Project Methodology."
       },
       human_rights_reference: {
         description: "Human Rights Reference",
         icon_url: featureIconPrefix + "human_rights_reference.png",
-        explanation: "This icon indicates whether the MSI explicitly references human rights, sustainability, or<br>environmental rights in any public documents other than the initiative’s standards. Relevant language may come from the<br>initiative’s mission, vision, or other texts available on the initiative’s website. For more information on this data<br>point, please see our Project Methodology."
+        explanation: "This icon indicates whether the MSI explicitly references human rights, sustainability, or environmental rights in any public documents other than the initiative’s standards. Relevant language may come from the initiative’s mission, vision, or other texts available on the initiative’s website. For more information on this data point, please see our Project Methodology."
       },
       involvement_of_affected_communities: {
         description: "Involvement of Affected Communities",
         icon_url: featureIconPrefix + "involvement_of_affected_communities.png",
-        explanation: "Affected communities may be defined as those populations the MSI intends to benefit<br>or protect (laborers, farmers, indigenous groups, etc) in addition to individuals who may be inadvertently impacted by<br>the MSI’s operations and implementation (grassroots activists, contracted researchers, etc). This icon indicates whether<br>the MSI engages these populations in initiatives, interviews or education programs outside of decision-making processes.<br>For more information on this data point, please see our Project Methodology."
+        explanation: "Affected communities may be defined as those populations the MSI intends to benefit or protect (laborers, farmers, indigenous groups, etc) in addition to individuals who may be inadvertently impacted by the MSI’s operations and implementation (grassroots activists, contracted researchers, etc). This icon indicates whether the MSI engages these populations in initiatives, interviews or education programs outside of decision-making processes. For more information on this data point, please see our Project Methodology."
       },
       reports: {
         description: "Reports",
         icon_url: featureIconPrefix + "reports.png",
-        explanation: "This icon indicates whether the MSI requires that publicly available reports be produced as a result of<br>evaluations of member compliance with initiative standards. Importantly, corporate/member self-reporting does not satisfy<br>this criterion. Reports must be produced by the MSI or by a third party and be available through the initiative webpage.<br>For more information on this data point, please see our Project Methodology."
+        explanation: "This icon indicates whether the MSI requires that publicly available reports be produced as a result of evaluations of member compliance with initiative standards. Importantly, corporate/member self-reporting does not satisfy this criterion. Reports must be produced by the MSI or by a third party and be available through the initiative webpage. For more information on this data point, please see our Project Methodology."
       },
       sanctions: {
         description: "Sanctions",
         icon_url: featureIconPrefix + "sanctions.png",
-        explanation: "This icon indicates whether the MSI has some authority to sanction or hold members accountable for breaches<br>of standards related to MSI activities. Examples of sanctions include the power to suspend or revoke memberships, impose<br>fines, sanction with fines, to withdraw certification, seal, use of logo, or require redress or remedies in other forms.<br>For more information on this data point, please see our Project Methodology."
+        explanation: "This icon indicates whether the MSI has some authority to sanction or hold members accountable for breaches of standards related to MSI activities. Examples of sanctions include the power to suspend or revoke memberships, impose fines, sanction with fines, to withdraw certification, seal, use of logo, or require redress or remedies in other forms. For more information on this data point, please see our Project Methodology."
       },
       standards: {
         description: "Standards",
         icon_url: featureIconPrefix + "standards.png",
-        explanation: "For the purposes of this project, Standards are defined as a compulsory set of actions or requirements that companies<br> and/or governments must follow to meet the aims of the initiative. All MSIs included in this data set are standard-setting."
+        explanation: "For the purposes of this project, Standards are defined as a compulsory set of actions or requirements that companies  and/or governments must follow to meet the aims of the initiative. All MSIs included in this data set are standard-setting."
       }
     },
 
@@ -111,7 +112,6 @@ var Explore = React.createClass({
       var size = 40,
           allFeatures = this.allFeatures;
       return features.map(function (feature, i) {
-        console.log(feature);
         var icon_url = allFeatures[feature]['icon_url'],
             description = allFeatures[feature]['description'];
         return (
@@ -150,6 +150,19 @@ var Explore = React.createClass({
       );
     },
 
+    renderHoveredFeatureInfo: function () {
+      var hoveredFeature = this.allFeatures[this.state.hoveredFeature];
+      if (!hoveredFeature) {
+        return (<div className="hovered-feature-info"></div>);
+      };
+      return (
+        <div className="hovered-feature-info">
+          <h3>{hoveredFeature.description}</h3>
+          {hoveredFeature.explanation}
+        </div>
+      );
+    },
+
     handleSearchTermChange: function (event) {
       this.setState({
         searchTerm: event.target.value
@@ -165,6 +178,14 @@ var Explore = React.createClass({
         selectedFeatures.splice(index, 1);
       }
       this.setState({selectedFeatures: selectedFeatures}, this.filterData);
+    },
+
+    handleMouseOnFeature: function (featureName) {
+      this.setState({hoveredFeature: featureName});
+    },
+
+    handleMouseOffFeature: function () {
+      this.setState({hoveredFeature: ''});
     },
 
     renderSearchResultsSummary: function () {
@@ -200,10 +221,12 @@ var Explore = React.createClass({
     },
 
     renderSearchBar: function () {
-      var allFeatures = this.allFeatures;
-      var handleToggleFeature = this.handleToggleFeature;
-      var selectedFeatures = this.state.selectedFeatures;
-      var featureNodes = Object.keys(allFeatures).map(function (featureName, index) {
+      var allFeatures = this.allFeatures,
+          handleToggleFeature = this.handleToggleFeature,
+          handleMouseOnFeature = this.handleMouseOnFeature,
+          handleMouseOffFeature = this.handleMouseOffFeature,
+          selectedFeatures = this.state.selectedFeatures,
+          featureNodes = Object.keys(allFeatures).map(function (featureName, index) {
         var description = allFeatures[featureName]['description'],
             explanation = allFeatures[featureName]['explanation'],
             icon_url = allFeatures[featureName]['icon_url'],
@@ -212,8 +235,14 @@ var Explore = React.createClass({
           classes += " active";
         }
         return (
-          <div className={classes} key={index} onClick={() => {handleToggleFeature(featureName)}}>
-            <img src={icon_url} alt={description} title={description} />
+          <div
+            className={classes}
+            key={index}
+            onClick={() => {handleToggleFeature(featureName)}}
+            onMouseEnter={() => {handleMouseOnFeature(featureName)}}
+            onMouseLeave={() => {handleMouseOffFeature()}}
+          >
+            <img src={icon_url} alt={description} title={description}/>
           </div>
         );
       });
@@ -237,7 +266,11 @@ var Explore = React.createClass({
             </div>
           </div>
           <div className="row">
-            // TODO put hovered element here
+            <div className="large-8 large-centered columns">
+              <div>
+                {this.renderHoveredFeatureInfo()}
+              </div>
+            </div>
           </div>
           <div className="row">
             {this.renderSearchResultsSummary()}

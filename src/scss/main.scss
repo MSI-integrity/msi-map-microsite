@@ -281,6 +281,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer {
+  background-color: $tertiary-color;
   margin-bottom: 16px;
   p {
     @extend .body-font;
@@ -292,6 +293,14 @@ h1, h2, h3, h4, h5 {
   color: white;
   font-size: 18px;
   margin-top: 20px;
+}
+
+.hovered-feature-info {
+  text-align: center;
+  background-color: $tertiary-color;
+  padding: 10px;
+  min-height: 191px;
+  margin-bottom: 10px;
 }
 
 .row-feature {
