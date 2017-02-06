@@ -10,7 +10,7 @@ var Home = React.createClass({
               <h4>Multi-Stakeholder Initiatives: On the Rise</h4>
               <p>Multi-stakeholder initiatives (MSIs) can generally be understood as voluntary initiatives that bring together various stakeholder groups — such as corporations, governments, NGOs and local communities — to address an issue of common concern. MSIs may foster cross-sector engagement, facilitate dialogue, and develop or apply standards for corporate or government conduct through collaborative processes.</p>
               <p>In collaboration with the law firm Miller & Chevalier, The Institute for Multi-Stakeholder Initiative Integrity (MSI Integrity) and the Duke Human Rights Center at the Kenan Institute for Ethics have conducted a project to map the global landscape of standard-setting MSIs aimed to address the public impacts of business conduct.</p>
-              <strong>To learn more, read our summary report (hyperlink to “Report” page), explore the data (hyperlink to “Explore” page), or review our project information page (hyperlink to “About” page).</strong>
+              <strong>To learn more, read our <a href="#report">summary report</a>, explore the data (hyperlink to “Explore” page), or review our project information page (hyperlink to “About” page).</strong>
             </div>
           </div>
         </div>

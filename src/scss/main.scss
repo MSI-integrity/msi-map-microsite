@@ -1,9 +1,4 @@
 @import 'foundation';
-@import 'slick.scss';
-
-// Custom dot size for slick-theme
-// $slick-dot-size: 50px;
-@import 'slick-theme.scss';
 
 @include foundation-everything;
 
@@ -176,11 +171,18 @@ h1, h2, h3, h4, h5 {
 }
 
 .report-content-top {
+  background-image:  url('images/photos/report_background.jpg');
   padding-top: 30px;
   padding-bottom: 30px;
+  hr {
+    width: 50%;
+    margin-left: 0;
+    border-top: 3px solid $secondary-color;
+  }
 }
 
 .report-content-bottom {
+  background-color: white;
   padding: 30px;
 }
 
@@ -228,11 +230,10 @@ h1, h2, h3, h4, h5 {
   height: 40px;
 }
 
-.download-data-container {
+.download-data-container, .download-report-container {
   margin-top: 30px;
   background-color: $secondary-color;
   padding-top: 20px;
-  // box-shadow: $shadow;
 }
 
 .download-format-chooser {
