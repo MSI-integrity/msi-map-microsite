@@ -17,9 +17,7 @@ var Report = React.createClass({
             <strong>In the past two decades, MSIs have emerged as particularly popular tools to address the human rights and environmental impacts of transnational business, with over 60 different standard-setting MSIs now established across nearly all major global industries. While these initiatives share many similar structures, they also evidence great variation in their sanctioning mechanisms, evaluationa and reporting processes, and inclusion of community members in their decision-making bodies. Furthermore...[INSERT RESEARCH FINDING].</strong>
           </div>
           <div className="small-4 small-offset-1 columns end text-center download-report-container">
-            <div>
-              <a className="button large download-report" download>Download Report</a>
-            </div>
+            <a className="button large download-report">Download Report</a>
           </div>
         </div>
         <div className="row report-content-bottom">
