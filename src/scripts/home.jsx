@@ -6,7 +6,7 @@ var Home = React.createClass({
       <div className={"tab" + (this.props.activeTab ? ' active-tab' : '')}>
         <div className="homepage-top">
           <div className="row">
-            <div className="homepage-box large-7 columns large-centered">
+            <div className="homepage-box large-12 columns large-centered">
               <h4>Multi-Stakeholder Initiatives: On the Rise</h4>
               <p>Multi-stakeholder initiatives (MSIs) can generally be understood as voluntary initiatives that bring together various stakeholder groups — such as corporations, governments, NGOs and local communities — to address an issue of common concern. MSIs may foster cross-sector engagement, facilitate dialogue, and develop or apply standards for corporate or government conduct through collaborative processes.</p>
               <p>In collaboration with the law firm Miller & Chevalier, The Institute for Multi-Stakeholder Initiative Integrity (MSI Integrity) and the Duke Human Rights Center at the Kenan Institute for Ethics have conducted a project to map the global landscape of standard-setting MSIs aimed to address the public impacts of business conduct.</p>
