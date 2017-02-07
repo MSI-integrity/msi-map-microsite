@@ -69,7 +69,7 @@ var Explore = React.createClass({
       evaluations: {
         description: "Evaluations",
         icon_url: featureIconPrefix + "evaluations.png",
-        explanation: "Evaluations: This icon indicates whether the MSI requires that third party evaluations be used to monitor individual member/company compliance with initiative standards. “Assessments”, “audits,” and “verification processes” were all considered as evaluation processes for the purposes of this data point. For more information on this data point, please see our Project Methodology."
+        explanation: "This icon indicates whether the MSI requires that third party evaluations be used to monitor individual member/company compliance with initiative standards. “Assessments”, “audits,” and “verification processes” were all considered as evaluation processes for the purposes of this data point. For more information on this data point, please see our Project Methodology."
       },
       grievance_mechanisms: {
         description: "Grievance Mechanism",
@@ -177,6 +177,7 @@ var Explore = React.createClass({
       } else {
         selectedFeatures.splice(index, 1);
       }
+      selectedFeatures.sort();
       this.setState({selectedFeatures: selectedFeatures}, this.filterData);
     },
 
