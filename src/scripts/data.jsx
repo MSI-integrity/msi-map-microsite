@@ -1,42 +1,8 @@
 var React = require('react');
 
+var fileUri = 'data/msi-data.zip';
+
 var Data = React.createClass({
-    formatsToFileName: {
-      'JSON': 'data.json',
-      'Excel': 'data.xlsx',
-      'PDF': 'data.pdf'
-    },
-
-    getInitialState: function () {
-      return {
-        format: 'JSON'
-      };
-    },
-
-    setFormat: function (format) {
-      if (Object.keys(this.formatsToFileName).indexOf(format) === -1) {
-        console.error('format' + format + 'is bad');
-      }
-      this.setState({format: format});
-    },
-
-    fileUri: function () {
-      return 'data/' + this.formatsToFileName[this.state.format];
-    },
-
-    renderFormatButtons: function () {
-      var setFormat = this.setFormat,
-          currentFormat = this.state.format;
-
-      return Object.keys(this.formatsToFileName).map(function (formatName, index) {
-        var buttonClasses = "button small" + (currentFormat === formatName ? ' alert' : '');
-        var cb = () => {setFormat(formatName)};
-        return (
-          <a className={buttonClasses} onClick={cb} key={index}>{formatName}</a>
-        );
-      });
-    },
-
     render: function () {
       return (
         <div className={"tab" + (this.props.activeTab ? ' active-tab' : '')}>
@@ -49,12 +15,7 @@ var Data = React.createClass({
               <strong>MSI researchers, practitioners or civil society members are encouraged to download the raw data for their own interpretation purposes. Additionally, those who wish to submit a comment or request an update to the data may do so here.</strong>
             </div>
             <div className="small-4 small-offset-1 columns end text-center download-data-container">
-              <div>
-                <a href={this.fileUri()} className="button large download-data" download>Download Data</a>
-              </div>
-              <div className="download-format-chooser">
-                {this.renderFormatButtons()}
-              </div>
+                <a href={fileUri} className="button large download-data" download>Download Data</a>
             </div>
           </div>
           <div className="row project-methodology">

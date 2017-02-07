@@ -11,13 +11,15 @@ var Report = React.createClass({
     return (
       <div className={"tab" + (this.props.activeTab ? ' active-tab' : '')}>
         <div className="row report-content-top">
-          <div className="small-6 columns">
+          <div className="small-12 columns">
             <h1>The Report</h1>
             <hr />
+          </div>
+          <div className="small-6 columns">
             <strong>In the past two decades, MSIs have emerged as particularly popular tools to address the human rights and environmental impacts of transnational business, with over 60 different standard-setting MSIs now established across nearly all major global industries. While these initiatives share many similar structures, they also evidence great variation in their sanctioning mechanisms, evaluationa and reporting processes, and inclusion of community members in their decision-making bodies. Furthermore...[INSERT RESEARCH FINDING].</strong>
           </div>
-          <div className="small-4 small-offset-1 columns end text-center download-report-container">
-            <a className="button large download-report">Download Report</a>
+          <div className="small-4 small-offset-1 columns end text-center">
+              <a href={""} className="button large download-data" download>Download Report</a>
           </div>
         </div>
         <div className="row report-content-bottom">
