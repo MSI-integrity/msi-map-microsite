@@ -81,11 +81,6 @@ var Explore = React.createClass({
         icon_url: featureIconPrefix + "human_rights_law_reference.png",
         explanation: "This icon indicates whether the MSI explicitly references human rights laws or principles (e.g., the UN Declaration on Human Rights, the ILO Core Conventions or the UN Guiding Principles on Business and Human Rights) in its standards. For more information on this data point, please see our Project Methodology."
       },
-      human_rights_reference: {
-        description: "Human Rights Reference",
-        icon_url: featureIconPrefix + "human_rights_reference.png",
-        explanation: "This icon indicates whether the MSI explicitly references human rights, sustainability, or environmental rights in any public documents other than the initiative’s standards. Relevant language may come from the initiative’s mission, vision, or other texts available on the initiative’s website. For more information on this data point, please see our Project Methodology."
-      },
       involvement_of_affected_communities: {
         description: "Involvement of Affected Communities",
         icon_url: featureIconPrefix + "involvement_of_affected_communities.png",
@@ -125,7 +120,7 @@ var Explore = React.createClass({
         <div className="row msi-info" key={i}>
           <div className="large-9 columns">
             <div>
-              <h4>{datum.name}</h4>
+              <h4><a href={datum.website}>{datum.name}</a></h4>
             </div>
             <div>
               <h5>{datum.industry}</h5>
@@ -228,25 +223,25 @@ var Explore = React.createClass({
           handleMouseOffFeature = this.handleMouseOffFeature,
           selectedFeatures = this.state.selectedFeatures,
           featureNodes = Object.keys(allFeatures).map(function (featureName, index) {
-        var description = allFeatures[featureName]['description'],
-            explanation = allFeatures[featureName]['explanation'],
-            icon_url = allFeatures[featureName]['icon_url'],
-            classes = "small-3 columns feature-selector-feature";
-        if (selectedFeatures.indexOf(featureName) !== -1) {
-          classes += " active";
-        }
-        return (
-          <div
-            className={classes}
-            key={index}
-            onClick={() => {handleToggleFeature(featureName)}}
-            onMouseEnter={() => {handleMouseOnFeature(featureName)}}
-            onMouseLeave={() => {handleMouseOffFeature()}}
-          >
-            <img src={icon_url} alt={description} title={description}/>
-          </div>
-        );
-      });
+            var description = allFeatures[featureName]['description'],
+                explanation = allFeatures[featureName]['explanation'],
+                icon_url = allFeatures[featureName]['icon_url'],
+                classes = "feature-selector-feature";
+            if (selectedFeatures.indexOf(featureName) !== -1) {
+              classes += " active";
+            }
+            return (
+              <div
+                className={classes}
+                key={index}
+                onClick={() => {handleToggleFeature(featureName)}}
+                onMouseEnter={() => {handleMouseOnFeature(featureName)}}
+                onMouseLeave={() => {handleMouseOffFeature()}}
+              >
+                <img src={icon_url} alt={description} title={description}/>
+              </div>
+            );
+          });
       return (
         <div key={-1} className="search-container row">
           <div className="row">
@@ -255,14 +250,9 @@ var Explore = React.createClass({
             </div>
           </div>
           <div className="row">
-            <div className="large-8 large-centered columns">
-              <div className="row collapse feature-selector">
-                <div className="small-6 columns">
-                  {featureNodes.slice(0, 4)}
-                </div>
-                <div className="small-6 columns">
-                  {featureNodes.slice(4, 8)}
-                </div>
+            <div className="large-12 large-centered columns">
+              <div className="feature-selector">
+                  {featureNodes}
               </div>
             </div>
           </div>

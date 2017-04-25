@@ -10,11 +10,11 @@ var Nav = React.createClass({
   },
 
   goToDataTab: function() {
-    window.location.hash = "data";
+    window.location.hash = "methodology";
   },
 
   goToExploreTab: function () {
-    window.location.hash = "explore";
+    window.location.hash = "data";
   },
 
   goToQuestionAndAnswerTab: function () {
@@ -36,13 +36,13 @@ var Nav = React.createClass({
       },
       {
         onClick: this.goToExploreTab,
-        className: this.props.hashValue == 'explore' && activeClass,
-        text: 'Explore'
+        className: this.props.hashValue == 'data' && activeClass,
+        text: 'The Data'
       },
       {
         onClick: this.goToDataTab,
-        className: this.props.hashValue ==  'data' && activeClass,
-        text: 'The Data'
+        className: this.props.hashValue ==  'methodology' && activeClass,
+        text: 'Methodology'
       },
       {
         onClick: this.goToQuestionAndAnswerTab,

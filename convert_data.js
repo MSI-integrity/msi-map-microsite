@@ -3,32 +3,35 @@ xlsx2json('data/data.xlsx', {
   dataStartingRow: 2,
   mapping: {
     "name": "A",
-    "industry": "B",
-    "industry_sub": "C",
+    "website": "B",
+    "industry": "C",
     "mission": "D",
     "stakeholders": "E",
     "launched": "F",
-    "human_rights_reference": "G",
-    "involvement_of_affected_communities": "H",
-    "standards": "I",
-    "human_rights_law_reference": "J",
-    "evaluations": "K",
-    "reports": "L",
-    "grievance_mechanisms": "M",
-    "sanctions": "N",
+    "involvement_of_affected_communities": "G",
+    "standards": "H",
+    "human_rights_law_reference": "I",
+    "evaluations": "J",
+    "reports": "K",
+    "grievance_mechanisms": "L",
+    "sanctions": "M",
   }
 }, function (error, jsonArray) {
-  msis = jsonArray.pop().map(msi => {
+  msis = jsonArray.pop().filter(msi => msi.name !== "").map(msi => {
     m = {};
     m.name = msi.name;
-    m.industry = msi.industry;
-    m.industry_sub = msi.industry_sub;
+    m.website = msi.website;
+    // "Agriculture ; Sophistry" -> "Agriculture; Sophistry"
+    m.industry = msi.industry.split(";").map(category => category.trim()).join('; ');
+    // Remove quotes from outside of descriptions if they have them.
     m.mission = msi.mission;
+    if (m.mission[0] === "\"" && m.mission[msi.mission.length - 1] === "\"" ) {
+      m.mission = m.mission.slice(1, -1)
+    }
     m.stakeholders = msi.stakeholders;
     m.launched = msi.launched;
     features = [];
-    ["human_rights_reference",
-     "involvement_of_affected_communities",
+    ["involvement_of_affected_communities",
      "standards",
      "human_rights_law_reference",
      "evaluations",
@@ -43,5 +46,5 @@ xlsx2json('data/data.xlsx', {
     m.features = features;
     return m;
   });
-  console.log(JSON.stringify({data: msis}));
+  console.log(JSON.stringify({ data: msis }));
 });

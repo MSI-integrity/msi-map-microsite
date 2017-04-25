@@ -9,7 +9,7 @@ var handleHashChange = function () {
     case "":
     case "report":
     case "data":
-    case "explore":
+    case "methodology":
     case "questions":
       break;
     default:

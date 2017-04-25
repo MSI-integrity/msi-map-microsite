@@ -14,9 +14,9 @@ var PageContainer = React.createClass({
         return Home;
       case "report":
         return Report;
-      case "data":
+      case "methodology":
         return Data;
-      case "explore":
+      case "data":
         return Explore;
       case "questions":
         return QuestionAndAnswer;
