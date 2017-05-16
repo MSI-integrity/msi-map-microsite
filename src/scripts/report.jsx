@@ -16,10 +16,11 @@ var Report = React.createClass({
             <hr />
           </div>
           <div className="small-6 columns">
-            <strong>In the past two decades, MSIs have emerged as particularly popular tools to address the human rights and environmental impacts of transnational business, with over 60 different standard-setting MSIs now established across nearly all major global industries. While these initiatives share many similar structures, they also evidence great variation in their sanctioning mechanisms, evaluationa and reporting processes, and inclusion of community members in their decision-making bodies. Furthermore...[INSERT RESEARCH FINDING].</strong>
+            <p>Since the 1990s, MSIs have emerged as popular mechanisms to address the human rights and environmental impacts of transnational business. As this project has uncovered, at least 45 different standard-setting MSIs now operate in over 170 countries on six continents, engage over 50 national governments, and regulate over 9,000 companies – including 65 Fortune Global 500 businesses with combined annual revenues of more than $5.4 trillion dollars.</p>
           </div>
           <div className="small-4 small-offset-1 columns end text-center">
-              <a href={""} className="button large download-data" download>Download Report</a>
+            <strong>Coming soon: “The New Regulators? Assessing the Landscape of Multi-Stakeholder Initiatives,” a summary report from MSI Integrity and the Duke Human Rights Center at the Kenan Institute for Ethics based on findings from the MSI database.</strong>
+              { /* <a href={""} className="button large download-data" download>Download Report</a> */ }
           </div>
         </div>
         <div className="row report-content-bottom">
