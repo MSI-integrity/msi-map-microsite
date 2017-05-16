@@ -148,7 +148,12 @@ var Explore = React.createClass({
     renderHoveredFeatureInfo: function () {
       var hoveredFeature = this.allFeatures[this.state.hoveredFeature];
       if (!hoveredFeature) {
-        return (<div className="hovered-feature-info"></div>);
+        return (
+          <div className="hovered-feature-info">
+            <h3>The Data</h3>
+            In addition to collecting basic data about the identity of each MSI, we have collected and coded data on initiatives based on their scope and mandate, internal decision-making and governance processes, and operations. Use the search bar below to find specific initiatives, or select MSI element icons to filter the search results. For more information about the threshold criteria used for each MSI feature see our Project Methodology.
+          </div>
+        );
       };
       return (
         <div className="hovered-feature-info">
@@ -288,7 +293,7 @@ var Explore = React.createClass({
       dataNodes.unshift(this.renderSearchBar());
       return (
         <div className={"msi-info-container tab" + (this.props.activeTab ? ' active-tab' : '')}>
-          {this.renderInfoBox()}
+          {/* this.renderInfoBox() */}
           {dataNodes}
         </div>
       );
