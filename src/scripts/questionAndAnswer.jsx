@@ -64,6 +64,7 @@ var QuestionAndAnswer = React.createClass({
       <div className="row qa-row-summary">
         <div className="small-12 columns">
           <h1>About the Project</h1>
+          <hr />
         </div>
         <div className="small-12 columns">
           {summaryNodes}

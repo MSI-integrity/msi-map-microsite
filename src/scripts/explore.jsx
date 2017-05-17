@@ -69,32 +69,32 @@ var Explore = React.createClass({
       evaluations: {
         description: "Evaluations",
         icon_url: featureIconPrefix + "evaluations.png",
-        explanation: "This icon indicates whether the MSI requires that third party evaluations be used to monitor individual member/company compliance with initiative standards. “Assessments”, “audits,” and “verification processes” were all considered as evaluation processes for the purposes of this data point. For more information on this data point, please see our Project Methodology."
+        explanation: "This data point documents whether the MSI requires that evaluations be used to monitor individual member/company compliance with initiative standards. “Assessments,” “audits,” and “verification processes” were all considered to be evaluation processes for the purposes of this data point. Corporate/member self-evaluation does not satisfy this criterion."
       },
       grievance_mechanisms: {
-        description: "Grievance Mechanism",
+        description: "External Complaints Mechanisms",
         icon_url: featureIconPrefix + "grievance_mechanism.png",
-        explanation: "This icon indicates whether the MSI provides a grievance mechanism for individuals to file complaints regarding member compliance with legal or initiative standards, resolve allegations of wrongdoing and/or seek remedy for human rights abuses. To satisfy this criterion, MSI grievance mechanisms must evidence a designated process and/or review body (as opposed to a “general feedback” form), and be open to all stakeholders including affected community members. For more information on this data point, please see our Project Methodology."
+        explanation: "This data point documents whether the MSI provides a mechanism for individuals to file complaints regarding member compliance with legal or initiative standards, or to resolve allegations of wrongdoing and/or seek remedy for human rights abuses. An external complaints mechanism is distinct from an internal dispute resolution mechanism that allows initiative members to file complaints about initiative governance or implementation. To satisfy this criterion, external complaints mechanisms must evidence a designated process and/or review body (as opposed to a “general feedback” form), and be open to all stakeholders including affected community members."
       },
       human_rights_law_reference: {
         description: "Human Rights Law Reference",
         icon_url: featureIconPrefix + "human_rights_law_reference.png",
-        explanation: "This icon indicates whether the MSI explicitly references human rights laws or principles (e.g., the UN Declaration on Human Rights, the ILO Core Conventions or the UN Guiding Principles on Business and Human Rights) in its standards. For more information on this data point, please see our Project Methodology."
+        explanation: "This data point documents whether the MSI references international human rights or environmental laws or principles (e.g., the United Nations Declaration on Human Rights, the International Labor Organization Core Conventions, or the United Nations Guiding Principles on Business and Human Rights) in its standards."
       },
       involvement_of_affected_communities: {
         description: "Involvement of Affected Communities",
         icon_url: featureIconPrefix + "involvement_of_affected_communities.png",
-        explanation: "Affected communities may be defined as those populations the MSI intends to benefit or protect (laborers, farmers, indigenous groups, etc) in addition to individuals who may be inadvertently impacted by the MSI’s operations and implementation (grassroots activists, contracted researchers, etc). This icon indicates whether the MSI engages these populations in initiatives, interviews or education programs outside of decision-making processes. For more information on this data point, please see our Project Methodology."
+        explanation: "Affected populations are those individuals the MSI intends to benefit or protect (such as laborers, farmers, or indigenous communities) in addition to individuals who may be impacted by the MSI’s operations and implementation (such as civil society activists, or researchers). This data point documents whether the MSI reports that it engages these populations in initiatives, interviews or education programs outside of decision-making processes."
       },
       reports: {
         description: "Reports",
         icon_url: featureIconPrefix + "reports.png",
-        explanation: "This icon indicates whether the MSI requires that publicly available reports be produced as a result of evaluations of member compliance with initiative standards. Importantly, corporate/member self-reporting does not satisfy this criterion. Reports must be produced by the MSI or by a third party and be available through the initiative webpage. For more information on this data point, please see our Project Methodology."
+        explanation: "This data point documents whether the MSI requires that publicly available reports be produced as a result of evaluations of member compliance with initiative standards. Corporate/member self-reporting does not satisfy this criterion. Reports must be produced by the MSI or by a third party and be publicly available on the MSI’s webpage."
       },
       sanctions: {
         description: "Sanctions",
         icon_url: featureIconPrefix + "sanctions.png",
-        explanation: "This icon indicates whether the MSI has some authority to sanction or hold members accountable for breaches of standards related to MSI activities. Examples of sanctions include the power to suspend or revoke memberships, impose fines, sanction with fines, to withdraw certification, seal, use of logo, or require redress or remedies in other forms. For more information on this data point, please see our Project Methodology."
+        explanation: "This data point documents whether the MSI has some authority to sanction or hold members accountable for breaches of standards related to MSI activities. Examples of sanctions include the power to suspend or revoke memberships, impose fines, sanction with fines, to withdraw certification, seal, use of the MSI’s logo, or require redress or remedies in other forms."
       },
       standards: {
         description: "Standards",
@@ -151,7 +151,20 @@ var Explore = React.createClass({
         return (
           <div className="hovered-feature-info">
             <h3>The Data</h3>
-            In addition to collecting basic data about the identity of each MSI, we have collected and coded data on initiatives based on their scope and mandate, internal decision-making and governance processes, and operations. Use the search bar below to find specific initiatives, or select MSI element icons to filter the search results. For more information about the threshold criteria used for each MSI feature see our Project Methodology.
+            <p>
+              The database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="#methodology">Project Methodology</a>.
+            </p>
+            <p>
+              Use the search bar above to find specific initiatives, or select MSI element icons to filter the search results.
+            </p>
+            <strong>
+              <p>
+                Please contact <a href="mailto:info@msi-integrity.org">MSI Integrity (info@msi-integrity.org)</a> to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses.
+              </p>
+              <p>
+                MSI researchers, practitioners or civil society members interested in reviewing project data should contact <a href="mailto:suzanne.katzenstein@duke.edu">Suzanne Katzenstein (suzanne.katzenstein@duke.edu)</a>.
+              </p>
+            </strong>
           </div>
         );
       };

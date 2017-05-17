@@ -114,6 +114,13 @@ h1, h2, h3, h4, h5 {
   padding-top: 50px;
   padding-bottom: 50px;
 
+  hr {
+    border-color: black;
+    width: 50%;
+    margin-left: 0;
+    border-top: 3px solid black;
+  }
+
   .homepage-box {
     @extend .body-font;
     background-color: rgba(255, 255, 255, 0.6);
@@ -162,20 +169,20 @@ h1, h2, h3, h4, h5 {
 }
 
 .report-content-top, .report-content-bottom, .data-content, .researchers-content, .project-methodology {
-  background-color: $box-background-color;
   padding: $box-padding;
   margin-top: 20px;
   box-shadow: $shadow;
 }
 
-.report-content-top {
-  background-image:  url('images/photos/report_background.jpg');
+.report-content-top, .data-content, .qa-row-summary {
+  background-color: $primary-color;
   padding-top: 30px;
   padding-bottom: 30px;
   hr {
+    border-color: black;
     width: 50%;
     margin-left: 0;
-    border-top: 3px solid $secondary-color;
+    border-top: 3px solid black;
   }
 }
 
@@ -187,8 +194,10 @@ h1, h2, h3, h4, h5 {
 .researchers-content {
   img {
     margin-bottom: 10px;
-    height: 75px;
+    max-height: 75px;
   }
+
+  background-color: $box-background-color;
 }
 
 .search-container {
