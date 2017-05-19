@@ -150,7 +150,7 @@ var Explore = React.createClass({
       if (!hoveredFeature) {
         return (
           <div className="hovered-feature-info">
-            <h3>The Data</h3>
+            <h3>Data Points</h3>
             <p>
               The database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="#methodology">Project Methodology</a>.
             </p>
@@ -267,8 +267,8 @@ var Explore = React.createClass({
               <input className="search-box" type="search" placeholder="Name of MSI and mission" onChange={this.handleSearchTermChange}/>
             </div>
           </div>
-          <div className="row">
-            <div className="large-12 large-centered columns">
+          <div className="row feature-selector-container">
+            <div className="large-10 large-offset-1 large-centered columns">
               <div className="feature-selector">
                   {featureNodes}
               </div>

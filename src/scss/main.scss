@@ -142,6 +142,26 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 20px;
 }
 
+.qa-row {
+  a {
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.qa-row-summary {
+  .question-toc-item {
+    padding-left: 10px;
+    a {
+      color: black;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
 .qa-row, .qa-row-summary {
   margin-top: 20px;
   padding: $box-padding;
@@ -153,18 +173,8 @@ h1, h2, h3, h4, h5 {
     margin-right: 10px;
   }
 
-  a {
-    &:hover {
-      color: $primary-color;
-    }
-  }
-
   .question-title {
     margin-bottom: 10px;
-  }
-
-  .question-toc-item {
-    padding-left: 10px;
   }
 }
 
@@ -201,11 +211,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .search-container {
-  background-color: $box-background-color;
+  background-color: $primary-color;
   padding-top: 30px;
   padding-bottom: $box-padding;
   box-shadow: $shadow;
   margin-top: $box-padding;
+
+  .feature-selector-container {
+    padding-bottom: 10px;
+  }
 
   .feature-selector {
     padding-top: 10px;

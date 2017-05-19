@@ -55,7 +55,7 @@ gulp.task('index', function () {
 });
 
 gulp.task('data', function () {
-  gulp.src('./data/*.{json,xslx}')
+  gulp.src('./data/*.{json,xslx,pdf}')
     .pipe(gulp.dest('./build/data'));
 });
 

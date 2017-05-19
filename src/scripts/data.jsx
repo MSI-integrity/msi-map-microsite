@@ -17,13 +17,13 @@ var Data = React.createClass({
               The project proceeded in four stages:
 
               <ul>
-                <li>Project Design and Review (Spring 2014-Fall 2014)</li>
-                <li>Pilot Research, Review, and Preparation for Data Collection Stage (Spring 2015-Fall 2015)</li>
-                <li>Data Collection and Internal Review (Spring 2016-Summer 2016)</li>
-                <li>Communication with MSIs (Summer 2016-Fall 2016)</li>
+                <li>Project Design and Review (Spring 2014 - Fall 2014)</li>
+                <li>Pilot Research, Review, and Preparation for Data Collection Stage (Spring 2015 - Fall 2015)</li>
+                <li>Data Collection and Internal Review (Spring 2016 - Summer 2016)</li>
+                <li>Communication with MSIs (Summer 2016 - Fall 2016)</li>
               </ul>
 
-              A full explanation of the project methodology is available <a href="#methodology">here</a>.
+              A full explanation of the project methodology is available <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">here</a>.
             </div>
           </div>
           <div className="row researchers-content">
@@ -34,19 +34,24 @@ var Data = React.createClass({
               <img src="images/org_icons/msi-integrity.png" />
             </div>
             <div className="small-9 columns">
-              <p>The Institute for Multi-Stakeholder Initiative Integrity (“MSI Integrity”) is a non-profit organization dedicated to understanding the human rights impact and value of voluntary initiatives that address business and human rights. MSI Integrity researches key questions surrounding the effectiveness of these initiatives, facilitates learning in the field, and develops tools to evaluate initiatives from a human rights perspective. MSI Integrity takes a particular interest in how initiatives include, empower, and impact affected communities. MSI Integrity was incubated at the International Human Rights Clinic at Harvard Law School from 2010- 2012, and was publicly launched in 2013.</p>
-            </div>
-            <div className="small-3 columns">
-              <img src="images/org_icons/miller-chevalier-logo.png" />
-            </div>
-            <div className="small-9 columns">
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+              <p>
+                The Institute for Multi-Stakeholder Initiative Integrity (“MSI Integrity”) is a non-profit organization dedicated to understanding the human rights impact and value of voluntary initiatives that address business and human rights. MSI Integrity researches key questions surrounding the effectiveness of these initiatives, facilitates learning in the field, and develops tools to evaluate initiatives from a human rights perspective. MSI Integrity takes a particular interest in how initiatives include, empower, and impact affected communities. MSI Integrity was incubated at the International Human Rights Clinic at Harvard Law School from 2010- 2012, and was launched publicly in 2013. For more information, visit <a href="http://www.msi-integrity.org">www.msi-integrity.org</a>.
+              </p>
             </div>
             <div className="small-3 columns">
               <img src="images/org_icons/dhrc-logo.png" />
             </div>
             <div className="small-9 columns">
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+              <p>
+                The Kenan Institute for Ethics at Duke is an interdisciplinary “think and do” tank committed to promoting moral reflection and commitment, conducting interdisciplinary research, and shaping policy and practice. The Duke Human Rights Center at Kenan explores contemporary international human rights challenges by promoting interdisciplinary collaborations and innovative pedagogy for faculty, students, and practitioners. It encourages critical investigations from a broad range of disciplinary traditions and that bridge the often separate spheres of research, advocacy and policy. For more information, visit <a href="http://kenan.ethics.duke.edu/humanrights">kenan.ethics.duke.edu/humanrights</a>.
+              </p>
+            </div>
+            <div className="small-3 columns">
+              <img src="images/org_icons/miller-chevalier-logo.png" />
+            </div>
+            <div className="small-9 columns">
+              <p>
+Founded in 1920, Miller & Chevalier is a Washington, DC law firm with a global perspective and leading practices in Tax, Employee Benefits (including ERISA), International Law and Business, White Collar and Internal Investigations, Complex Litigation and Government Affairs. Miller & Chevalier's Business & Human Rights (BHR) practice draws on the firm's deep experience in compliance counseling, investigations and litigation to provide tailored strategies to comply with BHR and related standards, avoid violations that create reputational and operational risk, and defend against alleged violations if issues arise. For more information on the firm, visit <a href="http://www.millerchevalier.com">www.millerchevalier.com</a>.              </p>
             </div>
           </div>
         </div>
