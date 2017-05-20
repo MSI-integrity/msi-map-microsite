@@ -36,15 +36,23 @@ $logo-banner-padding: 5px;
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
+
   h5 {
     color: $primary-color;
     display: inline-block;
     margin-left: 10px;
     font-size: 10px;
   }
+
+  a {
+    margin-left: 10px;
+    &:last-child {
+      margin-left: 0px;
+    }
+  }
+
   img {
     height: $logo-banner-height - $logo-banner-padding * 2;
-    margin-left: 10px;
   }
 }
 
@@ -212,8 +220,8 @@ h1, h2, h3, h4, h5 {
 
 .search-container {
   background-color: $primary-color;
+  padding: $box-padding;
   padding-top: 30px;
-  padding-bottom: $box-padding;
   box-shadow: $shadow;
   margin-top: $box-padding;
 
@@ -338,9 +346,6 @@ a.download-data {
     margin-left: 0;
     border-top: 3px solid black;
   }
-
-  padding-left: $box-padding * 2;
-  padding-right: $box-padding * 2;
 }
 
 .hovered-feature-info {

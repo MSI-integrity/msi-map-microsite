@@ -155,7 +155,7 @@ var QuestionAndAnswer = React.createClass({
             The database reflects publicly available information disclosed by MSIs through August 2016. Data was collected between February and June 2016 and submitted to MSIs for review from August - September 2016.
           </p>
           <p>
-            Please contact MSI Integrity (info@msi-integrity.org) to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses. Corrections and updates will be accepted if they are verifiable with publicly available information and are consistent with the project’s Classification Guide.
+            Please contact MSI Integrity (<a href="mailto:info@msi-integrity.org">info@msi-integrity.org</a>) to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses. Corrections and updates will be accepted if they are verifiable with publicly available information and are consistent with the project’s Classification Guide.
           </p>
         </div>
     },
@@ -175,7 +175,7 @@ var QuestionAndAnswer = React.createClass({
         question: 'What data sources have been used for the project?',
         answer:
           <p>
-            The project relies on the self-reporting of MSIs on their own websites in order to represent MSIs as the general public might see them. The exclusive use of publicly available information highlights the varying levels of transparency and accessibility across initiatives. At the same time, the database does not verify that any of the initiatives’ stated features are followed or implemented, but simply notes that these processes and policies have been reported to exist. Please contact MSI Integrity (info@msi-integrity.org) if you would like a copy of our data sources.
+            The project relies on the self-reporting of MSIs on their own websites in order to represent MSIs as the general public might see them. The exclusive use of publicly available information highlights the varying levels of transparency and accessibility across initiatives. At the same time, the database does not verify that any of the initiatives’ stated features are followed or implemented, but simply notes that these processes and policies have been reported to exist. Please contact MSI Integrity (<a href="mailto:info@msi-integrity.org">info@msi-integrity.org</a>) if you would like a copy of our data sources.
           </p>
     },
     {

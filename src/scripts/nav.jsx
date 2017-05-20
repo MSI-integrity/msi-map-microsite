@@ -37,7 +37,7 @@ var Nav = React.createClass({
       {
         onClick: this.goToExploreTab,
         className: this.props.hashValue == 'data' && activeClass,
-        text: 'Data Points'
+        text: 'The Database'
       },
       {
         onClick: this.goToDataTab,
@@ -64,17 +64,17 @@ var Nav = React.createClass({
       <div className="nav">
         <div className="logo-banner">
           <h5>A joint initiative of</h5>
-          <img src="images/org_icons/dhrc-logo.png" />
-          <img src="images/org_icons/msi-integrity.png" />
-          <img src="images/org_icons/miller-chevalier-logo.png" />
+          <a href="http://kenan.ethics.duke.edu/humanrights"><img src="images/org_icons/dhrc-logo.png" /></a>
+          <a href="http://www.msi-integrity.org"><img src="images/org_icons/msi-integrity.png" /></a>
+          <a href="http://www.millerchevalier.com"><img src="images/org_icons/miller-chevalier-logo.png" /></a>
         </div>
         <div className="top-bar">
-          <div className="top-bar-left">
+          {/*<div className="top-bar-left">
             <ul className="menu" data-responsive-menu="accordion">
               <a href="#"><li className="menu-text">The New Regulators</li></a>
             </ul>
-          </div>
-          <div className="top-bar-right">
+          </div> */ }
+          <div className="top-bar-left">
             <ul className="menu">
               {this.renderMenuItems()}
             </ul>

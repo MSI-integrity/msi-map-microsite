@@ -250,22 +250,20 @@ var Explore = React.createClass({
           });
       return (
         <div key={-1} className="search-container row">
-          <div className="row explore-info">
-            <div className="large-12 large-centered columns">
-              <h1>Data Points</h1>
-              <hr />
+          <div className="small-12 columns explore-info">
+            <h1>The Database</h1>
+            <hr />
+            <p>
+              The database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="#methodology">Project Methodology</a>.
+            </p>
+            <strong>
               <p>
-                The database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="#methodology">Project Methodology</a>.
+                Please contact <a href="mailto:info@msi-integrity.org">MSI Integrity (info@msi-integrity.org)</a> to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses.
               </p>
-              <strong>
-                <p>
-                  Please contact <a href="mailto:info@msi-integrity.org">MSI Integrity (info@msi-integrity.org)</a> to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses.
-                </p>
-                <p>
-                  MSI researchers, practitioners or civil society members interested in reviewing project data should contact <a href="mailto:suzanne.katzenstein@duke.edu">Suzanne Katzenstein (suzanne.katzenstein@duke.edu)</a>.
-                </p>
-              </strong>
-            </div>
+              <p>
+                MSI researchers, practitioners or civil society members interested in reviewing project data should contact <a href="mailto:suzanne.katzenstein@duke.edu">Suzanne Katzenstein (suzanne.katzenstein@duke.edu)</a>.
+              </p>
+            </strong>
           </div>
           <div className="row">
             <div className="large-7 large-centered columns">
