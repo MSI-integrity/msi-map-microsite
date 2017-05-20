@@ -150,21 +150,9 @@ var Explore = React.createClass({
       if (!hoveredFeature) {
         return (
           <div className="hovered-feature-info">
-            <h3>Data Points</h3>
-            <p>
-              The database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="#methodology">Project Methodology</a>.
-            </p>
             <p>
               Use the search bar above to find specific initiatives, or select MSI element icons to filter the search results.
             </p>
-            <strong>
-              <p>
-                Please contact <a href="mailto:info@msi-integrity.org">MSI Integrity (info@msi-integrity.org)</a> to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses.
-              </p>
-              <p>
-                MSI researchers, practitioners or civil society members interested in reviewing project data should contact <a href="mailto:suzanne.katzenstein@duke.edu">Suzanne Katzenstein (suzanne.katzenstein@duke.edu)</a>.
-              </p>
-            </strong>
           </div>
         );
       };
@@ -262,6 +250,23 @@ var Explore = React.createClass({
           });
       return (
         <div key={-1} className="search-container row">
+          <div className="row explore-info">
+            <div className="large-12 large-centered columns">
+              <h1>Data Points</h1>
+              <hr />
+              <p>
+                The database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="#methodology">Project Methodology</a>.
+              </p>
+              <strong>
+                <p>
+                  Please contact <a href="mailto:info@msi-integrity.org">MSI Integrity (info@msi-integrity.org)</a> to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses.
+                </p>
+                <p>
+                  MSI researchers, practitioners or civil society members interested in reviewing project data should contact <a href="mailto:suzanne.katzenstein@duke.edu">Suzanne Katzenstein (suzanne.katzenstein@duke.edu)</a>.
+                </p>
+              </strong>
+            </div>
+          </div>
           <div className="row">
             <div className="large-7 large-centered columns">
               <input className="search-box" type="search" placeholder="Name of MSI and mission" onChange={this.handleSearchTermChange}/>
@@ -288,25 +293,15 @@ var Explore = React.createClass({
       );
     },
 
-    renderInfoBox: function () {
-      return (
-        <div className="row explore-info">
-          <p>In addition to collecting basic data about the identity of each MSI, we have collected and coded data on initiatives based on their scope and mandate, internal decision-making and governance processes, and operations. Use the search bar below to find specific initiatives, or select MSI element icons to filter the search results.</p>
-          <p>For more information about the threshold criteria used for each MSI feature see our Project Methodology.</p>
-        </div>
-      );
-    },
-
     render: function () {
       var generateFeatureBadges = this.generateFeatureBadges;
       var renderTableRow = this.renderTableRow;
       var dataNodes = this.state.filteredData.map(function (datum, i) {
         return renderTableRow(datum, i);
       });
-      dataNodes.unshift(this.renderSearchBar());
       return (
         <div className={"msi-info-container tab" + (this.props.activeTab ? ' active-tab' : '')}>
-          {/* this.renderInfoBox() */}
+          {this.renderSearchBar()}
           {dataNodes}
         </div>
       );

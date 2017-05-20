@@ -332,15 +332,22 @@ a.download-data {
 }
 
 .explore-info {
-  font-size: 18px;
-  margin-top: 20px;
+  hr {
+    border-color: black;
+    width: 50%;
+    margin-left: 0;
+    border-top: 3px solid black;
+  }
+
+  padding-left: $box-padding * 2;
+  padding-right: $box-padding * 2;
 }
 
 .hovered-feature-info {
   text-align: center;
   background-color: $tertiary-color;
   padding: 10px;
-  min-height: 191px;
+  min-height: 239px;
   margin-bottom: 10px;
 }
 
