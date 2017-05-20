@@ -20,10 +20,10 @@ var Report = React.createClass({
           </div>
           <div className="small-4 small-offset-1 columns end text-center">
             <strong>Coming soon: “The New Regulators? Assessing the Landscape of Multi-Stakeholder Initiatives,” a summary report from MSI Integrity and the Duke Human Rights Center at the Kenan Institute for Ethics based on findings from the MSI database.</strong>
-              { /* <a href={""} className="button large download-data" download>Download Report</a> */ }
+            { /* <a href={""} className="button large download-data" download>Download Report</a> */ }
           </div>
         </div>
-        <div className="row report-content-bottom">
+        {/* <div className="row report-content-bottom">
           <div className="row collapse">
             <h1>What's Inside</h1>
             <p>“Mapping Multi-Stakeholder Initiatives: Proliferation and Practice” uses data from this mapping project to illuminate trends in the functions and operations of MSIs as part of a larger global governance landscape. Summary data points and graphics may be found below.</p>
@@ -36,7 +36,7 @@ var Report = React.createClass({
               <img src="images/charts/right.png" />
             </div>
           </div>
-        </div>
+        </div> */ }
       </div>
     );
   }
