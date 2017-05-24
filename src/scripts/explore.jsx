@@ -120,7 +120,7 @@ var Explore = React.createClass({
         <div className="row msi-info" key={i}>
           <div className="large-9 columns">
             <div>
-              <h4><a href={datum.website}>{datum.name}</a></h4>
+              <h4><a href={datum.website} target="_blank">{datum.name}</a></h4>
             </div>
             <div>
               <h5>{datum.industry}</h5>
