@@ -131,13 +131,17 @@ h1, h2, h3, h4, h5 {
 
   .homepage-box {
     @extend .body-font;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
 
     padding: $box-padding;
     box-shadow: $shadow;
     color: black;
     h4 {
       color: black;
+    }
+
+    p, strong {
+      font-size: 18px;
     }
   }
 }
@@ -193,7 +197,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .report-content-top, .data-content, .qa-row-summary {
-  background-color: $primary-color;
+  background-color: $box-background-color;
   padding-top: 30px;
   padding-bottom: 30px;
   hr {
@@ -219,7 +223,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .search-container {
-  background-color: $primary-color;
+  background-color: $box-background-color;
   padding: $box-padding;
   padding-top: 30px;
   box-shadow: $shadow;
