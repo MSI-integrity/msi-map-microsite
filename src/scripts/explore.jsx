@@ -106,7 +106,7 @@ var Explore = React.createClass({
     generateFeatureBadges: function(features) {
       var size = 40,
           allFeatures = this.allFeatures;
-      return features.map(function (feature, i) {
+      return features.sort().map(function (feature, i) {
         var icon_url = allFeatures[feature]['icon_url'],
             description = allFeatures[feature]['description'];
         return (
