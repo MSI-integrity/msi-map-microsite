@@ -66,7 +66,6 @@ var Nav = React.createClass({
           <h5>A joint initiative of</h5>
           <a href="http://kenan.ethics.duke.edu/humanrights"><img src="images/org_icons/dhrc-logo.png" /></a>
           <a href="http://www.msi-integrity.org"><img src="images/org_icons/msi-integrity.png" /></a>
-          <a href="http://www.millerchevalier.com"><img src="images/org_icons/miller-chevalier-logo.png" /></a>
         </div>
         <div className="top-bar">
           {/*<div className="top-bar-left">
