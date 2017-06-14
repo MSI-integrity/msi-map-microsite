@@ -11,6 +11,7 @@ function createSearchIndex (data) {
   var index = lunr(function() {
     this.field('name', {boost: 10});
     this.field('mission');
+    this.field('industry');
   });
   for (var i = 0; i < data.length; i++) {
     index.add(data[i]);
