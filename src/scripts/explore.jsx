@@ -267,7 +267,7 @@ var Explore = React.createClass({
           </div>
           <div className="row">
             <div className="large-7 large-centered columns">
-              <input className="search-box" type="search" placeholder="Name of MSI and mission" onChange={this.handleSearchTermChange}/>
+              <input className="search-box" type="search" placeholder="Search by MSI name, industry, or mission" onChange={this.handleSearchTermChange}/>
             </div>
           </div>
           <div className="row feature-selector-container">
