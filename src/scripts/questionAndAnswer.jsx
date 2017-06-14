@@ -93,7 +93,7 @@ var QuestionAndAnswer = React.createClass({
       answer:
         <div>
           <p>
-            The database and data collection methodology were designed and developed by MSI Integrity, the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University and MSI Integrity’s pro bono counsel, Miller & Chevalier (a law firm based in Washington D.C.) between 2014 – 2016. During this time, the three organizations worked together to define the scope of the project, including the types of initiatives that would be catalogued in the database, as well as the specific data points that would be collected for each initiative.
+            The database and data collection methodology were designed and developed by MSI Integrity, the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University and MSI Integrity's pro bono counsel for this project, Miller & Chevalier (a law firm based in Washington D.C.) between 2014 – 2016. During this time, the three organizations worked together to define the scope of the project, including the types of initiatives that would be catalogued in the database, as well as the specific data points that would be collected for each initiative.
           </p>
           <p>
             The project proceeded in four stages:
@@ -197,11 +197,11 @@ var QuestionAndAnswer = React.createClass({
       answer:
         <div>
           <p>
-            This project is a collaboration between the non-profit organization, MSI Integrity, and the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University. In addition, MSI Integrity’s pro bono counsel, Miller & Chevalier helped to formulate the data collection methodology and assisted with data collection.
+            This project is a collaboration between the non-profit organization, MSI Integrity, and the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University. In addition, MSI Integrity's pro bono counsel for this project, Miller & Chevalier helped to formulate the data collection methodology and assisted with data collection.
           </p>
           <ul>
             <li>MSI Integrity is a non-profit organization based in San Francisco, CA which works in partnership with academic institutions and civil society organizations to understand the human rights impact and value of multi-stakeholder initiatives that address business and human rights.</li>
-            <li>The Duke Human Rights Center at the Kenan Institute for Ethics is an interdisciplinary “think and do” tank at Duke University, which researches, among other topics, ethical issues involving human rights, regulation, and religion.</li>
+            <li>The Duke Human Rights Center at the Kenan Institute for Ethics is an interdisciplinary “think and do” tank at Duke University, which explores contemporary international human rights challenges by promoting innovative pedagogy and interdisciplinary collaboration that bridge research, advocacy and policy.</li>
             <li>Miller & Chevalier is a Washington, D.C. law firm with a global perspective and leading practices in Tax, Employee Benefits, International Law and Business, White Collar and Internal Investigations, Complex Litigation and Government Affairs.  Miller & Chevalier’s Business & Human Rights (BHR) practice draws on the firm’s deep experience in compliance counseling, investigations and litigation to provide tailored strategies to comply with BHR and related standards, prevent violations that create reputational and operational risk, and defend against alleged violations if issues arise.</li>
           </ul>
         </div>
