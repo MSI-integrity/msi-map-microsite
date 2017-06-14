@@ -254,7 +254,7 @@ var Explore = React.createClass({
             <h1>The Database</h1>
             <hr />
             <p>
-              The database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="#methodology">Project Methodology</a>.
+              This database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="#methodology">Project Methodology</a>.
             </p>
             <strong>
               <p>
