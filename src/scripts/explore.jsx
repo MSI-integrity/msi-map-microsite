@@ -67,34 +67,34 @@ var Explore = React.createClass({
 
     allFeatures: {
       evaluations: {
-        description: "Evaluations",
-        icon_url: featureIconPrefix + "evaluations.png",
-        explanation: "This data point documents whether the MSI requires that evaluations be used to monitor individual member/company compliance with initiative standards. “Assessments,” “audits,” and “verification processes” were all considered to be evaluation processes for the purposes of this data point. Corporate/member self-evaluation does not satisfy this criterion."
+        description: "Compliance Evaluations",
+        icon_url: featureIconPrefix + "compliance_evaluations.png",
+        explanation: "This data point documents whether the MSI  requires evaluations to monitor individual member/company compliance with initiative standards. “Assessments,” “audits,” and “verification processes” were all considered to be evaluation processes for the purposes of this data point. Corporate/member self-evaluation does not satisfy this criterion."
       },
       grievance_mechanisms: {
         description: "External Complaints Mechanisms",
         icon_url: featureIconPrefix + "grievance_mechanism.png",
-        explanation: "This data point documents whether the MSI provides a mechanism for individuals to file complaints regarding member compliance with legal or initiative standards, or to resolve allegations of wrongdoing and/or seek remedy for human rights abuses. An external complaints mechanism is distinct from an internal dispute resolution mechanism that allows initiative members to file complaints about initiative governance or implementation. To satisfy this criterion, external complaints mechanisms must evidence a designated process and/or review body (as opposed to a “general feedback” form), and be open to all stakeholders including affected community members."
+        explanation: "This data point documents whether the MSI reports that it provides a mechanism for individuals to file complaints regarding member compliance with legal or initiative standards, to resolve allegations of wrongdoing, and to seek a remedy for human rights abuses. An external complaints mechanism is distinct from an internal dispute resolution mechanism that allows initiative members to file complaints about the initiative’s governance or implementation. To satisfy this criterion, external complaints mechanisms must evidence a designated process and/or review body (as opposed to a “general feedback” form), and be open to all stakeholders including affected community members."
       },
       human_rights_law_reference: {
-        description: "Human Rights Law Reference",
-        icon_url: featureIconPrefix + "human_rights_law_reference.png",
+        description: "International Law Reference",
+        icon_url: featureIconPrefix + "international_law_reference.png",
         explanation: "This data point documents whether the MSI references international human rights or environmental laws or principles (e.g., the United Nations Declaration on Human Rights, the International Labor Organization Core Conventions, or the United Nations Guiding Principles on Business and Human Rights) in its standards."
       },
       involvement_of_affected_communities: {
-        description: "Involvement of Affected Communities",
-        icon_url: featureIconPrefix + "involvement_of_affected_communities.png",
-        explanation: "Affected populations are those individuals the MSI intends to benefit or protect (such as laborers, farmers, or indigenous communities) in addition to individuals who may be impacted by the MSI’s operations and implementation (such as civil society activists, or researchers). This data point documents whether the MSI reports that it engages these populations in initiatives, interviews or education programs outside of decision-making processes."
+        description: "Involvement of Affected Populations",
+        icon_url: featureIconPrefix + "involvement_of_affected_populations.png",
+        explanation: "Affected populations are the people the MSI intends to benefit or protect (such as laborers, farmers, or indigenous communities) in addition to individuals who may be impacted by the MSI’s operations and implementation (such as civil society activists, or researchers). This data point documents whether the MSI reports that it engages these populations through initiatives, interviews, or education programs."
       },
       reports: {
-        description: "Reports",
-        icon_url: featureIconPrefix + "reports.png",
+        description: "Public Reports",
+        icon_url: featureIconPrefix + "public_reports.png",
         explanation: "This data point documents whether the MSI requires that publicly available reports be produced as a result of evaluations of member compliance with initiative standards. Corporate/member self-reporting does not satisfy this criterion. Reports must be produced by the MSI or by a third party and be publicly available on the MSI’s webpage."
       },
       sanctions: {
         description: "Sanctions",
         icon_url: featureIconPrefix + "sanctions.png",
-        explanation: "This data point documents whether the MSI has some authority to sanction or hold members accountable for breaches of standards related to MSI activities. Examples of sanctions include the power to suspend or revoke memberships, impose fines, sanction with fines, to withdraw certification, seal, use of the MSI’s logo, or require redress or remedies in other forms."
+        explanation: "This data point documents whether the MSI reports that it has some authority to sanction or hold members accountable for breaches of standards related to MSI activities. Examples of sanctions include the power to suspend or revoke memberships, impose fines, sanction with fines, to withdraw certification, seal, use of the MSI’s logo, or require redress or remedies in other forms."
       },
       standards: {
         description: "Standards",

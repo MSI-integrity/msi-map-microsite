@@ -17,7 +17,7 @@ var Data = React.createClass({
               The project proceeded in four stages:
 
               <ul>
-                <li>Project Design and Review (Spring 2014 - Fall 2014)</li>
+                <li>Project Design and Review (Winter 2014 - Winter 2015)</li>
                 <li>Pilot Research, Review, and Preparation for Data Collection Stage (Spring 2015 - Fall 2015)</li>
                 <li>Data Collection and Internal Review (Spring 2016 - Summer 2016)</li>
                 <li>Communication with MSIs (Summer 2016 - Fall 2016)</li>
@@ -43,7 +43,7 @@ var Data = React.createClass({
             </div>
             <div className="small-9 columns">
               <p>
-                The Kenan Institute for Ethics at Duke is an interdisciplinary “think and do” tank committed to promoting moral reflection and commitment, conducting interdisciplinary research, and shaping policy and practice. The Duke Human Rights Center at Kenan explores contemporary international human rights challenges by promoting interdisciplinary collaborations and innovative pedagogy for faculty, students, and practitioners. It encourages critical investigations from a broad range of disciplinary traditions and that bridge the often separate spheres of research, advocacy and policy. For more information, visit <a href="http://kenan.ethics.duke.edu/humanrights">kenan.ethics.duke.edu/humanrights</a>.
+                The Kenan Institute for Ethics at Duke is an interdisciplinary “think and do” tank committed to promoting moral reflection and commitment, conducting interdisciplinary research, and shaping policy and practice. The Duke Human Rights Center at Kenan explores contemporary international human rights challenges by promoting interdisciplinary collaborations and innovative pedagogy. It encourages critical investigations from a broad range of disciplinary traditions and that bridge the often-separate spheres of research, advocacy and policy. For more information, visit <a href="http://kenan.ethics.duke.edu/humanrights">kenan.ethics.duke.edu/humanrights</a>.
               </p>
             </div>
             <div className="small-3 columns">
@@ -51,7 +51,7 @@ var Data = React.createClass({
             </div>
             <div className="small-9 columns">
               <p>
-Founded in 1920, Miller & Chevalier is a Washington, DC law firm with a global perspective and leading practices in Tax, Employee Benefits (including ERISA), International Law and Business, White Collar and Internal Investigations, Complex Litigation and Government Affairs. Miller & Chevalier's Business & Human Rights (BHR) practice draws on the firm's deep experience in compliance counseling, investigations and litigation to provide tailored strategies to comply with BHR and related standards, avoid violations that create reputational and operational risk, and defend against alleged violations if issues arise. For more information on the firm, visit <a href="http://www.millerchevalier.com">www.millerchevalier.com</a>.              </p>
+Founded in 1920, Miller & Chevalier is a Washington, DC law firm with a global perspective and leading practices in Tax, Employee Benefits (including ERISA), International Law and Business, White Collar and Internal Investigations, Complex Litigation and Government Affairs. Miller & Chevalier's Business & Human Rights (BHR) practice draws on the firm's deep experience in compliance counseling, investigations and litigation to provide tailored strategies to comply with BHR and related standards, prevent violations that create reputational and operational risk, and defend against alleged violations if issues arise. For more information on the firm, visit <a href="http://www.millerchevalier.com">www.millerchevalier.com</a>.              </p>
             </div>
           </div>
         </div>
