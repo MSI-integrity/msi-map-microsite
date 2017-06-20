@@ -16,7 +16,7 @@ var Report = React.createClass({
             <hr />
           </div>
           <div className="small-6 columns">
-            <p>Since the 1990s, MSIs have established themselves as global governance institutions. As this project has uncovered, at least 45 different standard-setting MSIs now address a range of human rights, governance, and environmental issues in over 170 countries on six continents. These MSIs engage over 50 national governments, and regulate over 9,000 companies – including 65 Fortune Global 500 businesses with combined annual revenues of more than $5.4 trillion dollars.</p>
+            <p>Since the 1990s, MSIs have established themselves as global governance institutions. As this project has uncovered, at least 45 different standard-setting MSIs now address a range of human rights, governance, and environmental issues in over 170 countries on six continents. These MSIs engage over 50 national governments, and regulate over 9,000 companies – including more than 65 Fortune Global 500 businesses with combined annual revenues of more than $5.4 trillion dollars.</p>
           </div>
           <div className="small-4 small-offset-1 columns end text-center">
             <strong>Coming in July 2017: “The New Regulators? Assessing the Landscape of Multi-Stakeholder Initiatives,” a summary report from MSI Integrity and the Duke Human Rights Center at the Kenan Institute for Ethics based on findings from the MSI database.</strong>
