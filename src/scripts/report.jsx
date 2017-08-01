@@ -16,27 +16,21 @@ var Report = React.createClass({
             <hr />
           </div>
           <div className="small-6 columns">
-            <p>Since the 1990s, MSIs have established themselves as global governance institutions. As this project has uncovered, at least 45 different standard-setting MSIs now address a range of human rights, governance, and environmental issues in over 170 countries on six continents. These MSIs engage over 50 national governments, and regulate over 9,000 companies – including more than 65 Fortune Global 500 businesses with combined annual revenues of more than $5.4 trillion dollars.</p>
+            <p>
+		Authored by MSI Integrity and the Duke Human Rights Center at the Kenan Institute for Ethics, <i>The New Regulators? Assessing the Landscape of Multi-Stakeholder Initiatives</i> analyzes the 45 standard-setting MSIs in the MSI Database.
+	    </p>
+	    <p>
+	    	In the report, we assess the growth and industry spread of standard-setting MSIs, which have risen to prominence as a new category of governance institution since the 1990s. These MSIs address a range of human rights, governance, and environmental issues in over 170 countries on six continents. They also engage over 50 national governments, and regulate over 9,000 companies including more than 65 Fortune Global 500 businesses with combined annual revenues of more than $5.4 trillion.
+	    </p>
+	    <p>
+	    	We examine how these MSIs are governed and the extent to which they include different stakeholder groups. Our analysis reveals that a majority of standard-setting MSIs fail to meaningfully engage the workers and communities that are most affected by the standards they set. We also find that many MSIs lack one or more of the basic institutional elements necessary to effectively set and enforce their own standards.
+	    </p>
           </div>
           <div className="small-4 small-offset-1 columns end text-center">
-            <strong>Coming in July 2017: “The New Regulators? Assessing the Landscape of Multi-Stakeholder Initiatives,” a summary report from MSI Integrity and the Duke Human Rights Center at the Kenan Institute for Ethics based on findings from the MSI database.</strong>
-            { /* <a href={""} className="button large download-data" download>Download Report</a> */ }
+	    <h4>Download the Report</h4>
+            <a href="/data/The%20New%20Regulators%20-%20MSI%20Database%20Report.pdf" download>The New Regulators? Assessing the Landscape of Multi-Stakeholder Initiatives</a>
           </div>
         </div>
-        {/* <div className="row report-content-bottom">
-          <div className="row collapse">
-            <h1>What's Inside</h1>
-            <p>“Mapping Multi-Stakeholder Initiatives: Proliferation and Practice” uses data from this mapping project to illuminate trends in the functions and operations of MSIs as part of a larger global governance landscape. Summary data points and graphics may be found below.</p>
-          </div>
-          <div className="row collapse">
-            <div className="large-6 columns">
-              <img src="images/charts/left.png" />
-            </div>
-            <div className="large-6 columns">
-              <img src="images/charts/right.png" />
-            </div>
-          </div>
-        </div> */ }
       </div>
     );
   }
