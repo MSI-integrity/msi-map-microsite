@@ -12,7 +12,7 @@ var Data = React.createClass({
               <hr />
             </div>
             <div className="small-12 columns">
-              The database and data collection methodology were designed and developed by MSI Integrity, the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University and Miller & Chevalier (a law firm based in Washington D.C.) between 2014 – 2016. During this time, the three organizations worked together to define the scope of the project, including the types of initiatives that would be catalogued in the database, as well as the specific data points that would be collected for each initiative.
+              The database and data collection methodology were designed and developed by MSI Integrity, the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University, and Miller & Chevalier (a law firm based in Washington D.C.) between 2014 – 2016. During this time, the three organizations worked together to define the scope of the project, including the types of initiatives that would be catalogued in the database, as well as the specific data points that would be collected for each initiative.
 
               The project proceeded in four stages:
 
