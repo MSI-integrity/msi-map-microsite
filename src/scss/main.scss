@@ -360,3 +360,7 @@ a.download-data {
 .row-feature {
   padding: 2px;
 }
+
+.grey-out {
+  filter: grayscale(100%);
+}

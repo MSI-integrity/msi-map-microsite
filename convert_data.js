@@ -1,4 +1,15 @@
 const xlsx2json = require('xlsx2json');
+
+const features = [
+  "involvement_of_affected_communities",
+  "standards",
+  "human_rights_law_reference",
+  "evaluations",
+  "reports",
+  "grievance_mechanisms",
+  "sanctions"
+];
+
 xlsx2json('data/data.xlsx', {
   dataStartingRow: 2,
   mapping: {
@@ -17,6 +28,10 @@ xlsx2json('data/data.xlsx', {
     "sanctions": "M",
   }
 }, function (error, jsonArray) {
+  if (error) {
+    console.error("could not parse data/data.xlsx:", error);
+    return;
+  }
   msis = jsonArray.pop().filter(msi => msi.name !== "").map(msi => {
     m = {};
     m.name = msi.name;
@@ -30,21 +45,11 @@ xlsx2json('data/data.xlsx', {
     }
     m.stakeholders = msi.stakeholders;
     m.launched = msi.launched;
-    features = [];
-    ["involvement_of_affected_communities",
-     "standards",
-     "human_rights_law_reference",
-     "evaluations",
-     "reports",
-     "grievance_mechanisms",
-     "sanctions"
-    ].forEach(feature => {
-      if (msi[feature] === 'Yes') {
-        features.push(feature);
-      }
-    });
-    m.features = features;
+    m.features = features.filter(feature => msi[feature] === 'Yes');
+    m.deprecatedFeatures = features.filter(feature => msi[feature] === 'N/A');
+
     return m;
   });
+
   console.log(JSON.stringify({ data: msis }));
 });

@@ -103,14 +103,15 @@ var Explore = React.createClass({
       }
     },
 
-    generateFeatureBadges: function(features) {
-      var size = 40,
-          allFeatures = this.allFeatures;
+    generateFeatureBadges: function(features, greyOut) {
+      const size = 40,
+            allFeatures = this.allFeatures,
+            classes = "row-feature" + (greyOut ? " grey-out" : "");
       return features.sort().map(function (feature, i) {
-        var icon_url = allFeatures[feature]['icon_url'],
-            description = allFeatures[feature]['description'];
+        const icon_url = allFeatures[feature]['icon_url'],
+              description = allFeatures[feature]['description'];
         return (
-          <img className="row-feature" src={icon_url} alt={description} title={description} height={size} width={size} key={i} />
+          <img className={classes} src={icon_url} alt={description} title={description} height={size} width={size} key={i} />
         );
       });
     },
@@ -139,7 +140,8 @@ var Explore = React.createClass({
               {datum.launched}
             </div>
             <h5>Elements</h5>
-            {this.generateFeatureBadges(datum.features)}
+            {this.generateFeatureBadges(datum.features, false)}
+            {this.generateFeatureBadges(datum.deprecatedFeatures, true)}
           </div>
         </div>
       );
