@@ -13,7 +13,7 @@ gulp.task('sass', function () {
   gulp.src('./src/scss/*.scss')
     .pipe(sass({
       includePaths: [
-        'bower_components/foundation-sites/scss',
+        'node_modules/foundation-sites/scss',
         'node_modules/slick-carousel/slick'
       ]
     }))
@@ -31,14 +31,6 @@ gulp.task('js', function () {
       }
     }))
     .pipe(gulp.dest('./build'));
-});
-
-gulp.task('bower-components', function () {
-  gulp.src([
-    'bower_components/jquery/dist/jquery.min.js',
-  ], {base: 'bower_components/'})
-    .pipe(rename({dirname: ''}))
-    .pipe(gulp.dest('./build/vendor'));
 });
 
 gulp.task('html', function () {
@@ -69,7 +61,7 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./build/fonts'));
 });
 
-gulp.task('build', ['bower-components', 'sass', 'js', 'html', 'index', 'data', 'images', 'fonts']);
+gulp.task('build', ['sass', 'js', 'html', 'index', 'data', 'images', 'fonts']);
 
 gulp.task('watch', ['build'], function () {
     gulp.watch('./src/scss/*.scss', ['sass']);

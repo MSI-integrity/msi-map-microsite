@@ -6,6 +6,7 @@
   "dependencies": {
     "body-parser": "^1.4.3",
     "express": "^4.4.5",
+    "foundation-sites": "6.2.3",
     "gulp-sheets2json": "^1.0.1",
     "lunr": "^0.7.1",
     "preact": "^7.1.0",
