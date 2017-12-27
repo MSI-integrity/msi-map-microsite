@@ -61,7 +61,13 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./build/fonts'));
 });
 
-gulp.task('build', ['sass', 'js', 'html', 'index', 'data', 'images', 'fonts']);
+// Netlify redirect config file.
+gulp.task('netlify', function () {
+  gulp.src('./_redirects')
+    .pipe(gulp.dest('./build'));
+});
+
+gulp.task('build', ['sass', 'js', 'html', 'index', 'data', 'images', 'fonts', 'netlify']);
 
 gulp.task('watch', ['build'], function () {
     gulp.watch('./src/scss/*.scss', ['sass']);
