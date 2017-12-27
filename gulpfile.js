@@ -22,7 +22,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function () {
-  gulp.src('./src/scripts/*.jsx')
+  gulp.src('./src/js/*.jsx')
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(minify({
       ext: {
@@ -71,7 +71,7 @@ gulp.task('build', ['sass', 'js', 'html', 'index', 'data', 'images', 'fonts', 'n
 
 gulp.task('watch', ['build'], function () {
     gulp.watch('./src/scss/*.scss', ['sass']);
-    gulp.watch('./src/scripts/*.jsx', ['js']);
+    gulp.watch('./src/js/*.jsx', ['js']);
     gulp.watch('./src/html/index.html', ['html']);
 });
 
