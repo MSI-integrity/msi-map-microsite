@@ -33,10 +33,5 @@ module.exports = {
       'react': 'preact-compat',
       'react-dom': 'preact-compat'
     }
-  },
-  plugins: [
-      new webpack.ResolverPlugin(
-          new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(".bower.json", ["main"])
-      )
-  ]
+  }
 };
