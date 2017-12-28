@@ -1,64 +1,7 @@
-var React = require('react');
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-var Nav = React.createClass({
-  goToHomeTab: function () {
-    window.location.hash = "";
-  },
-
-  goToReportTab: function () {
-    window.location.hash = "report";
-  },
-
-  goToDataTab: function() {
-    window.location.hash = "methodology";
-  },
-
-  goToExploreTab: function () {
-    window.location.hash = "data";
-  },
-
-  goToQuestionAndAnswerTab: function () {
-    window.location.hash = "questions";
-  },
-
-  renderMenuItems: function () {
-    var activeClass = 'active-link';
-    var itemData = [
-      {
-        onClick: this.goToHomeTab,
-        className: this.props.hashValue == '' && activeClass,
-        text: 'Overview'
-      },
-      {
-        onClick: this.goToReportTab,
-        className: this.props.hashValue == 'report' && activeClass,
-        text: 'The Report'
-      },
-      {
-        onClick: this.goToExploreTab,
-        className: this.props.hashValue == 'data' && activeClass,
-        text: 'The Database'
-      },
-      {
-        onClick: this.goToDataTab,
-        className: this.props.hashValue ==  'methodology' && activeClass,
-        text: 'Methodology'
-      },
-      {
-        onClick: this.goToQuestionAndAnswerTab,
-        className: this.props.hashValue == 'questions' && activeClass,
-        text: 'FAQ'
-      }
-    ];
-    return itemData.map(function (datum, i) {
-      return (
-        <li className={"menu-link " + datum.className} key={i}>
-          <a onClick={datum.onClick}>{datum.text}</a>
-        </li>
-      )
-    });
-  },
-
+const Nav = React.createClass({
   render: function () {
     return (
       <div className="nav">
@@ -68,14 +11,23 @@ var Nav = React.createClass({
           <a href="http://www.msi-integrity.org"><img src="images/org_icons/msi-integrity.png" /></a>
         </div>
         <div className="top-bar">
-          {/*<div className="top-bar-left">
-            <ul className="menu" data-responsive-menu="accordion">
-              <a href="#"><li className="menu-text">The New Regulators</li></a>
-            </ul>
-          </div> */ }
           <div className="top-bar-left">
             <ul className="menu">
-              {this.renderMenuItems()}
+              <li className={"menu-link"}>
+                <Link to={"/"}>Overview</Link>
+              </li>
+              <li className={"menu-link"}>
+                <Link to={"/report"}>The Report</Link>
+              </li>
+              <li className={"menu-link"}>
+                <Link to={"/database"}>The Database</Link>
+              </li>
+              <li className={"menu-link"}>
+                <Link to={"/methodology"}>Methodology</Link>
+              </li>
+              <li className={"menu-link"}>
+                <Link to={"/faq"}>FAQ</Link>
+              </li>
             </ul>
           </div>
         </div>

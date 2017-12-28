@@ -1,10 +1,11 @@
-var lunr = require('lunr'),
-    React = require('react'),
-    ReactDOM = require('react-dom');
+import Lunr from 'lunr';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
-var featureIconPrefix = 'images/feature_icons/';
+const featureIconPrefix = 'images/feature_icons/';
 
-var Explore = React.createClass({
+const Database = React.createClass({
     loadDataFromServer: function() {
       $.ajax({
         url: 'data/indexed_data.json',
@@ -12,7 +13,7 @@ var Explore = React.createClass({
         cache: false,
         success: function(indexed_data) {
           var data = indexed_data.data,
-              index = lunr.Index.load(indexed_data.index);
+              index = Lunr.Index.load(indexed_data.index);
           this.setState({data: data, filteredData: data, searchIndex: index});
         }.bind(this),
         error: function(xhr, status, err) {
@@ -256,7 +257,7 @@ var Explore = React.createClass({
             <h1>The Database</h1>
             <hr />
             <p>
-              This database catalogues basic information about the design characteristics of each MSI’s scope, governance, and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="#methodology">Project Methodology</a>.
+              This database catalogues basic information about the design characteristics of each MSI’s scope, governance, and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <Link to={'/methodology'}>Project Methodology</Link>.
             </p>
             <strong>
               <p>
@@ -308,4 +309,4 @@ var Explore = React.createClass({
     }
 });
 
-module.exports = Explore;
+module.exports = Database;

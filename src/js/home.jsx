@@ -1,4 +1,5 @@
-var React = require('react');
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 var Home = React.createClass({
   render: function () {
@@ -14,7 +15,7 @@ var Home = React.createClass({
               <p>This database is an open-access resource for learning about transnational standard-setting MSIs. It catalogues publicly available information about the institutional design of MSIs to provide an overview of the governance and operations of these initiatives.</p>
               <p><a href="http://www.msi-integrity.org">The Institute for Multi-Stakeholder Initiative Integrity (MSI Integrity)</a> and the <a href="http://kenan.ethics.duke.edu/humanrights">Duke Human Rights Center at the Kenan Institute for Ethics</a>, with the support of <a href="http://www.millerchevalier.com">Miller & Chevalier</a> as pro bono counsel for this project, have produced this database of transnational standard-setting MSIs to provide an introduction to these influential sources of standards and to encourage research and critical reflection into the roles, functions, and effectiveness of MSIs.</p>
 
-              <strong>To learn more, read our <a href="#report">summary report</a>, explore <a href="#data">the data</a>, or review our <a href="#questions">FAQ</a>.</strong>
+              <strong>To learn more, read our <Link to={'/report'}>summary report</Link>, explore <Link to={'/database'}>the data</Link>, or review our <Link to={'/faq'}>FAQ</Link>.</strong>
             </div>
           </div>
         </div>

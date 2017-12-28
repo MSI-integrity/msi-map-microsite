@@ -104,12 +104,7 @@ h1, h2, h3, h4, h5 {
 
 .tab {
   @extend .body-font;
-  display: none;
-  // margin-top: 20px;
   margin-bottom: 20px;
-  &.active-tab {
-    display: block;
-  }
 }
 
 .homepage-top {
