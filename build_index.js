@@ -1,5 +1,5 @@
-var lunr = require('lunr'),
-    through = require('through2');
+const lunr = require('lunr'),
+      through = require('through2');
 
 function addIds (data) {
   for (var i = 0; i < data.length; i++) {
@@ -21,7 +21,7 @@ function createSearchIndex (data) {
 
 function getIndexAndData (file) {
   var data = file.data,
-      index;
+    index;
   addIds(data);
   index = createSearchIndex(data);
   return {

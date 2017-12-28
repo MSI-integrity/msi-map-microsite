@@ -1,6 +1,17 @@
-var React = require('react');
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-var QuestionAndAnswer = React.createClass({
+const slugify = (text) => {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+}
+
+
+const FAQ = React.createClass({
   questionsAndAnswers: [
     {
       question: 'What is the MSI database?',
@@ -105,7 +116,7 @@ var QuestionAndAnswer = React.createClass({
             <li>Communication with MSIs (Summer 2016-Fall 2016) </li>
           </ul>
           <p>
-            A full explanation of the project methodology is available <a href="#methodology">here</a>.
+            A full explanation of the project methodology is available <Link to={'/methodology'}>here</Link>.
           </p>
       </div>
     },
@@ -209,14 +220,10 @@ var QuestionAndAnswer = React.createClass({
   ],
 
   renderQASummary: function () {
-    var scrollToQuestion = (index) => {
-      $('.qa-row').get(index).scrollIntoView(/* alignToTop = */ true);
-    };
-    var summaryNodes = this.questionsAndAnswers.map(function (info, index) {
-      var scrollToThisQuestion = () => {scrollToQuestion(index);};
+    const summaryNodes = this.questionsAndAnswers.map((info, index) => { 
       return (
         <div className="question-toc-item" key={index}>
-          <strong><a onClick={scrollToThisQuestion}>{info.question}</a></strong>
+          <strong><a href={"#" + slugify(info.question)}>{info.question}</a></strong>
         </div>
       );
     });
@@ -236,12 +243,15 @@ var QuestionAndAnswer = React.createClass({
   renderQARows: function () {
     return this.questionsAndAnswers.map(function (info, index) {
       return (
-        <div key={index} className="row qa-row">
-          <div className="small-12 columns">
-            <div className="question-title">
-              <h3>{info.question}</h3> <a onClick={() => {window.scrollTo(0,0);}}>Top</a>
+        <div>
+          <a name={slugify(info.question)}/>
+          <div key={index} className="row qa-row">
+            <div className="small-12 columns">
+              <div className="question-title">
+                <h3>{info.question}</h3> <a href={'#'}>Top</a>
+              </div>
+              <p>{info.answer}</p>
             </div>
-            <p>{info.answer}</p>
           </div>
         </div>
       );
@@ -258,4 +268,4 @@ var QuestionAndAnswer = React.createClass({
   }
 });
 
-module.exports = QuestionAndAnswer;
+module.exports = FAQ;

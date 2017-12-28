@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var Report = React.createClass({
+const Report = React.createClass({
   getInitialState: function () {
     return {
       tabHasBeenSeen: false

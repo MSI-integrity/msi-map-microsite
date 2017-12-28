@@ -1,7 +1,7 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/scripts/main.jsx',
+  entry: './src/js/main.jsx',
   output: {
     // Output the bundled file.
     path: require('path').resolve('./build'),
