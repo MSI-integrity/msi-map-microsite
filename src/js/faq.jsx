@@ -1,6 +1,16 @@
-var React = require('react');
+import React from 'react';
 
-var QuestionAndAnswer = React.createClass({
+const slugify = (text) => {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+}
+
+
+const FAQ = React.createClass({
   questionsAndAnswers: [
     {
       question: 'What is the MSI database?',
@@ -209,14 +219,10 @@ var QuestionAndAnswer = React.createClass({
   ],
 
   renderQASummary: function () {
-    var scrollToQuestion = (index) => {
-      $('.qa-row').get(index).scrollIntoView(/* alignToTop = */ true);
-    };
-    var summaryNodes = this.questionsAndAnswers.map(function (info, index) {
-      var scrollToThisQuestion = () => {scrollToQuestion(index);};
+    const summaryNodes = this.questionsAndAnswers.map((info, index) => { 
       return (
         <div className="question-toc-item" key={index}>
-          <strong><a onClick={scrollToThisQuestion}>{info.question}</a></strong>
+          <strong><a href={"#" + slugify(info.question)}>{info.question}</a></strong>
         </div>
       );
     });
@@ -238,8 +244,9 @@ var QuestionAndAnswer = React.createClass({
       return (
         <div key={index} className="row qa-row">
           <div className="small-12 columns">
+            <a name={slugify(info.question)}/>
             <div className="question-title">
-              <h3>{info.question}</h3> <a onClick={() => {window.scrollTo(0,0);}}>Top</a>
+              <h3>{info.question}</h3> <a href={'#'}>Top</a>
             </div>
             <p>{info.answer}</p>
           </div>
@@ -258,4 +265,4 @@ var QuestionAndAnswer = React.createClass({
   }
 });
 
-module.exports = QuestionAndAnswer;
+module.exports = FAQ;
