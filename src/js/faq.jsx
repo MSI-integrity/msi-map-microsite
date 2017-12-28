@@ -243,13 +243,15 @@ const FAQ = React.createClass({
   renderQARows: function () {
     return this.questionsAndAnswers.map(function (info, index) {
       return (
-        <div key={index} className="row qa-row">
-          <div className="small-12 columns">
-            <a name={slugify(info.question)}/>
-            <div className="question-title">
-              <h3>{info.question}</h3> <a href={'#'}>Top</a>
+        <div>
+          <a name={slugify(info.question)}/>
+          <div key={index} className="row qa-row">
+            <div className="small-12 columns">
+              <div className="question-title">
+                <h3>{info.question}</h3> <a href={'#'}>Top</a>
+              </div>
+              <p>{info.answer}</p>
             </div>
-            <p>{info.answer}</p>
           </div>
         </div>
       );
