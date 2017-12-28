@@ -1,8 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+
+const Items = [
+  {
+    path: '/',
+    name: 'Overview'
+  },
+  {
+    path: '/report',
+    name: 'The Report'
+  },
+  {
+    path: '/database',
+    name: 'The Database'
+  },
+  {
+    path: '/methodology',
+    name: 'Methodology'
+  },
+  {
+    path: '/faq',
+    name: 'FAQ'
+  },
+];
 
 const Nav = React.createClass({
-  render: function () {
+  renderMenuLink: function ({path, name}) {
+    return (
+      <Route exact path={path} children={({ match }) => (
+        <li className={'menu-link ' + (match ? 'active-link' : '')}>
+          <Link to={path}>{name}</Link>
+        </li>
+      )}/>
+    );
+  },
+
+  render: function (props) {
     return (
       <div className="nav">
         <div className="logo-banner">
@@ -13,21 +46,7 @@ const Nav = React.createClass({
         <div className="top-bar">
           <div className="top-bar-left">
             <ul className="menu">
-              <li className={"menu-link"}>
-                <Link to={"/"}>Overview</Link>
-              </li>
-              <li className={"menu-link"}>
-                <Link to={"/report"}>The Report</Link>
-              </li>
-              <li className={"menu-link"}>
-                <Link to={"/database"}>The Database</Link>
-              </li>
-              <li className={"menu-link"}>
-                <Link to={"/methodology"}>Methodology</Link>
-              </li>
-              <li className={"menu-link"}>
-                <Link to={"/faq"}>FAQ</Link>
-              </li>
+              {Items.map((item) => this.renderMenuLink(item))}
             </ul>
           </div>
         </div>
