@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-var Home = React.createClass({
+const Home = React.createClass({
   render: function () {
     return (
       <div className={"tab" + (this.props.activeTab ? ' active-tab' : '')}>

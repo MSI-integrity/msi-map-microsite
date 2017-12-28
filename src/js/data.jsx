@@ -1,8 +1,8 @@
-var React = require('react');
+import React from 'react';
 
-var fileUri = 'data/msi-data.zip';
+const fileUri = 'data/msi-data.zip';
 
-var Data = React.createClass({
+const Data = React.createClass({
     render: function () {
       return (
         <div className={"tab" + (this.props.activeTab ? ' active-tab' : '')}>
