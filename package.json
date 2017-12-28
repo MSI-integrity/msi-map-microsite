@@ -4,16 +4,13 @@
   "private": true,
   "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.4.3",
     "express": "^4.4.5",
     "foundation-sites": "6.2.3",
     "gulp-sheets2json": "^1.0.1",
     "lunr": "^0.7.1",
     "preact": "^7.1.0",
     "preact-compat": "^3.9.4",
-    "react-router-dom": "^4.2.2",
-    "react-slick": "^0.14.5",
-    "slick-carousel": "^1.6.0"
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-core": "^5.8.23",
