@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const slugify = (text) => {
   return text.toString().toLowerCase()
@@ -115,7 +116,7 @@ const FAQ = React.createClass({
             <li>Communication with MSIs (Summer 2016-Fall 2016) </li>
           </ul>
           <p>
-            A full explanation of the project methodology is available <a href="#methodology">here</a>.
+            A full explanation of the project methodology is available <Link to={'/methodology'}>here</Link>.
           </p>
       </div>
     },
