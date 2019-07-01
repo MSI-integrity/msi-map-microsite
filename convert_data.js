@@ -10,7 +10,13 @@ const features = [
   "sanctions"
 ];
 
-xlsx2json('data/data.xlsx', {
+const filename = process.argv[2];
+if (!filename) {
+  console.error("no filename provided");
+  process.exit(1);
+}
+
+xlsx2json(filename, {
   dataStartingRow: 2,
   mapping: {
     "name": "A",
