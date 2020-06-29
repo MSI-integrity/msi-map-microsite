@@ -253,16 +253,20 @@ const Database = React.createClass({
           <h1>The Database</h1>
           <hr />
           <p>
-            This database catalogues basic information about the design characteristics of each MSI’s scope, governance, and implementation structures. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <Link to={'/methodology'}>Project Methodology</Link>.
+            This database catalogued basic information about the design characteristics of global standard-setting MSIs, including their scope, governance, and implementation structures. Analysis of the data can be found in <Link to={'/report'}>our summary report</Link>; raw data can be downloaded <a href="https://github.com/MSI-integrity/msi-map-microsite/raw/master/data/data.xlsx">here</a> or by <a href="http://www.msi-integrity.org/contact-us/">contacting us</a>.
           </p>
-          <strong>
-            <p>
-              Please contact <a href="mailto:info@msi-integrity.org">MSI Integrity (info@msi-integrity.org)</a> to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses.
-            </p>
-            <p>
-              MSI researchers, practitioners, or civil society members interested in reviewing project data should contact <a href="mailto:suzanne.katzenstein@duke.edu">Suzanne Katzenstein (suzanne.katzenstein@duke.edu)</a>.
-            </p>
-          </strong>
+          <p>
+            The database did not evaluate, rate, or rank MSIs, nor did it assess the impact or effectiveness of MSIs. It should not be treated as a “scorecard” or “benchmark” for MSI performance. For more information about the data collection process and the threshold criteria used for each data point, see our <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">Project Methodology</a>.
+          </p>
+          <p>
+            The database was released in June 2017. In 2020, MSI Integrity released a new report on MSIs, <a href="https://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a>, which provides more recent data, current through June 2019, on the MSIs listed in this database. The database was not updated to reflect this new information, except that we made a few revisions to the launch dates listed for some of the MSIs in the database, updated some mission statements, and eliminated five MSIs from the original list of 45. Two of the five MSIs were removed because they are no longer in operation. We removed another three because their standards focused solely on environmental protection and did not include other specific human rights components, and so were not appropriate for our ongoing analysis. We also note that UTZ has merged with Rainforest Alliance, but we analyzed it separately as, at the time of our research, it still retained separate procedures and processes. For more information about these revisions, see our <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">Project Methodology</a>. 
+          </p>
+          <p>
+            Beyond the revisions stated here, the database was not and will not be updated any further. MSI Integrity is shifting to a new and exciting research focus: looking <a href="https://www.msi-integrity.org/beyond-corporations/">beyond corporations</a> to support the promotion of business models that center workers and communities in their ownership and governance.
+          </p>
+          <p>
+            If you wish to explore more recent data on the 40 MSIs now in our database, explore our 2020 report, <a href="https://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a>.
+          </p>
         </div>
         <div className="row">
           <div className="large-7 large-centered columns">

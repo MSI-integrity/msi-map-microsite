@@ -47,7 +47,7 @@ const FAQ = React.createClass({
           <li>The initiative sets standards for its members to follow; </li>
           <li>The initiative is “voluntary” (i.e. optional for companies and other stakeholders to join although once a member, compliance with certain standards may be mandatory);</li>
           <li>The initiative’s standards are implemented in more than one country; and</li>
-          <li>The initiative focuses on addressing business or government conduct relating to issues of public concern (e.g. human rights, environmental protection, corruption prevention, etc.).</li>
+          <li>The initiative focuses on addressing business or government conduct relating to issues of public concern (e.g. human rights, environmental protection, corruption prevention, etc.). Note: in 2020 we modified this criterion to restrict the database to MSIs standards that address or affect specific human rights beyond the environment. See our <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">project methodology</a> for more information, including a list of the MSIs that were removed.</li>
         </ul>
         <p>
           The exact organizational structure or formal status of an initiative — such as whether it is an incorporated entity — is not a consideration in determining whether the initiative qualifies for inclusion in the database. However, it is required that the initiative’s governance structure mandate the participation of diverse stakeholders in its primary decision-making body. Over time, we may expand the database to include initiatives that have a multi-stakeholder advisory group or that delegate limited authority to a multi-stakeholder body.  However, expanding the database in this way may result in the inclusion of many initiatives that are not commonly viewed as MSIs, such as the United Nations.
@@ -116,7 +116,7 @@ const FAQ = React.createClass({
             <li>Communication with MSIs (Summer 2016-Fall 2016) </li>
           </ul>
           <p>
-            A full explanation of the project methodology is available <Link to={'/methodology'}>here</Link>.
+            In 2020, five MSIs were removed from the database and the names and launch dates of the remaining MSIs and, in some cases, the mission statements, were revised to reflect more current information. Beyond these revisions, the database was not and will not be updated any further. A full explanation of the project methodology, including the removal of the five MSIs, is available <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">here</a>.
           </p>
       </div>
     },
@@ -144,10 +144,7 @@ const FAQ = React.createClass({
       answer:
         <div>
           <p>
-            In selecting the data points, we considered both the potential relevance and usefulness of the data points to various stakeholder groups: In particular, (1) whether the characteristic is widely considered fundamental to an MSI’s potential to be effective, (2) whether information about this characteristic could help close a knowledge gap or stimulate further research or debate into MSIs, and (3) whether the data point would be potentially useful to stakeholder groups seeking to engage with MSIs. In making that assessment, MSI Integrity staff drew on the comments and feedback obtained during MSI Integrity’s global consultation on the Essential Elements of MSIs, as the consultation involved input from over 100 individuals on characteristics of potential important to MSI efficacy. A brief explanation of each substantive data point is included in the Classification Guide.
-          </p>
-          <p>
-            Over time, the database may be expanded to include other data points. If you are interested in helping to expand the database to cover further data points, please contact MSI Integrity (<a href="mailto:info@msi-integrity.org">info@msi-integrity.org</a>).
+            In selecting the data points, we considered both the potential relevance and usefulness of the data points to various stakeholder groups: In particular, (1) whether the characteristic is widely considered fundamental to an MSI’s potential to be effective, (2) whether information about this characteristic could help close a knowledge gap or stimulate further research or debate into MSIs, and (3) whether the data point would be potentially useful to stakeholder groups seeking to engage with MSIs. In making that assessment, MSI Integrity staff drew on the comments and feedback obtained during MSI Integrity’s global consultation on the Essential Elements of MSIs, as the consultation involved input from over 100 individuals on characteristics of potential importance to MSI efficacy. A brief explanation of each substantive data point is included in the Classification Guide (Appendix A of the <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">Project Methodology</a> document).
           </p>
         </div>
     },
@@ -155,7 +152,7 @@ const FAQ = React.createClass({
       question: 'How was data collected about each MSI?',
       answer:
         <p>
-          Researchers relied on self-reported information by MSIs on MSI websites as the source material for data collection. Two researchers were assigned to each MSI and catalogued information on each initiative separately. A third researcher then compared the two data sets and reconciled any discrepancies. MSI Integrity and Kenan staff provided a final check on the data collected, devoting particular attention to any unresolved discrepancies or questions and reviewing all data points concerning the involvement of affected populations and external complaints mechanisms. In the final stage of the project, the data was shared with MSIs for feedback. Of the 45 initiatives included in the database, 10 responded with corrections or clarification. Corrections were made if they could be verified with publicly available information and if they were consistent with the project’s Classification Guide.
+          Researchers relied on self-reported information by MSIs on MSI websites as the source material for data collection. Two researchers were assigned to each MSI and catalogued information on each initiative separately. A third researcher then compared the two data sets and reconciled any discrepancies. MSI Integrity and Kenan staff provided a final check on the data collected, devoting particular attention to any unresolved discrepancies or questions and reviewing all data points concerning the involvement of affected populations and external complaints mechanisms. In the final stage of the project, the data was shared with MSIs for feedback. Of the 45 initiatives originally included in the database, 10 responded with corrections or clarification. Corrections were made if they could be verified with publicly available information and if they were consistent with the project’s Classification Guide.
         </p>
     },
     {
@@ -163,10 +160,7 @@ const FAQ = React.createClass({
       answer:
         <div>
           <p>
-            The database reflects publicly available information disclosed by MSIs through August 2016. Data was collected between February and June 2016 and submitted to MSIs for review from August - September 2016.
-          </p>
-          <p>
-            Please contact MSI Integrity (<a href="mailto:info@msi-integrity.org">info@msi-integrity.org</a>) to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses. Corrections and updates will be accepted if they are verifiable with publicly available information and are consistent with the project’s Classification Guide.
+            The database initially reflected publicly available information disclosed by MSIs through August 2016. For this initial launch phase, ata was collected between February and June 2016 and submitted to MSIs for review from August - September 2016. In 2020, MSI Integrity released a new report on MSIs, <a href="https://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a>, which provides more recent data, current through June 2019, on the MSIs listed in this database. The database was not updated to reflect this new data, except that we eliminated five MSIs from the original list of 45 and, where necessary, revised the names and launch dates of the remaining MSIs in the database and, in some cases, the mission statements, for consistency with our newest research into MSIs. Beyond these revisions, the database was not and will not be updated any further. See the <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">Project Methodology</a> for more information on these updates. Please <a href="http://www.msi-integrity.org/contact-us/">contact MSI Integrity</a> to access the original data released in 2017. Explore our new research, <a href="https://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a> for more recent data on MSIs.
           </p>
         </div>
     },
@@ -175,10 +169,16 @@ const FAQ = React.createClass({
       answer:
         <div>
           <p>
-            Researchers were able to identify 45 transnational, standard-setting MSIs that regulate company or government conduct on issues of public concern. Although we aimed to be as comprehensive as possible in our identification of transnational, standard-setting MSIs, some initiatives may not have been captured by our methodology. If you know of an MSI that should be included in this dataset, please contact MSI Integrity (<a href="mailto:info@msi-integrity.org">info@msi-integrity.org</a>)
+            During the initial stages of research, the researchers were able to identify 45 transnational, standard-setting MSIs that regulate company or government conduct on issues of public concern. Although we aimed to be as comprehensive as possible in our identification of transnational, standard-setting MSIs, some initiatives may not have been captured by our methodology.
           </p>
           <p>
             Notably, there are several initiatives that researchers identified during the database development process that meet all of the database’s threshold criteria except for being transnational (i.e. implementing standards in two or more countries). Such initiatives include: The Accord on Fire and Building Safety in Bangladesh, the Alliance for Bangladesh Worker Safety, and the Alliance for Fair Food.
+          </p>
+          <p>
+            In 2020, five MSIs were removed from the database for consistency with our newer research into MSIs. Two of the five MSIs—Fair Flowers Fair Plants and Marine Aquarium Council—were removed because they are no longer in operation. We removed another three—Green-e, International Seafood Sustainability Foundation and Wildlife Friendly Enterprise Network—because their standards focused solely on environmental protection and did not include other specific human rights components, and so were not appropriate for our ongoing analysis.
+          </p>
+          <p>
+            The database will not be updated or expanded any further. For more information, see our Project Methodology <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">here</a>. If you wish to see the original data that includes these five MSIs, please <a href="http://www.msi-integrity.org/contact-us/">contact MSI Integrity</a>.
           </p>
         </div>
     },
@@ -186,21 +186,14 @@ const FAQ = React.createClass({
         question: 'What data sources have been used for the project?',
         answer:
           <p>
-            The project relies on the self-reporting of MSIs on their own websites in order to represent MSIs as the general public might see them. The exclusive use of publicly available information highlights the varying levels of transparency and accessibility across initiatives. At the same time, the database does not verify that any of the initiatives’ stated features are followed or implemented, but simply notes that these processes and policies have been reported to exist. Please contact MSI Integrity (<a href="mailto:info@msi-integrity.org">info@msi-integrity.org</a>) if you would like a copy of our data sources.
+            The project relies on the self-reporting of MSIs on their own websites in order to represent MSIs as the general public might see them. The exclusive use of publicly available information highlights the varying levels of transparency and accessibility across initiatives. At the same time, the database does not verify that any of the initiatives’ stated features are followed or implemented, but simply notes that these processes and policies have been reported to exist.
           </p>
     },
     {
       question: 'Will the database be updated or expanded in the future?',
       answer:
         <p>
-          The database reflects publicly available information disclosed by MSIs through August 2016. We hope to continue to expand the database in the future, and appreciate suggestions from researchers, MSI practitioners, companies, and the general public on how the database may be further developed so that it is most useful. Please contact MSI Integrity (<a href="mailto:info@msi-integrity.org">info@msi-integrity.org</a>) to submit updates or corrections to the database, or to provide suggestions for the database’s development and future uses. Corrections and updates will be accepted if they are verifiable with publicly available information and are consistent with the project’s Classification Guide.
-        </p>
-    },
-    {
-      question: 'How can I suggest additions, updates, or modifications to the MSI database?',
-      answer:
-        <p>
-          Please contact MSI Integrity (<a href="mailto:info@msi-integrity.org">info@msi-integrity.org</a>) to submit additional initiatives to potentially include in the database, updates or corrections to the database, or to provide suggestions for the database’s development and future uses. Additions, corrections and updates will be accepted if they are verifiable with publicly available information and are consistent with the project’s Classification Guide.
+          The data in the database will not be updated or expanded any further. MSI Integrity is shifting to a new and exciting research focus: looking <a href="https://www.msi-integrity.org/beyond-corporations/">beyond corporations</a> to support the promotion of business models that center workers and communities in their ownership and governance. Explore our latest research, <a href="https://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a> for more recent data on MSIs.
         </p>
     },
     {
@@ -211,8 +204,8 @@ const FAQ = React.createClass({
             This project is a collaboration between the non-profit organization, MSI Integrity, and the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University. In addition, MSI Integrity's pro bono counsel for this project, Miller & Chevalier helped to formulate the data collection methodology and assisted with data collection.
           </p>
           <ul>
-            <li>MSI Integrity is a non-profit organization based in San Francisco, CA which works in partnership with academic institutions and civil society organizations to understand the human rights impact and value of multi-stakeholder initiatives that address business and human rights.</li>
-            <li>The Duke Human Rights Center at the Kenan Institute for Ethics is an interdisciplinary “think and do” tank at Duke University, which explores contemporary international human rights challenges by promoting innovative pedagogy and interdisciplinary collaboration that bridge research, advocacy and policy.</li>
+            <li>MSI Integrity is a non-profit organization based in Berkeley, CA which works in partnership with academic institutions and civil society organizations to understand the human rights impact and value of multi-stakeholder initiatives that address business and human rights.</li>
+            <li>The Duke Human Rights Center at the Kenan Institute for Ethics is an interdisciplinary “think and do” tank at Duke University, which explores contemporary international human rights challenges by promoting innovative pedagogy and interdisciplinary collaboration that bridges research, advocacy and policy.</li>
             <li>Miller & Chevalier is a Washington, D.C. law firm with a global perspective and leading practices in Tax, Employee Benefits, International Law and Business, White Collar and Internal Investigations, Complex Litigation and Government Affairs.  Miller & Chevalier’s Business & Human Rights (BHR) practice draws on the firm’s deep experience in compliance counseling, investigations and litigation to provide tailored strategies to comply with BHR and related standards, prevent violations that create reputational and operational risk, and defend against alleged violations if issues arise.</li>
           </ul>
         </div>
