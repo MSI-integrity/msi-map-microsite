@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "gulp build",
+    "build": "npm i natives; gulp build",
     "watch": "gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "convert-data": "node convert_data.js data/data.xlsx > data/data.json"
