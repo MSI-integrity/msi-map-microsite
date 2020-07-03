@@ -12,7 +12,7 @@ const Data = React.createClass({
               <hr />
             </div>
             <div className="small-12 columns">
-              The database and data collection methodology were designed and developed by MSI Integrity, the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University, and Miller & Chevalier (a law firm based in Washington D.C.) between 2014 – 2016. During this time, the three organizations worked together to define the scope of the project, including the types of initiatives that would be catalogued in the database, as well as the specific data points that would be collected for each initiative. The project proceeded in four initial stages:
+              The MSI Database and data collection methodology were designed and developed by MSI Integrity, the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University, and Miller & Chevalier (a law firm based in Washington D.C.) between 2014 – 2016. During this time, the three organizations worked together to define the scope of the project, including the types of initiatives that would be catalogued in the MSI Database, as well as the specific data points that would be collected for each initiative. The project proceeded in four initial stages:
 
               <ul>
                 <li>Project Design and Review (Winter 2014 - Winter 2015)</li>
@@ -22,7 +22,7 @@ const Data = React.createClass({
               </ul>
 
               <p>
-              In 2020, five MSIs were removed from the database and the names and launch dates of the remaining MSIs and, in some cases, the mission statements, were revised to reflect more current information. Beyond these revisions, the database was not and will not be updated any further. A full explanation of the project methodology is available <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">here</a>. 
+                In 2020, five MSIs were removed from the MSI Database, and the names, launch dates, and some mission statements of MSIs were revised to reflect more current information. Beyond these revisions, the MSI Database was not and will not be updated any further. A full explanation of the project methodology is available <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">here</a>. 
               </p>
             </div>
           </div>

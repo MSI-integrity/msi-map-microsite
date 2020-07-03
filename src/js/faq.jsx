@@ -14,10 +14,10 @@ const slugify = (text) => {
 const FAQ = React.createClass({
   questionsAndAnswers: [
     {
-      question: 'What is the MSI database?',
+      question: 'What is the MSI Database?',
       answer:
         <p>
-          The MSI database is an open-access resource for researchers, MSIs, companies, and the public to use in identifying transnational, standard-setting multi-stakeholder initiatives (MSIs) and learning about their characteristics. Specifically, the project catalogues publicly available information regarding MSI institutional design features, such as whether initiatives include reporting or sanctioning mechanisms, in order to provide an overview of MSI governance and operational characteristics.  Although the database contains potentially important descriptive information about the landscape of MSIs, it should be emphasized that the database does not evaluate, rate, or rank the effectiveness of MSIs, and therefore should not be treated as a “scoring” tool for MSI performance.  It is our hope that the database contributes to debate and discussion about the role of MSIs in voluntary governance of the private sector, and that it encourages deeper research and critical reflection into the roles, functions and effectiveness of individual MSIs, as well as MSIs as a field. This database should also be viewed as a resource for various stakeholders seeking to engage with MSIs.
+          The MSI Database is an open-access resource for researchers, MSIs, companies, and the public to use in identifying transnational, standard-setting multi-stakeholder initiatives (MSIs) and learning about their characteristics. Specifically, the project catalogues publicly available information regarding MSI institutional design features, such as whether initiatives include reporting or sanctioning mechanisms, in order to provide an overview of MSI governance and operational characteristics.  Although the MSI Database contains potentially important descriptive information about the landscape of MSIs, it should be emphasized that the MSI Database does not evaluate, rate, or rank the effectiveness of MSIs, and therefore should not be treated as a “scoring” tool for MSI performance.  It is our hope that the MSI Database contributes to debate and discussion about the role of MSIs in voluntary governance of the private sector, and that it encourages deeper research and critical reflection into the roles, functions and effectiveness of individual MSIs, as well as MSIs as a field. This MSI Database should also be viewed as a resource for various stakeholders seeking to engage with MSIs.
         </p>
     },
     {
@@ -33,58 +33,58 @@ const FAQ = React.createClass({
         </div>
     },
     {
-      question: 'What types of MSIs are included in the MSI database?',
+      question: 'What types of MSIs are included in the MSI Database?',
       answer:
       <div>
         <p>
-          At this stage, the database focuses exclusively on MSIs that set transnational standards for business or government conduct on issues of public concern, such as human rights, the environment and corruption. Over time, the database may be expanded to include other types of initiatives. The decision to focus on transnational standard-setting MSIs was made because of the potential significance of these initiatives to various stakeholder groups in the context of global and national “governance gaps” related to environmental and human rights protection — and the potential of these MSIs to address these gaps in combination with international and national laws.
+          At this stage, the MSI Database focuses exclusively on MSIs that set transnational standards for business or government conduct on issues of public concern, such as human rights, the environment and corruption. Over time, the MSI Database may be expanded to include other types of initiatives. The decision to focus on transnational standard-setting MSIs was made because of the potential significance of these initiatives to various stakeholder groups in the context of global and national “governance gaps” related to environmental and human rights protection — and the potential of these MSIs to address these gaps in combination with international and national laws.
         </p>
         <p>
-          To meet the threshold for inclusion in the database, an initiative must meet all of the following criteria:
+          To meet the threshold for inclusion in the MSI Database, an initiative must meet all of the following criteria:
         </p>
         <ul>
           <li>The initiative has more than one stakeholder group (i.e., industry, civil society, government, or communities affected by business operations) that collaborates in the primary decision-making processes of the initiative; </li>
           <li>The initiative sets standards for its members to follow; </li>
           <li>The initiative is “voluntary” (i.e. optional for companies and other stakeholders to join although once a member, compliance with certain standards may be mandatory);</li>
           <li>The initiative’s standards are implemented in more than one country; and</li>
-          <li>The initiative focuses on addressing business or government conduct relating to issues of public concern (e.g. human rights, environmental protection, corruption prevention, etc.). Note: in 2020 we modified this criterion to restrict the database to MSIs standards that address or affect specific human rights beyond the environment. See our <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">project methodology</a> for more information, including a list of the MSIs that were removed.</li>
+          <li>The initiative focuses on addressing business or government conduct relating to issues of public concern (e.g. human rights, environmental protection, corruption prevention, etc.). Note: in 2020 we modified this criterion to restrict the MSI Database to MSIs standards that address or affect specific human rights beyond the environment. See our <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">project methodology</a> for more information, including a list of the MSIs that were removed.</li>
         </ul>
         <p>
-          The exact organizational structure or formal status of an initiative — such as whether it is an incorporated entity — is not a consideration in determining whether the initiative qualifies for inclusion in the database. However, it is required that the initiative’s governance structure mandate the participation of diverse stakeholders in its primary decision-making body. Over time, we may expand the database to include initiatives that have a multi-stakeholder advisory group or that delegate limited authority to a multi-stakeholder body.  However, expanding the database in this way may result in the inclusion of many initiatives that are not commonly viewed as MSIs, such as the United Nations.
+          The exact organizational structure or formal status of an initiative — such as whether it is an incorporated entity — is not a consideration in determining whether the initiative qualifies for inclusion in the MSI Database. However, it is required that the initiative’s governance structure mandate the participation of diverse stakeholders in its primary decision-making body. Over time, we may expand the MSI Database to include initiatives that have a multi-stakeholder advisory group or that delegate limited authority to a multi-stakeholder body.  However, expanding the MSI Database in this way may result in the inclusion of many initiatives that are not commonly viewed as MSIs, such as the United Nations.
         </p>
         <p>
-          Finally, given that our research methodology relied on online research, we only included MSIs in the database that had a website.
+          Finally, given that our research methodology relied on online research, we only included MSIs in the MSI Database that had a website.
         </p>
       </div>
     },
     {
-      question: 'Why does the database only include transnational, standard-setting MSIs?',
+      question: 'Why does the MSI Database only include transnational, standard-setting MSIs?',
       answer:
         <p>
           The decision to initially focus on transnational, standard-setting MSIs was made because of the global governance significance of these initiatives and their potential to address “governance gaps” around environmental and human rights protection — supporting, or possibly undermining the development of international and national laws. Some researchers have argued that some MSIs have been perceived as filling “governance gaps” and therefore deterred policymakers from passing laws or regulations to address the underlying issues. Others see some MSIs as norm generators that have helped create conditions and political willingness for legislation to be passed to establish those norms. For these reasons, from an accountability and rights-protection perspective, standard-setting MSIs are commonly viewed as warranting heightened attention compared with other forms of MSIs.
         </p>
     },
     {
-      question: 'Does the database rank, evaluate or rate MSIs?',
+      question: 'Does the MSI Database rank, evaluate or rate MSIs?',
       answer:
         <p>
-          No. The database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance.
+          No. The MSI Database does not evaluate, rate, or rank MSIs, nor does it assess the impact or effectiveness of MSIs. Therefore, it should not be treated as a “scorecard” or “benchmark” for MSI performance.
         </p>
     },
     {
-      question: 'Does the database assess the impact, effectiveness or quality of the MSIs surveyed?',
+      question: 'Does the MSI Database assess the impact, effectiveness or quality of the MSIs surveyed?',
       answer:
       <div>
         <p>
-          No. The database does not assess the impact or effectiveness of the MSIs surveyed. The database does catalogue those MSI design characteristics (such as evaluation and sanctioning) that are considered, based on MSI Integrity’s research, to be important for an initiative’s potential efficacy. However, any evaluation of MSI impact would require an examination of the effects that an MSI has had on its affected community — which is beyond the scope of this project. Similarly, studies into effectiveness of an initiative would require greater examination of the design and/or outcomes of an initiative. The database documents the information that the MSIs have reported regarding their policies and practices, but not their quality or implementation.  In short, the database does not evaluate whether an initiative’s features or practices are well-designed, effective or utilized. As a result, an MSI that contains all the features in the database may be no more effective than an MSI with none of those features.
+          No. The MSI Database does not assess the impact or effectiveness of the MSIs surveyed. The MSI Database does catalogue those MSI design characteristics (such as evaluation and sanctioning) that are considered, based on MSI Integrity’s research, to be important for an initiative’s potential efficacy. However, any evaluation of MSI impact would require an examination of the effects that an MSI has had on its affected community — which is beyond the scope of this project. Similarly, studies into effectiveness of an initiative would require greater examination of the design and/or outcomes of an initiative. The MSI Database documents the information that the MSIs have reported regarding their policies and practices, but not their quality or implementation.  In short, the MSI Database does not evaluate whether an initiative’s features or practices are well-designed, effective or utilized. As a result, an MSI that contains all the features in the MSI Database may be no more effective than an MSI with none of those features.
         </p>
         <p>
-          We realize that the database’s focus on select, publicly reported design characteristics risks encouraging or contributing to a check-box approach to MSI design and review — an approach that often serves more as a public relations exercise than an attempt to produce meaningful change on the ground. For this reason, we emphasize that this project does not, and cannot, speak to the quality or impact of MSIs and their design features. Our hope is that the database provides a foundation for others to pursue more detailed analyses of that nature.
+          We realize that the MSI Database’s focus on select, publicly reported design characteristics risks encouraging or contributing to a check-box approach to MSI design and review — an approach that often serves more as a public relations exercise than an attempt to produce meaningful change on the ground. For this reason, we emphasize that this project does not, and cannot, speak to the quality or impact of MSIs and their design features. Our hope is that the MSI Database provides a foundation for others to pursue more detailed analyses of that nature.
         </p>
       </div>
     },
     {
-      question: 'What are the main limitations of the database’s findings?',
+      question: 'What are the main limitations of the MSI Database’s findings?',
       answer:
         <div>
           <p>
@@ -92,19 +92,19 @@ const FAQ = React.createClass({
           </p>
           <ol>
             <li>The project does not collect information on the substantive content of MSIs – for instance whether MSI standards require meaningful change in corporate practice, or simply confirm what is already corporate practice.</li>
-            <li>The project relies on the self-reporting of MSIs on their own websites in order to represent MSIs as the general public might see them. The exclusive use of publicly available information highlights the varying levels of transparency and accessibility across initiatives. At the same time, the database does not verify that any of the initiatives’ stated features are followed or implemented, but simply notes that these processes and policies reportedly exist.</li>
+            <li>The project relies on the self-reporting of MSIs on their own websites in order to represent MSIs as the general public might see them. The exclusive use of publicly available information highlights the varying levels of transparency and accessibility across initiatives. At the same time, the MSI Database does not verify that any of the initiatives’ stated features are followed or implemented, but simply notes that these processes and policies reportedly exist.</li>
           </ol>
           <p>
-            The project does not evaluate the implementation of the features catalogued (for example, whether an MSI actually uses its sanctioning mechanism against non-compliant members), nor their quality or effectiveness. Instead, the project and resulting database aim to serve as an initial resource for researchers, civil society, MSI staff, and the private sector to support further research and critical reflection on MSIs, and to inform stakeholder engagement with MSIs.
+            The project does not evaluate the implementation of the features catalogued (for example, whether an MSI actually uses its sanctioning mechanism against non-compliant members), nor their quality or effectiveness. Instead, the project and resulting MSI Database aim to serve as an initial resource for researchers, civil society, MSI staff, and the private sector to support further research and critical reflection on MSIs, and to inform stakeholder engagement with MSIs.
           </p>
         </div>
     },
     {
-      question: 'How was the database developed?',
+      question: 'How was the MSI Database developed?',
       answer:
         <div>
           <p>
-            The database and data collection methodology were designed and developed by MSI Integrity, the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University and MSI Integrity's pro bono counsel for this project, Miller & Chevalier (a law firm based in Washington D.C.) between 2014 – 2016. During this time, the three organizations worked together to define the scope of the project, including the types of initiatives that would be catalogued in the database, as well as the specific data points that would be collected for each initiative.
+            The MSI Database and data collection methodology were designed and developed by MSI Integrity, the Duke Human Rights Center at the Kenan Institute for Ethics at Duke University and MSI Integrity's pro bono counsel for this project, Miller & Chevalier (a law firm based in Washington D.C.) between 2014 – 2016. During this time, the three organizations worked together to define the scope of the project, including the types of initiatives that would be catalogued in the MSI Database, as well as the specific data points that would be collected for each initiative.
           </p>
           <p>
             The project proceeded in four stages:
@@ -116,7 +116,7 @@ const FAQ = React.createClass({
             <li>Communication with MSIs (Summer 2016-Fall 2016) </li>
           </ul>
           <p>
-            In 2020, five MSIs were removed from the database and the names and launch dates of the remaining MSIs and, in some cases, the mission statements, were revised to reflect more current information. Beyond these revisions, the database was not and will not be updated any further. A full explanation of the project methodology, including the removal of the five MSIs, is available <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">here</a>.
+            In 2020, five MSIs were removed from the MSI Database and the names and launch dates of the remaining MSIs and, in some cases, the mission statements, were revised to reflect more current information. Beyond these revisions, the MSI Database was not and will not be updated any further. A full explanation of the project methodology, including the removal of the five MSIs, is available <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">here</a>.
           </p>
       </div>
     },
@@ -125,7 +125,7 @@ const FAQ = React.createClass({
       answer:
       <div>
         <p>
-          The database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The data points catalogued were included because they are considered, based on MSI Integrity’s research, to be important for an initiative’s potential efficacy. A detailed description of the criteria used for each data point is included in the Classification Guide at the end of the project methodology document. A summary of each MSI design characteristic catalogued in the database is available below:
+          The MSI Database catalogues basic information about the design characteristics of each MSI’s scope, governance and implementation structures. The data points catalogued were included because they are considered, based on MSI Integrity’s research, to be important for an initiative’s potential efficacy. A detailed description of the criteria used for each data point is included in the Classification Guide at the end of the project methodology document. A summary of each MSI design characteristic catalogued in the MSI Database is available below:
         </p>
         <ul>
           <li>Involvement of Affected Populations: Affected populations may be defined as those individuals the MSI intends to benefit or protect (such as laborers, farmers, or indigenous communities) in addition to individuals who may be impacted by the MSI’s operations and implementation (such as civil society activists, or researchers). This data point documents whether the MSI reports that it engages these populations in initiatives, interviews or education programs outside of decision-making processes.</li>
@@ -156,11 +156,11 @@ const FAQ = React.createClass({
         </p>
     },
     {
-      question: 'When was the database last updated?',
+      question: 'When was the MSI Database last updated?',
       answer:
         <div>
           <p>
-            The database initially reflected publicly available information disclosed by MSIs through August 2016. For this initial launch phase, ata was collected between February and June 2016 and submitted to MSIs for review from August - September 2016. In 2020, MSI Integrity released a new report on MSIs, <a href="https://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a>, which provides more recent data, current through June 2019, on the MSIs listed in this database. The database was not updated to reflect this new data, except that we eliminated five MSIs from the original list of 45 and, where necessary, revised the names and launch dates of the remaining MSIs in the database and, in some cases, the mission statements, for consistency with our newest research into MSIs. Beyond these revisions, the database was not and will not be updated any further. See the <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">Project Methodology</a> for more information on these updates. Please <a href="http://www.msi-integrity.org/contact-us/">contact MSI Integrity</a> to access the original data released in 2017. Explore our new research, <a href="https://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a> for more recent data on MSIs.
+            The MSI Database initially reflected publicly available information disclosed by MSIs through August 2016. For this initial launch phase, ata was collected between February and June 2016 and submitted to MSIs for review from August - September 2016. In 2020, MSI Integrity released a new report on MSIs, <a href="http://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a>, which provides more recent data, current through June 2019, on the MSIs listed in this database. The MSI Database was not updated to reflect all of this new data; specifically, we updated the names, launch dates, and some mission statements of MSIs, and eliminated five MSIs from the original list of 45 for consistency with our final set of research into MSIs. Beyond these revisions, the MSI Database was not and will not be updated any further. See the <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">Project Methodology</a> for more information on these updates. Please <a href="http://www.msi-integrity.org/contact-us/">contact MSI Integrity</a> to access the original data released in 2017. Explore our new research, <a href="http://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a> for more recent data on MSIs.
           </p>
         </div>
     },
@@ -172,13 +172,13 @@ const FAQ = React.createClass({
             During the initial stages of research, the researchers were able to identify 45 transnational, standard-setting MSIs that regulate company or government conduct on issues of public concern. Although we aimed to be as comprehensive as possible in our identification of transnational, standard-setting MSIs, some initiatives may not have been captured by our methodology.
           </p>
           <p>
-            Notably, there are several initiatives that researchers identified during the database development process that meet all of the database’s threshold criteria except for being transnational (i.e. implementing standards in two or more countries). Such initiatives include: The Accord on Fire and Building Safety in Bangladesh, the Alliance for Bangladesh Worker Safety, and the Alliance for Fair Food.
+            Notably, there are several initiatives that researchers identified during the MSI Database development process that meet all of the MSI Database’s threshold criteria except for being transnational (i.e. implementing standards in two or more countries). Such initiatives include: The Accord on Fire and Building Safety in Bangladesh, the Alliance for Bangladesh Worker Safety, and the Alliance for Fair Food.
           </p>
           <p>
-            In 2020, five MSIs were removed from the database for consistency with our newer research into MSIs. Two of the five MSIs—Fair Flowers Fair Plants and Marine Aquarium Council—were removed because they are no longer in operation. We removed another three—Green-e, International Seafood Sustainability Foundation and Wildlife Friendly Enterprise Network—because their standards focused solely on environmental protection and did not include other specific human rights components, and so were not appropriate for our ongoing analysis.
+            In 2020, five MSIs were removed from the MSI Database for consistency with our newer research into MSIs. Two of the five MSIs—Fair Flowers Fair Plants and Marine Aquarium Council—were removed because they are no longer in operation. We removed another three—Green-e, International Seafood Sustainability Foundation and Wildlife Friendly Enterprise Network—because their standards focused solely on environmental protection and did not include other specific human rights components, and so were not appropriate for our ongoing analysis.
           </p>
           <p>
-            The database will not be updated or expanded any further. For more information, see our Project Methodology <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">here</a>. If you wish to see the original data that includes these five MSIs, please <a href="http://www.msi-integrity.org/contact-us/">contact MSI Integrity</a>.
+            The MSI Database will not be updated or expanded any further. For more information, see our Project Methodology <a href="/data/Project%20Methodology%20and%20Classification%20Guide%20-%20MSI%20Database.pdf">here</a>. If you wish to see the original data that includes these five MSIs, please <a href="http://www.msi-integrity.org/contact-us/">contact MSI Integrity</a>.
           </p>
         </div>
     },
@@ -186,18 +186,18 @@ const FAQ = React.createClass({
         question: 'What data sources have been used for the project?',
         answer:
           <p>
-            The project relies on the self-reporting of MSIs on their own websites in order to represent MSIs as the general public might see them. The exclusive use of publicly available information highlights the varying levels of transparency and accessibility across initiatives. At the same time, the database does not verify that any of the initiatives’ stated features are followed or implemented, but simply notes that these processes and policies have been reported to exist.
+            The project relies on the self-reporting of MSIs on their own websites in order to represent MSIs as the general public might see them. The exclusive use of publicly available information highlights the varying levels of transparency and accessibility across initiatives. At the same time, the MSI Database does not verify that any of the initiatives’ stated features are followed or implemented, but simply notes that these processes and policies have been reported to exist.
           </p>
     },
     {
-      question: 'Will the database be updated or expanded in the future?',
+      question: 'Will the MSI Database be updated or expanded in the future?',
       answer:
         <p>
-          The data in the database will not be updated or expanded any further. MSI Integrity is shifting to a new and exciting research focus: looking <a href="https://www.msi-integrity.org/beyond-corporations/">beyond corporations</a> to support the promotion of business models that center workers and communities in their ownership and governance. Explore our latest research, <a href="https://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a> for more recent data on MSIs.
+          The data in the MSI Database will not be updated or expanded any further. MSI Integrity is shifting to a new and exciting research focus: looking <a href="https://www.msi-integrity.org/beyond-corporations/">beyond corporations</a> to support the promotion of business models that center workers and communities in their ownership and governance. Explore our latest research, <a href="http://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-For-Purpose</a> for more recent data on MSIs.
         </p>
     },
     {
-      question: 'Who created the MSI database?',
+      question: 'Who created the MSI Database?',
       answer:
         <div>
           <p>

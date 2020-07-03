@@ -8,6 +8,7 @@
     "foundation-sites": "6.2.3",
     "gulp-sheets2json": "^1.0.1",
     "lunr": "^0.7.1",
+    "natives": "^1.1.6",
     "preact": "^7.1.0",
     "preact-compat": "^3.9.4",
     "react-router-dom": "^4.2.2"
