@@ -26,7 +26,7 @@ const Report = React.createClass({
               We examined how these MSIs are governed and the extent to which they include different stakeholder groups. Our analysis revealed that a majority of standard-setting MSIs fail to meaningfully engage the workers and communities that are most affected by the standards they set. We also found that many MSIs lack one or more of the basic institutional elements necessary to effectively set and enforce their own standards.
 	    </p>
             <p>
-              Read our latest report on MSIs, <a href="http://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-for-Purpose: The Grand Experiment of Multi-Stakeholder Initiatives in Corporate Accountability, Human Rights, and Global Governance</a>, which expands on <i>The New Regulators?</i>  and ultimately concludes through six major insights that MSIs have failed as tools for human rights protection.
+              Read our latest report on MSIs, <a href="https://www.msi-integrity.org/not-fit-for-purpose/">Not Fit-for-Purpose: The Grand Experiment of Multi-Stakeholder Initiatives in Corporate Accountability, Human Rights, and Global Governance</a>, which expands on <i>The New Regulators?</i>  and ultimately concludes through six major insights that MSIs have failed as tools for human rights protection.
             </p>
           </div>
           <div className="small-4 small-offset-1 columns end text-center">
